@@ -1,0 +1,9 @@
+<?php
+namespace App\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
+use App\Models\Collection;
+use App\Models\Product;
+use App\Services\MediaService;
+use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
+class CollectionController extends Controller {public function __construct(private MediaService $media){}public function index(){return view('admin.collections.index',['collections'=>Collection::withCount('products')->latest()->paginate(25)]);}public function create(){return view('admin.collections.form',['collection'=>new Collection,'products'=>Product::active()->orderBy('name')->get()]);}public function store(Request $r){$c=$this->save(new Collection,$r);return redirect()->route('admin.collections.edit',$c)->with('success','Collection created.');}public function edit(Collection $collection){return view('admin.collections.form',['collection'=>$collection->load('products'),'products'=>Product::active()->orderBy('name')->get()]);}public function update(Request $r,Collection $collection){$this->save($collection,$r);return back()->with('success','Collection updated.');}public function destroy(Collection $collection){$collection->delete();return back()->with('success','Collection deleted.');}private function save(Collection $c,Request $r){$d=$r->validate(['title'=>'required|max:191','slug'=>['required','alpha_dash',Rule::unique('collections')->ignore($c)],'tagline'=>'nullable|max:191','description'=>'nullable|string','image'=>[$c->exists?'nullable':'required','image','max:6144'],'products'=>'nullable|array','products.*'=>'exists:products,id']);if($r->hasFile('image')){$this->media->delete($c->image);$d['image']=$this->media->store($r->file('image'),'collections');}$d['is_active']=$r->boolean('is_active');$c->fill($d)->save();$c->products()->sync(collect($r->input('products',[]))->mapWithKeys(fn($id,$i)=>[$id=>['sort_order'=>$i]])->all());return $c;}}

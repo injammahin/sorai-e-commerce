@@ -1,0 +1,8 @@
+<?php
+namespace App\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
+use App\Models\Post;
+use App\Services\MediaService;
+use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
+class PostController extends Controller {public function __construct(private MediaService $media,private \App\Services\HtmlSanitizer $sanitizer){}public function index(){return view('admin.posts.index',['posts'=>Post::latest()->paginate(25)]);}public function create(){return view('admin.posts.form',['post'=>new Post]);}public function store(Request $r){$p=$this->save(new Post,$r);return redirect()->route('admin.posts.edit',$p)->with('success','Journal post created.');}public function edit(Post $post){return view('admin.posts.form',compact('post'));}public function update(Request $r,Post $post){$this->save($post,$r);return back()->with('success','Journal post updated.');}public function destroy(Post $post){$post->delete();return back()->with('success','Journal post deleted.');}private function save(Post $p,Request $r){$d=$r->validate(['title'=>'required|max:191','slug'=>['required','alpha_dash',Rule::unique('posts')->ignore($p)],'category'=>'nullable|max:100','excerpt'=>'nullable|max:500','content'=>'required|string','image'=>[$p->exists?'nullable':'required','image','max:6144'],'meta_title'=>'nullable|max:70','meta_description'=>'nullable|max:170','published_at'=>'nullable|date']);$d['content']=$this->sanitizer->clean($d['content']);if($r->hasFile('image')){$this->media->delete($p->image);$d['image']=$this->media->store($r->file('image'),'journal');}$d['author_id']=$r->user()->id;$d['is_published']=$r->boolean('is_published');$d['published_at']=$d['is_published']?($d['published_at']??now()):null;$p->fill($d)->save();return $p;}}

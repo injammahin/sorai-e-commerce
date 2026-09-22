@@ -1,0 +1,2 @@
+@extends('layouts.store') @section('title','Verify Email | SARAI')
+@section('content')<div class="auth-shell"><div class="auth-card text-center"><i class="fa-regular fa-envelope text-4xl"></i><h1 class="text-5xl mt-5">Check your inbox</h1><p class="muted mt-4">We sent a verification link to {{ auth()->user()->email }}. Verify your email before accessing account features.</p><form action="{{ route('verification.send') }}" method="post">@csrf<button class="btn btn-dark mt-7">Resend verification email</button></form></div></div>@endsection

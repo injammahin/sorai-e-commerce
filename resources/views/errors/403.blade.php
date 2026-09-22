@@ -1,0 +1,2 @@
+@extends('layouts.store') @section('title','Access Restricted | SARAI')
+@section('content')<div class="wrap min-h-[65vh] grid place-items-center text-center py-20"><div><p class="eyebrow">403</p><h1 class="heading mt-3">This area is restricted.</h1><p class="muted mt-5">Sign in with an authorized account to continue.</p><a class="btn btn-dark mt-8" href="{{ route('login') }}">Sign in</a></div></div>@endsection

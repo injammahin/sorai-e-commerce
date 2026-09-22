@@ -1,0 +1,24 @@
+@php($cartService=app(\App\Services\CartService::class))
+<div class="announcement"><div class="wrap text-center">{{ $siteSettings['announcement']??'Complimentary delivery across Bangladesh on orders over ৳5,000' }}</div></div>
+<header class="site-header">
+ <div class="wrap main-row">
+  <div class="flex items-center"><button class="icon-link mobile-only" data-open="mobile-menu" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button><button class="icon-link desktop-nav" data-open="search-layer" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button></div>
+  <a href="{{ route('home') }}" aria-label="SARAI home"><img class="logo" src="{{ asset('images/logo/sarai-lockup.webp') }}" alt="SARAI"></a>
+  <div class="flex justify-end"><button class="icon-link mobile-only" data-open="search-layer" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button><a class="icon-link desktop-nav" href="{{ auth()->check()?route('account.index'):route('login') }}" aria-label="Account"><i class="fa-regular fa-user"></i></a><a class="icon-link" href="{{ auth()->check()?route('wishlist.index'):route('login') }}" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></a><a class="icon-link" href="{{ route('cart.index') }}" aria-label="Bag"><i class="fa-solid fa-bag-shopping"></i>@if($cartService->count())<span class="count">{{ $cartService->count() }}</span>@endif</a></div>
+ </div>
+ <nav class="desktop-nav border-t hairline" aria-label="Main navigation"><div class="main-nav wrap">
+ @foreach($navCategories as $nav)
+  <div class="nav-wrap"><a class="nav-item" href="{{ route('categories.show',$nav) }}">{{ $nav->name }}</a>
+   <div class="mega-menu"><div class="wrap mega-grid">
+    <div><p class="eyebrow mb-3">{{ $nav->tagline }}</p><div class="mega-links"><a class="!text-copper-600" href="{{ route('new-arrivals') }}">New Arrivals</a>@foreach($nav->children as $child)<a href="{{ route('products.index',[$nav,$child]) }}">{{ $child->name }}</a>@endforeach</div><a class="btn btn-outline mt-5 !py-2.5" href="{{ route('categories.show',$nav) }}">View all {{ $nav->name }}</a></div>
+    <a href="{{ route('categories.show',$nav) }}"><p class="eyebrow mb-3">Featured collection</p><div class="mega-image"><img src="{{ asset($nav->image) }}" alt="{{ $nav->name }} collection"></div><h3 class="text-2xl mt-2">{{ $nav->heading }}</h3></a>
+    @php($highlight=\App\Models\Product::active()->where('category_id',$nav->id)->where('is_featured',true)->with('primaryImage')->first() ?: \App\Models\Product::active()->where('category_id',$nav->id)->with('primaryImage')->first())
+    @if($highlight)<a href="{{ route('products.show',$highlight) }}"><p class="eyebrow mb-3">On the floor now</p><div class="mega-image"><img src="{{ asset($highlight->primaryImage->path) }}" alt="{{ $highlight->name }}"></div><p class="mt-2 text-sm">{{ $highlight->name }}</p><strong class="text-xs">৳{{ number_format($highlight->price) }}</strong></a>@endif
+   </div></div>
+  </div>
+ @endforeach
+ <a class="nav-item" href="{{ route('new-arrivals') }}">New Arrivals</a>
+ </div></nav>
+</header>
+<div id="search-layer" class="search-layer" data-layer><button class="absolute right-8 top-8 text-2xl" data-close aria-label="Close"><i class="fa-solid fa-xmark"></i></button><form class="search-box" action="{{ route('search') }}"><p class="eyebrow mb-5">Search SARAI</p><div class="flex border-b border-black"><input autofocus class="w-full bg-transparent py-4 text-2xl outline-none" name="q" placeholder="Jamdani, kantha, home décor…"><button class="px-4" aria-label="Search"><i class="fa-solid fa-arrow-right"></i></button></div><p class="mt-4 text-xs muted">Try “Jamdani saree”, “Nakshi Kantha”, “Shital Pati” or “handmade gifts”.</p></form></div>
+<div id="mobile-menu" class="drawer-backdrop" data-layer><nav class="drawer mobile-nav" aria-label="Mobile navigation"><div class="flex items-center justify-between mb-8"><img class="h-12" src="{{ asset('images/logo/sarai-lockup.webp') }}" alt="SARAI"><button data-close class="text-xl"><i class="fa-solid fa-xmark"></i></button></div><a class="block py-3 border-b hairline" href="{{ route('new-arrivals') }}">New Arrivals</a>@foreach($navCategories as $nav)<details class="border-b hairline"><summary class="py-3 flex justify-between">{{ $nav->name }}<i class="fa-solid fa-plus text-xs"></i></summary><div class="pb-3 pl-4"><a class="block py-2" href="{{ route('categories.show',$nav) }}">View all</a>@foreach($nav->children as $child)<a class="block py-2 muted" href="{{ route('products.index',[$nav,$child]) }}">{{ $child->name }}</a>@endforeach</div></details>@endforeach<div class="grid gap-3 mt-8 text-sm"><a href="{{ auth()->check()?route('account.index'):route('login') }}">My Account</a><a href="{{ route('pages.show','customer-service') }}">Customer Service</a><a href="{{ route('pages.show','stores') }}">Find a Store</a></div></nav></div>

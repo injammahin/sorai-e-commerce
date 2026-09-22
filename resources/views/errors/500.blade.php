@@ -1,0 +1,2 @@
+@extends('layouts.store') @section('title','Something Went Wrong | SARAI')
+@section('content')<div class="wrap min-h-[65vh] grid place-items-center text-center py-20"><div><p class="eyebrow">500</p><h1 class="heading mt-3">We could not complete that request.</h1><p class="muted mt-5">Please try again in a moment. Your cart remains safe.</p><a class="btn btn-dark mt-8" href="{{ route('home') }}">Return home</a></div></div>@endsection

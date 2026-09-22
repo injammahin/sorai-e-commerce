@@ -1,0 +1,2 @@
+@extends('layouts.store') @section('title','Page Not Found | SARAI')
+@section('content')<div class="wrap min-h-[65vh] grid place-items-center text-center py-20"><div><p class="eyebrow">404</p><h1 class="display mt-3">This path ends here.</h1><p class="muted mt-5">The page may have moved, or the piece may no longer be available.</p><div class="flex flex-wrap justify-center gap-3 mt-8"><a class="btn btn-dark" href="{{ route('home') }}">Return home</a><a class="btn btn-outline" href="{{ route('new-arrivals') }}">New arrivals</a></div></div></div>@endsection

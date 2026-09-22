@@ -1,0 +1,3756 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "slug": "nokshi-handloom-jamdani-saree",
+      "name": "Nokshi Handloom Jamdani Saree",
+      "category": "women",
+      "subcategory": "sarees",
+      "price": 18500,
+      "originalPrice": 22400,
+      "discount": 17,
+      "sku": "SR-WOSA-1000",
+      "material": "Handwoven cotton jamdani",
+      "colors": [
+        {
+          "name": "Ivory",
+          "hex": "#efe6d6"
+        },
+        {
+          "name": "Indigo",
+          "hex": "#22344f"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/nokshi-handloom-jamdani-saree-1.webp",
+        "/images/products/nokshi-handloom-jamdani-saree-2.webp"
+      ],
+      "shortDescription": "Six yards of handwoven jamdani, worked on the loom over eleven days.",
+      "description": "A jamdani saree woven on a pit loom in Rupganj, where the motif is built thread by thread rather than printed on afterwards. The ground is unbleached cotton; the buti is picked out in a deeper indigo weft. Because each length is worked by hand, small irregularities in the repeat are part of the piece.",
+      "rating": 4.9,
+      "reviewCount": 64,
+      "tags": [
+        "new",
+        "featured"
+      ],
+      "isNew": true,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 2,
+      "slug": "meher-silk-saree-with-woven-border",
+      "name": "Meher Silk Saree with Woven Border",
+      "category": "women",
+      "subcategory": "sarees",
+      "price": 24900,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WOSA-1001",
+      "material": "Mulberry silk",
+      "colors": [
+        {
+          "name": "Madder",
+          "hex": "#8e2f2a"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/meher-silk-saree-with-woven-border-1.webp",
+        "/images/products/meher-silk-saree-with-woven-border-2.webp"
+      ],
+      "shortDescription": "Deep madder silk with a hand-woven gold border and a full pallu.",
+      "description": "Mulberry silk dyed in small batches to a warm madder red, finished with a woven border in muted gold and a pallu that carries the motif at full scale. The drape is fluid and holds a pleat well, which makes it a saree for long evenings rather than short ones.",
+      "rating": 4.8,
+      "reviewCount": 41,
+      "tags": [
+        "featured",
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 3,
+      "slug": "doyel-cotton-taant-saree",
+      "name": "Doyel Cotton Taant Saree",
+      "category": "women",
+      "subcategory": "sarees",
+      "price": 6950,
+      "originalPrice": 8200,
+      "discount": 15,
+      "sku": "SR-WOSA-1002",
+      "material": "Handloom cotton taant",
+      "colors": [
+        {
+          "name": "Teal",
+          "hex": "#245b56"
+        },
+        {
+          "name": "Ivory",
+          "hex": "#efe6d6"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/doyel-cotton-taant-saree-1.webp",
+        "/images/products/doyel-cotton-taant-saree-2.webp"
+      ],
+      "shortDescription": "Crisp everyday taant, light enough for the warmest months.",
+      "description": "The taant is the working saree of Bengal — closely woven cotton that stays crisp through the day and softens with every wash. This one is dyed a cool teal with an ivory stripe running the length of the body.",
+      "rating": 4.7,
+      "reviewCount": 96,
+      "tags": [
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 4,
+      "slug": "rongdhonu-block-print-saree",
+      "name": "Rongdhonu Block-Print Saree",
+      "category": "women",
+      "subcategory": "sarees",
+      "price": 8450,
+      "originalPrice": 9900,
+      "discount": 15,
+      "sku": "SR-WOSA-1003",
+      "material": "Cotton mul",
+      "colors": [
+        {
+          "name": "Terracotta",
+          "hex": "#b4572f"
+        },
+        {
+          "name": "Cream",
+          "hex": "#e8ddc9"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/rongdhonu-block-print-saree-1.webp",
+        "/images/products/rongdhonu-block-print-saree-2.webp"
+      ],
+      "shortDescription": "Hand block-printed in madder and iron, on soft cotton mul.",
+      "description": "Printed by hand with carved teak blocks, one repeat at a time, in natural madder and iron-based dye. The cotton mul is light and slightly translucent, and the colour will mellow gently over the first few washes.",
+      "rating": 4.6,
+      "reviewCount": 28,
+      "tags": [
+        "new"
+      ],
+      "isNew": true,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 5,
+      "slug": "shondha-tussar-silk-saree",
+      "name": "Shondha Tussar Silk Saree",
+      "category": "women",
+      "subcategory": "sarees",
+      "price": 27500,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WOSA-1004",
+      "material": "Tussar silk",
+      "colors": [
+        {
+          "name": "Plum",
+          "hex": "#5a2f48"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/shondha-tussar-silk-saree-1.webp",
+        "/images/products/shondha-tussar-silk-saree-2.webp"
+      ],
+      "shortDescription": "Textured tussar in deep plum, with a gold-toned pallu.",
+      "description": "Tussar has a natural slub and a dry, papery hand that catches light differently from mulberry silk. Dyed to a deep plum and finished with a gold-toned pallu, this is a saree for a wedding you are attending rather than hosting.",
+      "rating": 4.9,
+      "reviewCount": 19,
+      "tags": [
+        "limited"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": true,
+      "stock": 3
+    },
+    {
+      "id": 6,
+      "slug": "beli-embroidered-kameez-set",
+      "name": "Beli Embroidered Kameez Set",
+      "category": "women",
+      "subcategory": "salwar-kameez",
+      "price": 9800,
+      "originalPrice": 11500,
+      "discount": 15,
+      "sku": "SR-WOSA-1005",
+      "material": "Cotton voile with hand embroidery",
+      "colors": [
+        {
+          "name": "Teal",
+          "hex": "#245b56"
+        },
+        {
+          "name": "Ivory",
+          "hex": "#efe6d6"
+        }
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "sizeSet": "apparel",
+      "images": [
+        "/images/products/beli-embroidered-kameez-set-1.webp",
+        "/images/products/beli-embroidered-kameez-set-2.webp"
+      ],
+      "shortDescription": "Three pieces: embroidered kameez, straight salwar, cotton dupatta.",
+      "description": "Hand-embroidered at the yoke in a fine running stitch, with a straight salwar and a plain cotton dupatta that lets the needlework sit on its own. Cut generously through the body so it moves.",
+      "rating": 4.7,
+      "reviewCount": 73,
+      "tags": [
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 7,
+      "slug": "aranya-three-piece-cotton-set",
+      "name": "Aranya Three-Piece Cotton Set",
+      "category": "women",
+      "subcategory": "salwar-kameez",
+      "price": 7600,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WOSA-1006",
+      "material": "Handloom cotton",
+      "colors": [
+        {
+          "name": "Olive",
+          "hex": "#5f6a3c"
+        },
+        {
+          "name": "Cream",
+          "hex": "#e8ddc9"
+        }
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "sizeSet": "apparel",
+      "images": [
+        "/images/products/aranya-three-piece-cotton-set-1.webp",
+        "/images/products/aranya-three-piece-cotton-set-2.webp"
+      ],
+      "shortDescription": "An unfussy everyday set in handloom cotton.",
+      "description": "Made for the ordinary weekday — handloom cotton in a muted olive, cut straight, with side slits deep enough to walk properly in. The dupatta is woven in the same yarn, undyed.",
+      "rating": 4.5,
+      "reviewCount": 52,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 8,
+      "slug": "shubhro-chikan-kameez-set",
+      "name": "Shubhro Chikan Kameez Set",
+      "category": "women",
+      "subcategory": "salwar-kameez",
+      "price": 13400,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WOSA-1007",
+      "material": "Cotton mul with chikankari",
+      "colors": [
+        {
+          "name": "Ivory",
+          "hex": "#efe6d6"
+        },
+        {
+          "name": "Copper",
+          "hex": "#a8542a"
+        }
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "sizeSet": "apparel",
+      "images": [
+        "/images/products/shubhro-chikan-kameez-set-1.webp",
+        "/images/products/shubhro-chikan-kameez-set-2.webp"
+      ],
+      "shortDescription": "White-on-white chikankari, with a copper-edged dupatta.",
+      "description": "Chikankari worked in white thread on white mul, so the pattern reads only as texture until the light moves across it. The dupatta carries a narrow copper edge — the single point of colour in the set.",
+      "rating": 4.8,
+      "reviewCount": 37,
+      "tags": [
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 9,
+      "slug": "kotha-straight-cut-kurta",
+      "name": "Kotha Straight-Cut Kurta",
+      "category": "women",
+      "subcategory": "kurtas",
+      "price": 4200,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WOKU-1008",
+      "material": "Handloom cotton",
+      "colors": [
+        {
+          "name": "Indigo",
+          "hex": "#22344f"
+        }
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "sizeSet": "apparel",
+      "images": [
+        "/images/products/kotha-straight-cut-kurta-1.webp",
+        "/images/products/kotha-straight-cut-kurta-2.webp"
+      ],
+      "shortDescription": "The straight kurta, cut long, in indigo handloom.",
+      "description": "A straight-cut kurta that falls below the knee, in indigo-dyed handloom cotton. Side slits, a plain round neck, three-quarter sleeves. It is the piece most people end up owning in three colours.",
+      "rating": 4.6,
+      "reviewCount": 118,
+      "tags": [
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 10,
+      "slug": "tulika-block-print-kurta",
+      "name": "Tulika Block-Print Kurta",
+      "category": "women",
+      "subcategory": "kurtas",
+      "price": 3850,
+      "originalPrice": 4600,
+      "discount": 16,
+      "sku": "SR-WOKU-1009",
+      "material": "Cotton",
+      "colors": [
+        {
+          "name": "Madder",
+          "hex": "#8e2f2a"
+        },
+        {
+          "name": "Cream",
+          "hex": "#e8ddc9"
+        }
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "sizeSet": "apparel",
+      "images": [
+        "/images/products/tulika-block-print-kurta-1.webp",
+        "/images/products/tulika-block-print-kurta-2.webp"
+      ],
+      "shortDescription": "Hand block-printed cotton with a mandarin placket.",
+      "description": "Block-printed by hand in a small repeating motif, with a short mandarin placket and shell buttons. The print sits slightly differently on every piece, which is how you know it was not rolled on by machine.",
+      "rating": 4.5,
+      "reviewCount": 64,
+      "tags": [
+        "new"
+      ],
+      "isNew": true,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 11,
+      "slug": "niribili-linen-kurta",
+      "name": "Niribili Linen Kurta",
+      "category": "women",
+      "subcategory": "kurtas",
+      "price": 5400,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WOKU-1010",
+      "material": "Pure linen",
+      "colors": [
+        {
+          "name": "Sage",
+          "hex": "#8c9a86"
+        }
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "sizeSet": "apparel",
+      "images": [
+        "/images/products/niribili-linen-kurta-1.webp",
+        "/images/products/niribili-linen-kurta-2.webp"
+      ],
+      "shortDescription": "Unlined linen, cut loose, in a quiet sage.",
+      "description": "Pure linen, washed before cutting so it arrives already soft. Unlined, generously cut, with a dropped shoulder. It creases — that is what linen does, and the creases are the point.",
+      "rating": 4.7,
+      "reviewCount": 45,
+      "tags": [
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 12,
+      "slug": "alpona-embroidered-kurta",
+      "name": "Alpona Embroidered Kurta",
+      "category": "women",
+      "subcategory": "kurtas",
+      "price": 6900,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WOKU-1011",
+      "material": "Cotton with hand embroidery",
+      "colors": [
+        {
+          "name": "Ivory",
+          "hex": "#efe6d6"
+        },
+        {
+          "name": "Copper",
+          "hex": "#a8542a"
+        }
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "sizeSet": "apparel",
+      "images": [
+        "/images/products/alpona-embroidered-kurta-1.webp",
+        "/images/products/alpona-embroidered-kurta-2.webp"
+      ],
+      "shortDescription": "A copper-thread motif traced across the yoke.",
+      "description": "The alpona — the drawn floor motif of a Bengali household — traced in copper thread across the yoke and repeated small at the cuffs. Everything else is left plain.",
+      "rating": 4.6,
+      "reviewCount": 31,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 13,
+      "slug": "shomoy-linen-co-ord-set",
+      "name": "Shomoy Linen Co-ord Set",
+      "category": "women",
+      "subcategory": "co-ords",
+      "price": 8900,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WOCO-1012",
+      "material": "Linen blend",
+      "colors": [
+        {
+          "name": "Sand",
+          "hex": "#c8b394"
+        }
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "sizeSet": "apparel",
+      "images": [
+        "/images/products/shomoy-linen-co-ord-set-1.webp",
+        "/images/products/shomoy-linen-co-ord-set-2.webp"
+      ],
+      "shortDescription": "Boxy top and wide trouser, cut from the same linen.",
+      "description": "A boxy top and a wide, high-waisted trouser cut from one length of sand-coloured linen, so the two read as a single piece. Works as a set; works better split up.",
+      "rating": 4.7,
+      "reviewCount": 22,
+      "tags": [
+        "new",
+        "featured"
+      ],
+      "isNew": true,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 14,
+      "slug": "megh-handloom-co-ord-set",
+      "name": "Megh Handloom Co-ord Set",
+      "category": "women",
+      "subcategory": "co-ords",
+      "price": 10200,
+      "originalPrice": 12000,
+      "discount": 15,
+      "sku": "SR-WOCO-1013",
+      "material": "Handloom cotton",
+      "colors": [
+        {
+          "name": "Pewter",
+          "hex": "#7d8288"
+        },
+        {
+          "name": "Indigo",
+          "hex": "#22344f"
+        }
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "sizeSet": "apparel",
+      "images": [
+        "/images/products/megh-handloom-co-ord-set-1.webp",
+        "/images/products/megh-handloom-co-ord-set-2.webp"
+      ],
+      "shortDescription": "Fine pewter stripe on handloom, top and trouser.",
+      "description": "A narrow indigo stripe on a pewter ground, woven rather than printed, made up into a relaxed top and a straight trouser with a drawstring waist.",
+      "rating": 4.5,
+      "reviewCount": 18,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 15,
+      "slug": "rodela-silk-scarf",
+      "name": "Rodela Silk Scarf",
+      "category": "women",
+      "subcategory": "scarves",
+      "price": 3400,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WOSC-1014",
+      "material": "Mulberry silk",
+      "colors": [
+        {
+          "name": "Saffron",
+          "hex": "#c68a2a"
+        },
+        {
+          "name": "Madder",
+          "hex": "#8e2f2a"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/rodela-silk-scarf-1.webp",
+        "/images/products/rodela-silk-scarf-2.webp"
+      ],
+      "shortDescription": "A long silk scarf in saffron, hand-rolled at the edge.",
+      "description": "Mulberry silk printed in saffron and madder, long enough to wrap twice, with edges rolled and stitched by hand. Light enough to carry in a pocket.",
+      "rating": 4.8,
+      "reviewCount": 87,
+      "tags": [
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 16,
+      "slug": "bindu-cotton-dupatta",
+      "name": "Bindu Cotton Dupatta",
+      "category": "women",
+      "subcategory": "scarves",
+      "price": 2200,
+      "originalPrice": 2750,
+      "discount": 20,
+      "sku": "SR-WOSC-1015",
+      "material": "Cotton mul",
+      "colors": [
+        {
+          "name": "Ivory",
+          "hex": "#efe6d6"
+        },
+        {
+          "name": "Teal",
+          "hex": "#245b56"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/bindu-cotton-dupatta-1.webp",
+        "/images/products/bindu-cotton-dupatta-2.webp"
+      ],
+      "shortDescription": "Plain mul dupatta with a knotted-thread fringe.",
+      "description": "Cotton mul, almost sheer, with a hand-knotted fringe at both ends and a single teal line running the length. Meant to be thrown on rather than arranged.",
+      "rating": 4.4,
+      "reviewCount": 56,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 17,
+      "slug": "himel-wool-shawl",
+      "name": "Himel Wool Shawl",
+      "category": "women",
+      "subcategory": "shawls",
+      "price": 14500,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WOSH-1016",
+      "material": "Merino wool",
+      "colors": [
+        {
+          "name": "Charcoal",
+          "hex": "#2c2f33"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/himel-wool-shawl-1.webp",
+        "/images/products/himel-wool-shawl-2.webp"
+      ],
+      "shortDescription": "Warm merino with a gold-thread border and long fringe.",
+      "description": "Woven from merino in a close twill, with a narrow gold-thread border and a long twisted fringe. Heavy enough for a Dhaka January and light enough to fold into a bag.",
+      "rating": 4.9,
+      "reviewCount": 33,
+      "tags": [
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 18,
+      "slug": "kuasha-jamdani-shawl",
+      "name": "Kuasha Jamdani Shawl",
+      "category": "women",
+      "subcategory": "shawls",
+      "price": 11800,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WOSH-1017",
+      "material": "Cotton-silk jamdani",
+      "colors": [
+        {
+          "name": "Cream",
+          "hex": "#e8ddc9"
+        },
+        {
+          "name": "Indigo",
+          "hex": "#22344f"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/kuasha-jamdani-shawl-1.webp",
+        "/images/products/kuasha-jamdani-shawl-2.webp"
+      ],
+      "shortDescription": "Jamdani technique on a cotton-silk ground.",
+      "description": "The jamdani motif worked at shawl scale on a cotton-silk ground — lighter than wool, warmer than it looks, and the only piece in the collection where the weaver signs the selvedge.",
+      "rating": 4.7,
+      "reviewCount": 24,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 19,
+      "slug": "payel-embroidered-khussa",
+      "name": "Payel Embroidered Khussa",
+      "category": "women",
+      "subcategory": "footwear",
+      "price": 4600,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WOFO-1018",
+      "material": "Leather with silk embroidery",
+      "colors": [
+        {
+          "name": "Wine",
+          "hex": "#6b2233"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [
+        "36",
+        "37",
+        "38",
+        "39",
+        "40",
+        "41"
+      ],
+      "sizeSet": "shoe",
+      "images": [
+        "/images/products/payel-embroidered-khussa-1.webp",
+        "/images/products/payel-embroidered-khussa-2.webp"
+      ],
+      "shortDescription": "Flat leather khussa with hand-embroidered vamp.",
+      "description": "A flat khussa in wine-dyed leather, with the vamp hand-embroidered in gold silk. Soft-soled and unlined; they mould to the foot within a week.",
+      "rating": 4.5,
+      "reviewCount": 29,
+      "tags": [
+        "new"
+      ],
+      "isNew": true,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 20,
+      "slug": "torulata-kantha-tote",
+      "name": "Torulata Kantha Tote",
+      "category": "women",
+      "subcategory": "accessories",
+      "price": 3900,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WOAC-1019",
+      "material": "Recycled cotton kantha",
+      "colors": [
+        {
+          "name": "Mustard",
+          "hex": "#b3902f"
+        },
+        {
+          "name": "Indigo",
+          "hex": "#22344f"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/torulata-kantha-tote-1.webp",
+        "/images/products/torulata-kantha-tote-2.webp"
+      ],
+      "shortDescription": "A roomy tote quilted from layered cotton in running stitch.",
+      "description": "Kantha is the practice of quilting worn cotton back into something useful with a running stitch. This tote is made that way — layered, stitched across in mustard thread, lined, and given leather-tipped handles.",
+      "rating": 4.6,
+      "reviewCount": 71,
+      "tags": [
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 21,
+      "slug": "taant-handloom-fabric",
+      "name": "Taant Handloom Fabric",
+      "category": "women",
+      "subcategory": "fabrics",
+      "price": 2400,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WOFA-1020",
+      "material": "Handloom cotton, per metre",
+      "colors": [
+        {
+          "name": "Indigo",
+          "hex": "#22344f"
+        },
+        {
+          "name": "Cream",
+          "hex": "#e8ddc9"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/taant-handloom-fabric-1.webp",
+        "/images/products/taant-handloom-fabric-2.webp"
+      ],
+      "shortDescription": "Loom-width handloom cotton, sold by the metre.",
+      "description": "Unstitched handloom cotton sold by the metre at full loom width, for anyone who would rather have it made up themselves. Shrinkage is roughly three percent on the first wash.",
+      "rating": 4.6,
+      "reviewCount": 15,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 22,
+      "slug": "shubho-cotton-panjabi",
+      "name": "Shubho Cotton Panjabi",
+      "category": "men",
+      "subcategory": "panjabis",
+      "price": 4800,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-MEPA-1021",
+      "material": "Handloom cotton",
+      "colors": [
+        {
+          "name": "Ivory",
+          "hex": "#efe6d6"
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "sizeSet": "menswear",
+      "images": [
+        "/images/products/shubho-cotton-panjabi-1.webp",
+        "/images/products/shubho-cotton-panjabi-2.webp"
+      ],
+      "shortDescription": "The plain white panjabi, cut properly.",
+      "description": "Handloom cotton, undyed, with a short mandarin collar and a five-button placket in shell. The cut is straight and slightly long — the way a panjabi is supposed to sit, not the way a shirt does.",
+      "rating": 4.7,
+      "reviewCount": 142,
+      "tags": [
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 23,
+      "slug": "nilaya-silk-panjabi",
+      "name": "Nilaya Silk Panjabi",
+      "category": "men",
+      "subcategory": "panjabis",
+      "price": 12400,
+      "originalPrice": 14800,
+      "discount": 16,
+      "sku": "SR-MEPA-1022",
+      "material": "Mulberry silk",
+      "colors": [
+        {
+          "name": "Indigo",
+          "hex": "#22344f"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "sizeSet": "menswear",
+      "images": [
+        "/images/products/nilaya-silk-panjabi-1.webp",
+        "/images/products/nilaya-silk-panjabi-2.webp"
+      ],
+      "shortDescription": "Deep indigo silk with a gold-thread placket.",
+      "description": "Mulberry silk in a deep indigo, with the placket picked out in fine gold thread and the rest left entirely plain. Lined at the shoulder only, so it keeps its weight without becoming warm.",
+      "rating": 4.8,
+      "reviewCount": 58,
+      "tags": [
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 24,
+      "slug": "aashray-jacquard-panjabi",
+      "name": "Aashray Jacquard Panjabi",
+      "category": "men",
+      "subcategory": "panjabis",
+      "price": 9200,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-MEPA-1023",
+      "material": "Cotton jacquard",
+      "colors": [
+        {
+          "name": "Charcoal",
+          "hex": "#2c2f33"
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "sizeSet": "menswear",
+      "images": [
+        "/images/products/aashray-jacquard-panjabi-1.webp",
+        "/images/products/aashray-jacquard-panjabi-2.webp"
+      ],
+      "shortDescription": "Tonal jacquard — pattern you feel before you see.",
+      "description": "The lattice is woven into the cloth in the same colour as the ground, so it reads as texture at a distance and as pattern up close. Charcoal throughout, including the buttons.",
+      "rating": 4.6,
+      "reviewCount": 44,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 25,
+      "slug": "boishakh-block-print-panjabi",
+      "name": "Boishakh Block-Print Panjabi",
+      "category": "men",
+      "subcategory": "panjabis",
+      "price": 5600,
+      "originalPrice": 6900,
+      "discount": 19,
+      "sku": "SR-MEPA-1024",
+      "material": "Cotton",
+      "colors": [
+        {
+          "name": "Terracotta",
+          "hex": "#b4572f"
+        },
+        {
+          "name": "Cream",
+          "hex": "#e8ddc9"
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "sizeSet": "menswear",
+      "images": [
+        "/images/products/boishakh-block-print-panjabi-1.webp",
+        "/images/products/boishakh-block-print-panjabi-2.webp"
+      ],
+      "shortDescription": "Hand block-printed for the first day of the year.",
+      "description": "Printed by hand in terracotta on a cream ground, in the small all-over motif that turns up everywhere in Boishakh. Cotton, unlined, and cut roomy for a warm April.",
+      "rating": 4.5,
+      "reviewCount": 61,
+      "tags": [
+        "new"
+      ],
+      "isNew": true,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 26,
+      "slug": "rudro-linen-kurta",
+      "name": "Rudro Linen Kurta",
+      "category": "men",
+      "subcategory": "kurtas",
+      "price": 6200,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-MEKU-1025",
+      "material": "Pure linen",
+      "colors": [
+        {
+          "name": "Sage",
+          "hex": "#8c9a86"
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "sizeSet": "menswear",
+      "images": [
+        "/images/products/rudro-linen-kurta-1.webp",
+        "/images/products/rudro-linen-kurta-2.webp"
+      ],
+      "shortDescription": "Short linen kurta with a concealed placket.",
+      "description": "A shorter kurta in washed linen, with a concealed placket and no collar. It is the piece for the evenings that are not formal but are not nothing either.",
+      "rating": 4.7,
+      "reviewCount": 39,
+      "tags": [
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 27,
+      "slug": "protik-handloom-kurta",
+      "name": "Protik Handloom Kurta",
+      "category": "men",
+      "subcategory": "kurtas",
+      "price": 4400,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-MEKU-1026",
+      "material": "Handloom cotton",
+      "colors": [
+        {
+          "name": "Pewter",
+          "hex": "#7d8288"
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "sizeSet": "menswear",
+      "images": [
+        "/images/products/protik-handloom-kurta-1.webp",
+        "/images/products/protik-handloom-kurta-2.webp"
+      ],
+      "shortDescription": "Fine woven stripe on handloom cotton.",
+      "description": "A narrow self-stripe woven into pewter handloom cotton. Straight cut, side-slit, three-quarter length. It takes a wash well and gets better for it.",
+      "rating": 4.4,
+      "reviewCount": 27,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 28,
+      "slug": "din-cotton-shirt",
+      "name": "Din Cotton Shirt",
+      "category": "men",
+      "subcategory": "shirts",
+      "price": 4100,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-MESH-1027",
+      "material": "Cotton",
+      "colors": [
+        {
+          "name": "Ivory",
+          "hex": "#efe6d6"
+        },
+        {
+          "name": "Indigo",
+          "hex": "#22344f"
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "sizeSet": "menswear",
+      "images": [
+        "/images/products/din-cotton-shirt-1.webp",
+        "/images/products/din-cotton-shirt-2.webp"
+      ],
+      "shortDescription": "A fine indigo check on an ivory ground.",
+      "description": "Woven check rather than printed, in indigo on ivory, with a soft collar, a single chest pocket and a straight hem you can wear out.",
+      "rating": 4.5,
+      "reviewCount": 88,
+      "tags": [
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 29,
+      "slug": "batash-linen-shirt",
+      "name": "Batash Linen Shirt",
+      "category": "men",
+      "subcategory": "shirts",
+      "price": 5300,
+      "originalPrice": 6400,
+      "discount": 17,
+      "sku": "SR-MESH-1028",
+      "material": "Linen",
+      "colors": [
+        {
+          "name": "Mist",
+          "hex": "#d5dcda"
+        },
+        {
+          "name": "Sage",
+          "hex": "#8c9a86"
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "sizeSet": "menswear",
+      "images": [
+        "/images/products/batash-linen-shirt-1.webp",
+        "/images/products/batash-linen-shirt-2.webp"
+      ],
+      "shortDescription": "Open-weave linen for the humid months.",
+      "description": "Loosely woven linen that moves air, cut with a camp collar and a relaxed body. Pale sage, unlined, and entirely unbothered about creasing.",
+      "rating": 4.6,
+      "reviewCount": 36,
+      "tags": [
+        "new"
+      ],
+      "isNew": true,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 30,
+      "slug": "shorol-tapered-trouser",
+      "name": "Shorol Tapered Trouser",
+      "category": "men",
+      "subcategory": "trousers",
+      "price": 5900,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-METR-1029",
+      "material": "Cotton twill",
+      "colors": [
+        {
+          "name": "Charcoal",
+          "hex": "#2c2f33"
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "sizeSet": "menswear",
+      "images": [
+        "/images/products/shorol-tapered-trouser-1.webp",
+        "/images/products/shorol-tapered-trouser-2.webp"
+      ],
+      "shortDescription": "Flat-front twill, tapered from the knee.",
+      "description": "Mid-weight cotton twill, flat-fronted, tapered from the knee down, with a hidden hook closure. Charcoal, which is the colour that goes with the rest of this list.",
+      "rating": 4.5,
+      "reviewCount": 42,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 31,
+      "slug": "anondo-linen-trouser",
+      "name": "Anondo Linen Trouser",
+      "category": "men",
+      "subcategory": "trousers",
+      "price": 6400,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-METR-1030",
+      "material": "Linen blend",
+      "colors": [
+        {
+          "name": "Sand",
+          "hex": "#c8b394"
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "sizeSet": "menswear",
+      "images": [
+        "/images/products/anondo-linen-trouser-1.webp",
+        "/images/products/anondo-linen-trouser-2.webp"
+      ],
+      "shortDescription": "Drawstring linen, cut wide and easy.",
+      "description": "A wide, drawstring-waisted linen trouser with deep side pockets. It is the trouser for the part of the day when nobody is watching.",
+      "rating": 4.6,
+      "reviewCount": 30,
+      "tags": [
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 32,
+      "slug": "ratan-silk-waistcoat",
+      "name": "Ratan Silk Waistcoat",
+      "category": "men",
+      "subcategory": "waistcoats",
+      "price": 8700,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-MEWA-1031",
+      "material": "Silk with brass buttons",
+      "colors": [
+        {
+          "name": "Wine",
+          "hex": "#6b2233"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "sizeSet": "menswear",
+      "images": [
+        "/images/products/ratan-silk-waistcoat-1.webp",
+        "/images/products/ratan-silk-waistcoat-2.webp"
+      ],
+      "shortDescription": "A short silk waistcoat with cast brass buttons.",
+      "description": "Cut short to sit over a panjabi rather than under a jacket, in wine silk with a fine tonal motif and three cast brass buttons. Fully lined in cotton.",
+      "rating": 4.8,
+      "reviewCount": 21,
+      "tags": [
+        "limited"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": true,
+      "stock": 10
+    },
+    {
+      "id": 33,
+      "slug": "sheetal-wool-muffler",
+      "name": "Sheetal Wool Muffler",
+      "category": "men",
+      "subcategory": "accessories",
+      "price": 3200,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-MEAC-1032",
+      "material": "Lambswool",
+      "colors": [
+        {
+          "name": "Indigo",
+          "hex": "#22344f"
+        },
+        {
+          "name": "Cream",
+          "hex": "#e8ddc9"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/sheetal-wool-muffler-1.webp",
+        "/images/products/sheetal-wool-muffler-2.webp"
+      ],
+      "shortDescription": "Lambswool muffler with a cream end-stripe.",
+      "description": "Soft lambswool, woven narrow and long, with a pair of cream stripes at each end and a short knotted fringe.",
+      "rating": 4.5,
+      "reviewCount": 47,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 34,
+      "slug": "paakhi-cotton-frock",
+      "name": "Paakhi Cotton Frock",
+      "category": "kids",
+      "subcategory": "girls",
+      "price": 2600,
+      "originalPrice": 3100,
+      "discount": 16,
+      "sku": "SR-KIGI-1033",
+      "material": "Cotton voile",
+      "colors": [
+        {
+          "name": "Blush",
+          "hex": "#c98e88"
+        }
+      ],
+      "sizes": [
+        "2–3Y",
+        "4–5Y",
+        "6–7Y",
+        "8–9Y",
+        "10–11Y"
+      ],
+      "sizeSet": "kids",
+      "images": [
+        "/images/products/paakhi-cotton-frock-1.webp",
+        "/images/products/paakhi-cotton-frock-2.webp"
+      ],
+      "shortDescription": "A soft everyday frock with a gathered skirt.",
+      "description": "Cotton voile in a pale blush, gathered at the waist, with short puffed sleeves and a buttoned back. Washes at forty and survives being climbed in.",
+      "rating": 4.7,
+      "reviewCount": 63,
+      "tags": [
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 35,
+      "slug": "jhilik-festive-frock",
+      "name": "Jhilik Festive Frock",
+      "category": "kids",
+      "subcategory": "girls",
+      "price": 4200,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-KIGI-1034",
+      "material": "Cotton with embroidery",
+      "colors": [
+        {
+          "name": "Saffron",
+          "hex": "#c68a2a"
+        },
+        {
+          "name": "Madder",
+          "hex": "#8e2f2a"
+        }
+      ],
+      "sizes": [
+        "2–3Y",
+        "4–5Y",
+        "6–7Y",
+        "8–9Y",
+        "10–11Y"
+      ],
+      "sizeSet": "kids",
+      "images": [
+        "/images/products/jhilik-festive-frock-1.webp",
+        "/images/products/jhilik-festive-frock-2.webp"
+      ],
+      "shortDescription": "Saffron festive frock with an embroidered hem.",
+      "description": "For the days there are photographs — saffron cotton with a hand-embroidered hem in madder thread, lined through the bodice so nothing scratches.",
+      "rating": 4.6,
+      "reviewCount": 24,
+      "tags": [
+        "new"
+      ],
+      "isNew": true,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 36,
+      "slug": "tuntuni-cotton-panjabi",
+      "name": "Tuntuni Cotton Panjabi",
+      "category": "kids",
+      "subcategory": "boys",
+      "price": 2400,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-KIBO-1035",
+      "material": "Handloom cotton",
+      "colors": [
+        {
+          "name": "Cream",
+          "hex": "#e8ddc9"
+        }
+      ],
+      "sizes": [
+        "2–3Y",
+        "4–5Y",
+        "6–7Y",
+        "8–9Y",
+        "10–11Y"
+      ],
+      "sizeSet": "kids",
+      "images": [
+        "/images/products/tuntuni-cotton-panjabi-1.webp",
+        "/images/products/tuntuni-cotton-panjabi-2.webp"
+      ],
+      "shortDescription": "A small version of the plain white panjabi.",
+      "description": "The same handloom cotton and the same mandarin collar as the grown-up version, scaled down and given a slightly shorter body so it does not trip anybody.",
+      "rating": 4.5,
+      "reviewCount": 51,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 37,
+      "slug": "chondro-kids-kurta-set",
+      "name": "Chondro Kids Kurta Set",
+      "category": "kids",
+      "subcategory": "boys",
+      "price": 3400,
+      "originalPrice": 3900,
+      "discount": 13,
+      "sku": "SR-KIBO-1036",
+      "material": "Cotton",
+      "colors": [
+        {
+          "name": "Teal",
+          "hex": "#245b56"
+        },
+        {
+          "name": "Ivory",
+          "hex": "#efe6d6"
+        }
+      ],
+      "sizes": [
+        "2–3Y",
+        "4–5Y",
+        "6–7Y",
+        "8–9Y",
+        "10–11Y"
+      ],
+      "sizeSet": "kids",
+      "images": [
+        "/images/products/chondro-kids-kurta-set-1.webp",
+        "/images/products/chondro-kids-kurta-set-2.webp"
+      ],
+      "shortDescription": "Teal kurta with matching pyjama.",
+      "description": "A two-piece set — teal kurta with a narrow ivory placket, and a drawstring pyjama in the same cotton. Both pieces have room to be grown into.",
+      "rating": 4.6,
+      "reviewCount": 33,
+      "tags": [
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 38,
+      "slug": "shishu-muslin-wrap-set",
+      "name": "Shishu Muslin Wrap Set",
+      "category": "kids",
+      "subcategory": "baby",
+      "price": 2900,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-KIBA-1037",
+      "material": "Cotton muslin",
+      "colors": [
+        {
+          "name": "Ivory",
+          "hex": "#efe6d6"
+        },
+        {
+          "name": "Blush",
+          "hex": "#c98e88"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/shishu-muslin-wrap-set-1.webp",
+        "/images/products/shishu-muslin-wrap-set-2.webp"
+      ],
+      "shortDescription": "Two muslin wraps, washed soft before they arrive.",
+      "description": "Two large squares of double-gauze cotton muslin, pre-washed so they are soft on the first day rather than the tenth. Big enough to swaddle, shade or mop up.",
+      "rating": 4.9,
+      "reviewCount": 78,
+      "tags": [
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 39,
+      "slug": "khela-kantha-pouch",
+      "name": "Khela Kantha Pouch",
+      "category": "kids",
+      "subcategory": "accessories",
+      "price": 1450,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-KIAC-1038",
+      "material": "Cotton kantha",
+      "colors": [
+        {
+          "name": "Mustard",
+          "hex": "#b3902f"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/khela-kantha-pouch-1.webp",
+        "/images/products/khela-kantha-pouch-2.webp"
+      ],
+      "shortDescription": "A small quilted pouch for the things that get lost.",
+      "description": "Quilted from layered cotton in a mustard running stitch, with a zip and a wrist loop. Sized for crayons, or for whatever is currently more important than crayons.",
+      "rating": 4.4,
+      "reviewCount": 19,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 40,
+      "slug": "nokshi-kantha-bedcover",
+      "name": "Nokshi Kantha Bedcover",
+      "category": "home-decor",
+      "subcategory": "bedding",
+      "price": 16800,
+      "originalPrice": 19500,
+      "discount": 14,
+      "sku": "SR-HOBE-1039",
+      "material": "Hand-quilted cotton",
+      "colors": [
+        {
+          "name": "Ivory",
+          "hex": "#efe6d6"
+        },
+        {
+          "name": "Madder",
+          "hex": "#8e2f2a"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/nokshi-kantha-bedcover-1.webp",
+        "/images/products/nokshi-kantha-bedcover-2.webp"
+      ],
+      "shortDescription": "A king-size kantha quilt, stitched entirely by hand.",
+      "description": "Nokshi kantha is embroidered storytelling — the whole surface covered in a running stitch that follows the motif rather than a grid. This bedcover takes one artisan roughly six weeks. No two are identical, and the reverse is as finished as the front.",
+      "rating": 4.9,
+      "reviewCount": 52,
+      "tags": [
+        "featured",
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 41,
+      "slug": "shitol-cotton-duvet-set",
+      "name": "Shitol Cotton Duvet Set",
+      "category": "home-decor",
+      "subcategory": "bedding",
+      "price": 9400,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-HOBE-1040",
+      "material": "Cotton percale",
+      "colors": [
+        {
+          "name": "Mist",
+          "hex": "#d5dcda"
+        },
+        {
+          "name": "Indigo",
+          "hex": "#22344f"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/shitol-cotton-duvet-set-1.webp",
+        "/images/products/shitol-cotton-duvet-set-2.webp"
+      ],
+      "shortDescription": "Cool percale in mist, with an indigo stripe.",
+      "description": "A duvet cover and two pillowcases in cotton percale — the crisp, cool weave, not the soft one. Mist grey with a single indigo stripe set in from the edge.",
+      "rating": 4.6,
+      "reviewCount": 40,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 42,
+      "slug": "mati-stoneware-dinner-plate",
+      "name": "Mati Stoneware Dinner Plate",
+      "category": "home-decor",
+      "subcategory": "tableware",
+      "price": 1850,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-HOTA-1041",
+      "material": "Glazed stoneware",
+      "colors": [
+        {
+          "name": "Sand",
+          "hex": "#c8b394"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/mati-stoneware-dinner-plate-1.webp",
+        "/images/products/mati-stoneware-dinner-plate-2.webp"
+      ],
+      "shortDescription": "Thrown stoneware with an uneven copper rim.",
+      "description": "Wheel-thrown and glazed in a sand-coloured matte, with the rim left in raw copper-toned clay. Dishwasher-safe; the rim will darken slowly, which is intended.",
+      "rating": 4.7,
+      "reviewCount": 95,
+      "tags": [
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 43,
+      "slug": "bhorer-ceramic-serving-bowl",
+      "name": "Bhorer Ceramic Serving Bowl",
+      "category": "home-decor",
+      "subcategory": "tableware",
+      "price": 2950,
+      "originalPrice": 3400,
+      "discount": 13,
+      "sku": "SR-HOTA-1042",
+      "material": "Glazed ceramic",
+      "colors": [
+        {
+          "name": "Mist",
+          "hex": "#d5dcda"
+        },
+        {
+          "name": "Teal",
+          "hex": "#245b56"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/bhorer-ceramic-serving-bowl-1.webp",
+        "/images/products/bhorer-ceramic-serving-bowl-2.webp"
+      ],
+      "shortDescription": "A wide serving bowl with a teal banded interior.",
+      "description": "Wide and shallow, for the dish that goes in the middle of the table. Pale glaze outside, a teal band and lattice inside, finished by hand so no two bands sit quite the same.",
+      "rating": 4.6,
+      "reviewCount": 38,
+      "tags": [
+        "new"
+      ],
+      "isNew": true,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 44,
+      "slug": "alpona-brass-wall-piece",
+      "name": "Alpona Brass Wall Piece",
+      "category": "home-decor",
+      "subcategory": "decor",
+      "price": 7400,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-HODE-1043",
+      "material": "Cast brass",
+      "colors": [
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/alpona-brass-wall-piece-1.webp",
+        "/images/products/alpona-brass-wall-piece-2.webp"
+      ],
+      "shortDescription": "A cast brass star for the wall, hand-finished.",
+      "description": "Sand-cast in brass and finished by hand, with a centre boss and eight points. It arrives lightly lacquered; strip the lacquer if you would rather watch it patina.",
+      "rating": 4.8,
+      "reviewCount": 26,
+      "tags": [
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 45,
+      "slug": "kumor-terracotta-vase",
+      "name": "Kumor Terracotta Vase",
+      "category": "home-decor",
+      "subcategory": "decor",
+      "price": 3600,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-HODE-1044",
+      "material": "Unglazed terracotta",
+      "colors": [
+        {
+          "name": "Clay",
+          "hex": "#c6a288"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/kumor-terracotta-vase-1.webp",
+        "/images/products/kumor-terracotta-vase-2.webp"
+      ],
+      "shortDescription": "Hand-thrown terracotta with a combed band.",
+      "description": "Thrown on a kick wheel and left unglazed, with a combed chevron band around the shoulder. Porous, so use a liner if you are putting water in it.",
+      "rating": 4.5,
+      "reviewCount": 44,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 46,
+      "slug": "kantha-embroidered-cushion",
+      "name": "Kantha Embroidered Cushion",
+      "category": "home-decor",
+      "subcategory": "cushions",
+      "price": 2400,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-HOCU-1045",
+      "material": "Cotton with kantha stitch",
+      "colors": [
+        {
+          "name": "Madder",
+          "hex": "#8e2f2a"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/kantha-embroidered-cushion-1.webp",
+        "/images/products/kantha-embroidered-cushion-2.webp"
+      ],
+      "shortDescription": "A madder cushion cover worked in running stitch.",
+      "description": "Forty-five centimetres square, hand-stitched across the whole face in gold thread on madder cotton, with a concealed zip and a cotton back. Cover only.",
+      "rating": 4.7,
+      "reviewCount": 101,
+      "tags": [
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 47,
+      "slug": "taant-woven-cushion",
+      "name": "Taant Woven Cushion",
+      "category": "home-decor",
+      "subcategory": "cushions",
+      "price": 1950,
+      "originalPrice": 2400,
+      "discount": 19,
+      "sku": "SR-HOCU-1046",
+      "material": "Handloom cotton",
+      "colors": [
+        {
+          "name": "Teal",
+          "hex": "#245b56"
+        },
+        {
+          "name": "Cream",
+          "hex": "#e8ddc9"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/taant-woven-cushion-1.webp",
+        "/images/products/taant-woven-cushion-2.webp"
+      ],
+      "shortDescription": "Handloom check, cut from full-width taant.",
+      "description": "Made up from the same handloom cotton as the sarees, in a teal and cream check, with an envelope back. It softens noticeably after the first wash.",
+      "rating": 4.5,
+      "reviewCount": 57,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 48,
+      "slug": "bansh-woven-basket",
+      "name": "Bansh Woven Basket",
+      "category": "home-decor",
+      "subcategory": "storage",
+      "price": 2800,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-HOST-1047",
+      "material": "Split bamboo",
+      "colors": [
+        {
+          "name": "Sand",
+          "hex": "#c8b394"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/bansh-woven-basket-1.webp",
+        "/images/products/bansh-woven-basket-2.webp"
+      ],
+      "shortDescription": "Split bamboo, woven tight, with a rolled rim.",
+      "description": "Bamboo split by hand and woven close enough to hold small things, with a rolled and bound rim. Deep enough for laundry, handsome enough to leave out.",
+      "rating": 4.6,
+      "reviewCount": 34,
+      "tags": [
+        "new"
+      ],
+      "isNew": true,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 49,
+      "slug": "golpo-seagrass-hamper",
+      "name": "Golpo Seagrass Hamper",
+      "category": "home-decor",
+      "subcategory": "storage",
+      "price": 4300,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-HOST-1048",
+      "material": "Seagrass",
+      "colors": [
+        {
+          "name": "Cream",
+          "hex": "#e8ddc9"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/golpo-seagrass-hamper-1.webp",
+        "/images/products/golpo-seagrass-hamper-2.webp"
+      ],
+      "shortDescription": "A tall seagrass hamper with a woven band.",
+      "description": "Seagrass coiled over a cane frame, with a contrast band at the waist. Light enough to carry full, stiff enough to stand up empty.",
+      "rating": 4.5,
+      "reviewCount": 22,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 50,
+      "slug": "jonaki-table-lamp",
+      "name": "Jonaki Table Lamp",
+      "category": "home-decor",
+      "subcategory": "lighting",
+      "price": 6800,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-HOLI-1049",
+      "material": "Brass with cotton shade",
+      "colors": [
+        {
+          "name": "Cream",
+          "hex": "#e8ddc9"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/jonaki-table-lamp-1.webp",
+        "/images/products/jonaki-table-lamp-2.webp"
+      ],
+      "shortDescription": "A brass column with a hand-stitched cotton shade.",
+      "description": "A turned brass column and a cotton shade stitched over a wire frame, so the light comes through warm rather than white. Takes a standard screw fitting; bulb not included.",
+      "rating": 4.7,
+      "reviewCount": 29,
+      "tags": [
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 51,
+      "slug": "prodip-ceramic-lamp",
+      "name": "Prodip Ceramic Lamp",
+      "category": "home-decor",
+      "subcategory": "lighting",
+      "price": 8200,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-HOLI-1050",
+      "material": "Glazed ceramic and brass",
+      "colors": [
+        {
+          "name": "Indigo",
+          "hex": "#22344f"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/prodip-ceramic-lamp-1.webp",
+        "/images/products/prodip-ceramic-lamp-2.webp"
+      ],
+      "shortDescription": "Indigo-glazed ceramic base, brass collar.",
+      "description": "A heavy indigo-glazed ceramic base with a brass collar and a linen-covered shade. The glaze pools darker at the foot, which is what a glaze does when it is poured by hand.",
+      "rating": 4.6,
+      "reviewCount": 18,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 52,
+      "slug": "chompa-gold-tone-necklace",
+      "name": "Chompa Gold-Tone Necklace",
+      "category": "jewellery",
+      "subcategory": "necklaces",
+      "price": 5600,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-JENE-1051",
+      "material": "Gold-plated brass",
+      "colors": [
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        },
+        {
+          "name": "Wine",
+          "hex": "#6b2233"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/chompa-gold-tone-necklace-1.webp",
+        "/images/products/chompa-gold-tone-necklace-2.webp"
+      ],
+      "shortDescription": "A graduated bead collar with a stone-set pendant.",
+      "description": "Hand-strung graduated beads in gold-plated brass, closing on a hook, with a central pendant set with a cut glass stone. Length adjusts over about four centimetres.",
+      "rating": 4.8,
+      "reviewCount": 67,
+      "tags": [
+        "bestseller",
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 53,
+      "slug": "tara-beaded-statement-necklace",
+      "name": "Tara Beaded Statement Necklace",
+      "category": "jewellery",
+      "subcategory": "necklaces",
+      "price": 7900,
+      "originalPrice": 9200,
+      "discount": 14,
+      "sku": "SR-JENE-1052",
+      "material": "Brass with glass stones",
+      "colors": [
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        },
+        {
+          "name": "Teal",
+          "hex": "#245b56"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/tara-beaded-statement-necklace-1.webp",
+        "/images/products/tara-beaded-statement-necklace-2.webp"
+      ],
+      "shortDescription": "Teal stones dropped from a beaded brass collar.",
+      "description": "A wider collar than the Chompa, with teal glass drops hung along the full length and a heavier pendant. It is deliberately loud; wear it with something plain.",
+      "rating": 4.7,
+      "reviewCount": 31,
+      "tags": [
+        "new"
+      ],
+      "isNew": true,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 54,
+      "slug": "jhumka-bell-earrings",
+      "name": "Jhumka Bell Earrings",
+      "category": "jewellery",
+      "subcategory": "earrings",
+      "price": 3200,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-JEEA-1053",
+      "material": "Gold-plated brass",
+      "colors": [
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        },
+        {
+          "name": "Wine",
+          "hex": "#6b2233"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/jhumka-bell-earrings-1.webp",
+        "/images/products/jhumka-bell-earrings-2.webp"
+      ],
+      "shortDescription": "The classic domed jhumka, with a beaded fringe.",
+      "description": "A domed bell with a beaded fringe around the rim and a stone-set stud above. Gold-plated brass with surgical steel posts, and lighter in the ear than they look.",
+      "rating": 4.8,
+      "reviewCount": 124,
+      "tags": [
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 55,
+      "slug": "shiuli-drop-earrings",
+      "name": "Shiuli Drop Earrings",
+      "category": "jewellery",
+      "subcategory": "earrings",
+      "price": 2600,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-JEEA-1054",
+      "material": "Brass with enamel",
+      "colors": [
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        },
+        {
+          "name": "Ivory",
+          "hex": "#efe6d6"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/shiuli-drop-earrings-1.webp",
+        "/images/products/shiuli-drop-earrings-2.webp"
+      ],
+      "shortDescription": "Small enamelled drops on a slim brass hook.",
+      "description": "Named for the night-flowering shiuli — small ivory enamel drops on a slim brass hook, light enough to forget you are wearing them.",
+      "rating": 4.6,
+      "reviewCount": 49,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 56,
+      "slug": "aloka-stone-ring",
+      "name": "Aloka Stone Ring",
+      "category": "jewellery",
+      "subcategory": "rings",
+      "price": 2900,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-JERI-1055",
+      "material": "Brass with glass stone",
+      "colors": [
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        },
+        {
+          "name": "Indigo",
+          "hex": "#22344f"
+        }
+      ],
+      "sizes": [
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "sizeSet": "ring",
+      "images": [
+        "/images/products/aloka-stone-ring-1.webp",
+        "/images/products/aloka-stone-ring-2.webp"
+      ],
+      "shortDescription": "A wide band with a bezel-set indigo stone.",
+      "description": "A wide, slightly domed brass band with an indigo glass stone set in a beaded bezel. Four sizes; the band is not resizable.",
+      "rating": 4.5,
+      "reviewCount": 27,
+      "tags": [
+        "new"
+      ],
+      "isNew": true,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 57,
+      "slug": "bindu-minimal-band",
+      "name": "Bindu Minimal Band",
+      "category": "jewellery",
+      "subcategory": "rings",
+      "price": 1800,
+      "originalPrice": 2200,
+      "discount": 18,
+      "sku": "SR-JERI-1056",
+      "material": "Brass",
+      "colors": [
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [
+        "12",
+        "14",
+        "16",
+        "18"
+      ],
+      "sizeSet": "ring",
+      "images": [
+        "/images/products/bindu-minimal-band-1.webp",
+        "/images/products/bindu-minimal-band-2.webp"
+      ],
+      "shortDescription": "A plain brushed band, meant for stacking.",
+      "description": "The quietest thing in the case — a narrow brushed brass band with no stone at all. Buy two or three and stack them.",
+      "rating": 4.4,
+      "reviewCount": 36,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 58,
+      "slug": "kangan-brass-bangle-set",
+      "name": "Kangan Brass Bangle Set",
+      "category": "jewellery",
+      "subcategory": "bracelets",
+      "price": 4100,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-JEBR-1057",
+      "material": "Cast brass",
+      "colors": [
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/kangan-brass-bangle-set-1.webp",
+        "/images/products/kangan-brass-bangle-set-2.webp"
+      ],
+      "shortDescription": "Three cast bangles, sold as a set.",
+      "description": "Three solid cast-brass bangles of slightly different widths, sold together. They knock against each other, which is the whole point of bangles.",
+      "rating": 4.7,
+      "reviewCount": 58,
+      "tags": [
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 59,
+      "slug": "rekha-stacked-bangles",
+      "name": "Rekha Stacked Bangles",
+      "category": "jewellery",
+      "subcategory": "bracelets",
+      "price": 5400,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-JEBR-1058",
+      "material": "Brass with enamel",
+      "colors": [
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        },
+        {
+          "name": "Madder",
+          "hex": "#8e2f2a"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/rekha-stacked-bangles-1.webp",
+        "/images/products/rekha-stacked-bangles-2.webp"
+      ],
+      "shortDescription": "Brass bangles with a madder enamel centre.",
+      "description": "The same three-bangle stack, with the middle band filled in madder enamel. The enamel is fired, not painted, so it will not lift.",
+      "rating": 4.6,
+      "reviewCount": 23,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 60,
+      "slug": "rajkonna-statement-collar",
+      "name": "Rajkonna Statement Collar",
+      "category": "jewellery",
+      "subcategory": "statement",
+      "price": 12800,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-JEST-1059",
+      "material": "Gold-plated brass with stones",
+      "colors": [
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        },
+        {
+          "name": "Wine",
+          "hex": "#6b2233"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/rajkonna-statement-collar-1.webp",
+        "/images/products/rajkonna-statement-collar-2.webp"
+      ],
+      "shortDescription": "A full bridal collar, hand-set stone by stone.",
+      "description": "The largest piece we make — a full collar of graduated beads and hand-set wine-coloured stones, with a weighted pendant. Made to order in small numbers; allow two weeks.",
+      "rating": 4.9,
+      "reviewCount": 17,
+      "tags": [
+        "limited",
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": true,
+      "stock": 10
+    },
+    {
+      "id": 61,
+      "slug": "neem-and-honey-face-cleanser",
+      "name": "Neem & Honey Face Cleanser",
+      "category": "beauty",
+      "subcategory": "skincare",
+      "price": 1250,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-BESK-1060",
+      "material": "Neem, raw honey, glycerin",
+      "colors": [
+        {
+          "name": "Sage",
+          "hex": "#8c9a86"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/neem-and-honey-face-cleanser-1.webp",
+        "/images/products/neem-and-honey-face-cleanser-2.webp"
+      ],
+      "shortDescription": "A gentle gel cleanser with neem and raw honey.",
+      "description": "A low-foaming gel cleanser built around neem and raw honey, without sulphates or added fragrance. 150ml, in glass. Suits most skin; patch test if yours is reactive.",
+      "rating": 4.6,
+      "reviewCount": 83,
+      "tags": [
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 62,
+      "slug": "rose-clay-renewal-mask",
+      "name": "Rose Clay Renewal Mask",
+      "category": "beauty",
+      "subcategory": "skincare",
+      "price": 1650,
+      "originalPrice": 1950,
+      "discount": 15,
+      "sku": "SR-BESK-1061",
+      "material": "Rose clay, oat, rosehip",
+      "colors": [
+        {
+          "name": "Blush",
+          "hex": "#c98e88"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/rose-clay-renewal-mask-1.webp",
+        "/images/products/rose-clay-renewal-mask-2.webp"
+      ],
+      "shortDescription": "A powdered clay mask you mix yourself.",
+      "description": "Rose clay milled with oat and rosehip, supplied dry so nothing needs preserving. Mix a teaspoon with water, leave ten minutes, rinse. 80g.",
+      "rating": 4.5,
+      "reviewCount": 41,
+      "tags": [
+        "new"
+      ],
+      "isNew": true,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 63,
+      "slug": "sandalwood-soap-trio",
+      "name": "Sandalwood Soap Trio",
+      "category": "beauty",
+      "subcategory": "bath",
+      "price": 980,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-BEBA-1062",
+      "material": "Cold-process soap",
+      "colors": [
+        {
+          "name": "Cream",
+          "hex": "#e8ddc9"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/sandalwood-soap-trio-1.webp",
+        "/images/products/sandalwood-soap-trio-2.webp"
+      ],
+      "shortDescription": "Three cold-process bars, cured for six weeks.",
+      "description": "Cold-process soap scented with sandalwood and cured six weeks so the bars last. Three bars, wrapped in printed paper, 100g each.",
+      "rating": 4.7,
+      "reviewCount": 66,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 64,
+      "slug": "bakul-night-oil",
+      "name": "Bakul Night Oil",
+      "category": "beauty",
+      "subcategory": "fragrance",
+      "price": 2400,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-BEFR-1063",
+      "material": "Jojoba, bakul, vetiver",
+      "colors": [
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/bakul-night-oil-1.webp",
+        "/images/products/bakul-night-oil-2.webp"
+      ],
+      "shortDescription": "A jojoba-based night oil scented with bakul.",
+      "description": "Jojoba and rosehip carrying bakul and vetiver — a warm, slightly green scent that holds for hours. 30ml in an amber dropper bottle. Two or three drops is plenty.",
+      "rating": 4.8,
+      "reviewCount": 35,
+      "tags": [
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 65,
+      "slug": "utshob-festive-gift-box",
+      "name": "Utshob Festive Gift Box",
+      "category": "gifts-crafts",
+      "subcategory": "gift-sets",
+      "price": 5900,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-GIGI-1064",
+      "material": "Assorted, in a lidded box",
+      "colors": [
+        {
+          "name": "Charcoal",
+          "hex": "#2c2f33"
+        },
+        {
+          "name": "Copper",
+          "hex": "#a8542a"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/utshob-festive-gift-box-1.webp",
+        "/images/products/utshob-festive-gift-box-2.webp"
+      ],
+      "shortDescription": "A cushion cover, a candle and a soap trio, boxed.",
+      "description": "Our standing festive box — a kantha cushion cover, a soy candle and the sandalwood soap trio, packed in a lidded charcoal box with a copper ribbon. Add a handwritten card at checkout.",
+      "rating": 4.8,
+      "reviewCount": 48,
+      "tags": [
+        "featured",
+        "bestseller"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": true,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 66,
+      "slug": "chayanika-tea-and-treat-hamper",
+      "name": "Chayanika Tea & Treat Hamper",
+      "category": "gifts-crafts",
+      "subcategory": "gift-sets",
+      "price": 4200,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-GIGI-1065",
+      "material": "Tea, ceramics, packaging",
+      "colors": [
+        {
+          "name": "Cream",
+          "hex": "#e8ddc9"
+        },
+        {
+          "name": "Teal",
+          "hex": "#245b56"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/chayanika-tea-and-treat-hamper-1.webp",
+        "/images/products/chayanika-tea-and-treat-hamper-2.webp"
+      ],
+      "shortDescription": "Loose-leaf tea and two hand-thrown cups.",
+      "description": "A hundred grams of loose-leaf Sylhet tea and two small hand-thrown cups, in a lined box. The cups are seconds from the pottery — very slightly irregular, which is why they are here.",
+      "rating": 4.6,
+      "reviewCount": 25,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 67,
+      "slug": "nakshi-terracotta-wall-plate",
+      "name": "Nakshi Terracotta Wall Plate",
+      "category": "gifts-crafts",
+      "subcategory": "handicrafts",
+      "price": 2700,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-GIHA-1066",
+      "material": "Hand-carved terracotta",
+      "colors": [
+        {
+          "name": "Clay",
+          "hex": "#c6a288"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/nakshi-terracotta-wall-plate-1.webp",
+        "/images/products/nakshi-terracotta-wall-plate-2.webp"
+      ],
+      "shortDescription": "Carved terracotta, made to hang.",
+      "description": "A terracotta plate carved while the clay is leather-hard, then fired unglazed. Comes with a hanging fixture on the reverse. Thirty centimetres across.",
+      "rating": 4.5,
+      "reviewCount": 30,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 68,
+      "slug": "shubheccha-keepsake-box",
+      "name": "Shubheccha Keepsake Box",
+      "category": "gifts-crafts",
+      "subcategory": "keepsakes",
+      "price": 3300,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-GIKE-1067",
+      "material": "Mango wood with brass inlay",
+      "colors": [
+        {
+          "name": "Sand",
+          "hex": "#c8b394"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [],
+      "sizeSet": "none",
+      "images": [
+        "/images/products/shubheccha-keepsake-box-1.webp",
+        "/images/products/shubheccha-keepsake-box-2.webp"
+      ],
+      "shortDescription": "A small wooden box with brass inlay on the lid.",
+      "description": "Mango wood, hand-cut, with a brass lattice inlaid into the lid and a felt-lined interior. For letters, or rings, or the things that do not have a drawer.",
+      "rating": 4.7,
+      "reviewCount": 21,
+      "tags": [
+        "new"
+      ],
+      "isNew": true,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 69,
+      "slug": "bourani-bridal-benarasi-saree",
+      "name": "Bourani Bridal Benarasi Saree",
+      "category": "wedding",
+      "subcategory": "bride",
+      "price": 62000,
+      "originalPrice": 71000,
+      "discount": 13,
+      "sku": "SR-WEBR-1068",
+      "material": "Benarasi silk with zari",
+      "colors": [
+        {
+          "name": "Wine",
+          "hex": "#6b2233"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/bourani-bridal-benarasi-saree-1.webp",
+        "/images/products/bourani-bridal-benarasi-saree-2.webp"
+      ],
+      "shortDescription": "Wine benarasi with a full zari pallu.",
+      "description": "A bridal benarasi in wine silk with zari worked through the border and across the whole pallu. Heavy — this is a saree that needs pinning, and it will outlast the marriage photographs by a few decades.",
+      "rating": 5,
+      "reviewCount": 23,
+      "tags": [
+        "featured",
+        "limited"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": true,
+      "stock": 3
+    },
+    {
+      "id": 70,
+      "slug": "shubhodrishti-bridal-set",
+      "name": "Shubhodrishti Bridal Set",
+      "category": "wedding",
+      "subcategory": "bride",
+      "price": 48500,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WEBR-1069",
+      "material": "Silk with hand embroidery",
+      "colors": [
+        {
+          "name": "Madder",
+          "hex": "#8e2f2a"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "sizeSet": "apparel",
+      "images": [
+        "/images/products/shubhodrishti-bridal-set-1.webp",
+        "/images/products/shubhodrishti-bridal-set-2.webp"
+      ],
+      "shortDescription": "Embroidered kameez, full skirt and gold dupatta.",
+      "description": "A three-piece bridal set — hand-embroidered kameez, a full silk skirt and a gold-worked dupatta. Made to order with a fitting; allow three weeks from confirmation.",
+      "rating": 4.9,
+      "reviewCount": 16,
+      "tags": [
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 71,
+      "slug": "boron-grooms-silk-panjabi",
+      "name": "Boron Groom's Silk Panjabi",
+      "category": "wedding",
+      "subcategory": "groom",
+      "price": 22400,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WEGR-1070",
+      "material": "Mulberry silk with zari",
+      "colors": [
+        {
+          "name": "Ivory",
+          "hex": "#efe6d6"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "sizeSet": "menswear",
+      "images": [
+        "/images/products/boron-grooms-silk-panjabi-1.webp",
+        "/images/products/boron-grooms-silk-panjabi-2.webp"
+      ],
+      "shortDescription": "Ivory silk with a zari-worked placket and cuffs.",
+      "description": "Ivory mulberry silk with zari at the placket, collar and cuffs, and nothing anywhere else. Cut long, lined at the shoulder, and made to be worn with the Ratan waistcoat.",
+      "rating": 4.8,
+      "reviewCount": 27,
+      "tags": [
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 72,
+      "slug": "rajbari-sherwani",
+      "name": "Rajbari Sherwani",
+      "category": "wedding",
+      "subcategory": "groom",
+      "price": 38900,
+      "originalPrice": 44000,
+      "discount": 12,
+      "sku": "SR-WEGR-1071",
+      "material": "Silk brocade",
+      "colors": [
+        {
+          "name": "Cream",
+          "hex": "#e8ddc9"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+      ],
+      "sizeSet": "menswear",
+      "images": [
+        "/images/products/rajbari-sherwani-1.webp",
+        "/images/products/rajbari-sherwani-2.webp"
+      ],
+      "shortDescription": "Full-length brocade sherwani with brass buttons.",
+      "description": "A full-length sherwani in cream silk brocade, structured through the shoulder and fastened with nine cast brass buttons. Includes a matching stole. Made to measure.",
+      "rating": 4.9,
+      "reviewCount": 14,
+      "tags": [
+        "limited"
+      ],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": true,
+      "stock": 10
+    },
+    {
+      "id": 73,
+      "slug": "utshob-guest-saree",
+      "name": "Utshob Guest Saree",
+      "category": "wedding",
+      "subcategory": "wedding-guest",
+      "price": 19600,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WEWE-1072",
+      "material": "Silk blend with zari border",
+      "colors": [
+        {
+          "name": "Teal",
+          "hex": "#245b56"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/utshob-guest-saree-1.webp",
+        "/images/products/utshob-guest-saree-2.webp"
+      ],
+      "shortDescription": "Teal silk with a narrow zari border — festive, not bridal.",
+      "description": "The saree for the wedding you are attending: teal silk with a narrow zari border, enough shine to photograph well and not so much that anybody looks twice at you instead of the bride.",
+      "rating": 4.7,
+      "reviewCount": 34,
+      "tags": [
+        "new"
+      ],
+      "isNew": true,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 74,
+      "slug": "mehendi-co-ord-set",
+      "name": "Mehendi Co-ord Set",
+      "category": "wedding",
+      "subcategory": "wedding-guest",
+      "price": 14200,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WEWE-1073",
+      "material": "Silk-cotton",
+      "colors": [
+        {
+          "name": "Olive",
+          "hex": "#5f6a3c"
+        },
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        }
+      ],
+      "sizes": [
+        "XS",
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "sizeSet": "apparel",
+      "images": [
+        "/images/products/mehendi-co-ord-set-1.webp",
+        "/images/products/mehendi-co-ord-set-2.webp"
+      ],
+      "shortDescription": "Olive and gold, cut for a long afternoon.",
+      "description": "A silk-cotton co-ord in olive with gold detailing — loose enough to sit cross-legged in for four hours, which is what the mehendi actually requires.",
+      "rating": 4.6,
+      "reviewCount": 20,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    },
+    {
+      "id": 75,
+      "slug": "bourani-bridal-necklace-set",
+      "name": "Bourani Bridal Necklace Set",
+      "category": "wedding",
+      "subcategory": "jewellery",
+      "price": 18900,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WEJE-1074",
+      "material": "Gold-plated brass with stones",
+      "colors": [
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        },
+        {
+          "name": "Wine",
+          "hex": "#6b2233"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/bourani-bridal-necklace-set-1.webp",
+        "/images/products/bourani-bridal-necklace-set-2.webp"
+      ],
+      "shortDescription": "Collar and matching jhumkas, boxed together.",
+      "description": "The bridal collar and a pair of matching jhumkas, supplied together in a lined box. Gold-plated brass, hand-set stones, and heavier than it photographs.",
+      "rating": 4.9,
+      "reviewCount": 18,
+      "tags": [
+        "featured"
+      ],
+      "isNew": false,
+      "isFeatured": true,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 3
+    },
+    {
+      "id": 76,
+      "slug": "boron-embroidered-clutch",
+      "name": "Boron Embroidered Clutch",
+      "category": "wedding",
+      "subcategory": "accessories",
+      "price": 6400,
+      "originalPrice": null,
+      "discount": 0,
+      "sku": "SR-WEAC-1075",
+      "material": "Silk with zari embroidery",
+      "colors": [
+        {
+          "name": "Gold",
+          "hex": "#b98d33"
+        },
+        {
+          "name": "Wine",
+          "hex": "#6b2233"
+        }
+      ],
+      "sizes": [
+        "One Size"
+      ],
+      "sizeSet": "onesize",
+      "images": [
+        "/images/products/boron-embroidered-clutch-1.webp",
+        "/images/products/boron-embroidered-clutch-2.webp"
+      ],
+      "shortDescription": "A small zari-embroidered clutch with a chain.",
+      "description": "Wine silk embroidered in zari, made up into a structured clutch with a detachable chain. Fits a phone, a lipstick and the speech you are not going to read.",
+      "rating": 4.6,
+      "reviewCount": 22,
+      "tags": [],
+      "isNew": false,
+      "isFeatured": false,
+      "isBestseller": false,
+      "isLimited": false,
+      "stock": 10
+    }
+  ],
+  "categories": [
+    {
+      "slug": "women",
+      "name": "Women",
+      "tagline": "Handloom, hand-print, hand-finished",
+      "heading": "Woven for the way you actually live",
+      "intro": "Sarees from pit looms in Rupganj, block prints pulled one repeat at a time, linen cut loose enough to move in. The women’s collection is built around cloth first and silhouette second.",
+      "image": "/images/category/women.webp",
+      "wide": "/images/category/women-wide.webp",
+      "featuredCollection": {
+        "title": "The Festive Edit",
+        "copy": "Silk, zari and a little restraint.",
+        "href": "/collection/festive-edit"
+      },
+      "subcategories": [
+        {
+          "slug": "sarees",
+          "name": "Sarees",
+          "image": "/images/sub/sarees.webp"
+        },
+        {
+          "slug": "salwar-kameez",
+          "name": "Salwar Kameez",
+          "image": "/images/sub/salwar-kameez.webp"
+        },
+        {
+          "slug": "kurtas",
+          "name": "Kurtas",
+          "image": "/images/sub/kurtas.webp"
+        },
+        {
+          "slug": "co-ords",
+          "name": "Co-ords",
+          "image": "/images/sub/co-ords.webp"
+        },
+        {
+          "slug": "scarves",
+          "name": "Scarves",
+          "image": "/images/sub/scarves.webp"
+        },
+        {
+          "slug": "shawls",
+          "name": "Shawls",
+          "image": "/images/sub/shawls.webp"
+        },
+        {
+          "slug": "footwear",
+          "name": "Footwear",
+          "image": "/images/sub/footwear.webp"
+        },
+        {
+          "slug": "accessories",
+          "name": "Accessories",
+          "image": "/images/sub/accessories.webp"
+        },
+        {
+          "slug": "fabrics",
+          "name": "Fabrics",
+          "image": "/images/sub/fabrics.webp"
+        }
+      ]
+    },
+    {
+      "slug": "men",
+      "name": "Men",
+      "tagline": "Panjabis, linen and quiet tailoring",
+      "heading": "Cut straight, finished properly",
+      "intro": "The plain white panjabi, made the way it should be. Linen that breathes through a Dhaka summer. Trousers that do one job well. Nothing here is trying to be noticed from across a room.",
+      "image": "/images/category/men.webp",
+      "wide": "/images/category/men-wide.webp",
+      "featuredCollection": {
+        "title": "Everyday Elegance",
+        "copy": "The pieces you reach for first.",
+        "href": "/collection/everyday-elegance"
+      },
+      "subcategories": [
+        {
+          "slug": "panjabis",
+          "name": "Panjabis",
+          "image": "/images/sub/panjabis.webp"
+        },
+        {
+          "slug": "kurtas",
+          "name": "Kurtas",
+          "image": "/images/sub/mens-kurtas.webp"
+        },
+        {
+          "slug": "shirts",
+          "name": "Shirts",
+          "image": "/images/sub/shirts.webp"
+        },
+        {
+          "slug": "trousers",
+          "name": "Trousers",
+          "image": "/images/sub/trousers.webp"
+        },
+        {
+          "slug": "waistcoats",
+          "name": "Waistcoats",
+          "image": "/images/sub/waistcoats.webp"
+        },
+        {
+          "slug": "accessories",
+          "name": "Accessories",
+          "image": "/images/sub/mens-accessories.webp"
+        }
+      ]
+    },
+    {
+      "slug": "kids",
+      "name": "Kids",
+      "tagline": "Soft cotton, real pockets",
+      "heading": "Made to be climbed in",
+      "intro": "Pre-washed muslin, cotton that survives forty degrees, and room to grow into. Everything here has been tested by people under ten, which is a harder standard than most.",
+      "image": "/images/category/kids.webp",
+      "wide": "/images/category/kids-wide.webp",
+      "featuredCollection": {
+        "title": "Festive Little Things",
+        "copy": "For the days there are photographs.",
+        "href": "/category/kids/girls"
+      },
+      "subcategories": [
+        {
+          "slug": "girls",
+          "name": "Girls",
+          "image": "/images/sub/girls.webp"
+        },
+        {
+          "slug": "boys",
+          "name": "Boys",
+          "image": "/images/sub/boys.webp"
+        },
+        {
+          "slug": "baby",
+          "name": "Baby",
+          "image": "/images/sub/baby.webp"
+        },
+        {
+          "slug": "accessories",
+          "name": "Accessories",
+          "image": "/images/sub/kids-accessories.webp"
+        }
+      ]
+    },
+    {
+      "slug": "home-decor",
+      "name": "Home Decor",
+      "tagline": "Kantha, clay and cane",
+      "heading": "The house, considered",
+      "intro": "Quilts stitched over six weeks. Stoneware thrown on a kick wheel. Bamboo split by hand and woven close. Objects that get better with use rather than worse.",
+      "image": "/images/category/home-decor.webp",
+      "wide": "/images/category/home-decor-wide.webp",
+      "featuredCollection": {
+        "title": "Handcrafted Home",
+        "copy": "Clay, cane and quilted cotton.",
+        "href": "/collection/handcrafted-home"
+      },
+      "subcategories": [
+        {
+          "slug": "bedding",
+          "name": "Bedding",
+          "image": "/images/sub/bedding.webp"
+        },
+        {
+          "slug": "tableware",
+          "name": "Tableware",
+          "image": "/images/sub/tableware.webp"
+        },
+        {
+          "slug": "decor",
+          "name": "Decor",
+          "image": "/images/sub/decor.webp"
+        },
+        {
+          "slug": "cushions",
+          "name": "Cushions",
+          "image": "/images/sub/cushions.webp"
+        },
+        {
+          "slug": "storage",
+          "name": "Storage",
+          "image": "/images/sub/storage.webp"
+        },
+        {
+          "slug": "lighting",
+          "name": "Lighting",
+          "image": "/images/sub/lighting.webp"
+        }
+      ]
+    },
+    {
+      "slug": "jewellery",
+      "name": "Jewellery",
+      "tagline": "Cast, plated and hand-set",
+      "heading": "Weight, and where it sits",
+      "intro": "Brass cast in sand moulds, plated in gold, and set by hand stone by stone. The jhumka you already own, made properly — and a collar for the day that warrants one.",
+      "image": "/images/category/jewellery.webp",
+      "wide": "/images/category/jewellery-wide.webp",
+      "featuredCollection": {
+        "title": "Wedding Stories",
+        "copy": "Collars, jhumkas and the full set.",
+        "href": "/collection/wedding-stories"
+      },
+      "subcategories": [
+        {
+          "slug": "necklaces",
+          "name": "Necklaces",
+          "image": "/images/sub/necklaces.webp"
+        },
+        {
+          "slug": "earrings",
+          "name": "Earrings",
+          "image": "/images/sub/earrings.webp"
+        },
+        {
+          "slug": "rings",
+          "name": "Rings",
+          "image": "/images/sub/rings.webp"
+        },
+        {
+          "slug": "bracelets",
+          "name": "Bracelets",
+          "image": "/images/sub/bracelets.webp"
+        },
+        {
+          "slug": "statement",
+          "name": "Statement Pieces",
+          "image": "/images/sub/statement.webp"
+        }
+      ]
+    },
+    {
+      "slug": "beauty",
+      "name": "Beauty",
+      "tagline": "Short ingredient lists",
+      "heading": "Nothing you cannot pronounce",
+      "intro": "Neem, rose clay, cold-process soap and a jojoba oil that smells of bakul. Small batches, glass where we can, and no added fragrance unless fragrance is the point.",
+      "image": "/images/category/beauty.webp",
+      "wide": "/images/category/beauty-wide.webp",
+      "featuredCollection": {
+        "title": "The Ritual Set",
+        "copy": "Cleanse, mask, oil.",
+        "href": "/category/beauty/skincare"
+      },
+      "subcategories": [
+        {
+          "slug": "skincare",
+          "name": "Skincare",
+          "image": "/images/sub/skincare.webp"
+        },
+        {
+          "slug": "bath",
+          "name": "Bath",
+          "image": "/images/sub/bath.webp"
+        },
+        {
+          "slug": "fragrance",
+          "name": "Fragrance",
+          "image": "/images/sub/fragrance.webp"
+        }
+      ]
+    },
+    {
+      "slug": "gifts-crafts",
+      "name": "Gifts & Crafts",
+      "tagline": "Boxed, ribboned, handwritten",
+      "heading": "Something to arrive with",
+      "intro": "Curated boxes, carved terracotta and small wooden things with brass in the lid. Add a handwritten card at checkout and we will write it out properly.",
+      "image": "/images/category/gifts-crafts.webp",
+      "wide": "/images/category/gifts-crafts-wide.webp",
+      "featuredCollection": {
+        "title": "The Festive Edit",
+        "copy": "Boxes made for giving.",
+        "href": "/collection/festive-edit"
+      },
+      "subcategories": [
+        {
+          "slug": "gift-sets",
+          "name": "Gift Sets",
+          "image": "/images/sub/gift-sets.webp"
+        },
+        {
+          "slug": "handicrafts",
+          "name": "Handicrafts",
+          "image": "/images/sub/handicrafts.webp"
+        },
+        {
+          "slug": "keepsakes",
+          "name": "Keepsakes",
+          "image": "/images/sub/keepsakes.webp"
+        }
+      ]
+    },
+    {
+      "slug": "wedding",
+      "name": "Wedding",
+      "tagline": "Benarasi, zari and made-to-measure",
+      "heading": "For the week that takes a year",
+      "intro": "Bridal benarasi with zari through the whole pallu. A sherwani cut to measure. And the saree for the wedding you are attending rather than hosting. Fittings by appointment at Gulshan.",
+      "image": "/images/category/wedding.webp",
+      "wide": "/images/category/wedding-wide.webp",
+      "featuredCollection": {
+        "title": "Wedding Stories",
+        "copy": "The full bridal wardrobe.",
+        "href": "/collection/wedding-stories"
+      },
+      "subcategories": [
+        {
+          "slug": "bride",
+          "name": "Bride",
+          "image": "/images/sub/bride.webp"
+        },
+        {
+          "slug": "groom",
+          "name": "Groom",
+          "image": "/images/sub/groom.webp"
+        },
+        {
+          "slug": "wedding-guest",
+          "name": "Wedding Guest",
+          "image": "/images/sub/wedding-guest.webp"
+        },
+        {
+          "slug": "jewellery",
+          "name": "Jewellery",
+          "image": "/images/sub/wedding-jewellery.webp"
+        },
+        {
+          "slug": "accessories",
+          "name": "Accessories",
+          "image": "/images/sub/wedding-accessories.webp"
+        }
+      ]
+    }
+  ],
+  "collections": [
+    {
+      "slug": "festive-edit",
+      "title": "The Festive Edit",
+      "tagline": "Silk, zari, restraint",
+      "copy": "Pieces for the short season when the house is full — cut to photograph well and to sit in for four hours.",
+      "image": "/images/collection/festive-edit.webp",
+      "product_slugs": [
+        "nokshi-handloom-jamdani-saree",
+        "meher-silk-saree-with-woven-border",
+        "shubhro-chikan-kameez-set",
+        "niribili-linen-kurta",
+        "shomoy-linen-co-ord-set",
+        "himel-wool-shawl",
+        "nilaya-silk-panjabi",
+        "rudro-linen-kurta",
+        "anondo-linen-trouser",
+        "utshob-festive-gift-box"
+      ]
+    },
+    {
+      "slug": "wedding-stories",
+      "title": "Wedding Stories",
+      "tagline": "Bride, groom, and everybody watching",
+      "copy": "The full wedding wardrobe, from the benarasi to the clutch that holds the speech you are not going to read.",
+      "image": "/images/collection/wedding-stories.webp",
+      "product_slugs": [
+        "bourani-bridal-benarasi-saree",
+        "shubhodrishti-bridal-set",
+        "boron-grooms-silk-panjabi",
+        "rajbari-sherwani",
+        "utshob-guest-saree",
+        "mehendi-co-ord-set",
+        "bourani-bridal-necklace-set",
+        "boron-embroidered-clutch"
+      ]
+    },
+    {
+      "slug": "everyday-elegance",
+      "title": "Everyday Elegance",
+      "tagline": "The pieces you reach for first",
+      "copy": "Handloom kurtas, linen shirts and the plain white panjabi. The quiet two-thirds of a working wardrobe.",
+      "image": "/images/collection/everyday-elegance.webp",
+      "product_slugs": [
+        "kotha-straight-cut-kurta",
+        "tulika-block-print-kurta",
+        "niribili-linen-kurta",
+        "alpona-embroidered-kurta",
+        "shomoy-linen-co-ord-set",
+        "megh-handloom-co-ord-set",
+        "shubho-cotton-panjabi",
+        "nilaya-silk-panjabi",
+        "aashray-jacquard-panjabi",
+        "boishakh-block-print-panjabi",
+        "rudro-linen-kurta",
+        "protik-handloom-kurta",
+        "din-cotton-shirt",
+        "batash-linen-shirt",
+        "shorol-tapered-trouser",
+        "anondo-linen-trouser"
+      ]
+    },
+    {
+      "slug": "handcrafted-home",
+      "title": "Handcrafted Home",
+      "tagline": "Clay, cane and quilted cotton",
+      "copy": "Kantha stitched over six weeks, stoneware thrown on a kick wheel, bamboo split and woven by hand.",
+      "image": "/images/collection/handcrafted-home.webp",
+      "product_slugs": [
+        "nokshi-kantha-bedcover",
+        "shitol-cotton-duvet-set",
+        "mati-stoneware-dinner-plate",
+        "bhorer-ceramic-serving-bowl",
+        "alpona-brass-wall-piece",
+        "kumor-terracotta-vase",
+        "kantha-embroidered-cushion",
+        "taant-woven-cushion",
+        "bansh-woven-basket",
+        "golpo-seagrass-hamper",
+        "jonaki-table-lamp",
+        "prodip-ceramic-lamp"
+      ]
+    }
+  ],
+  "heroSlides": [
+    {
+      "id": "festive",
+      "eyebrow": "Autumn / Winter",
+      "title": "The Festive Edit",
+      "subtitle": "Timeless craftsmanship for modern celebrations",
+      "copy": "Silk, zari and a great deal of restraint — the pieces we make for the three weeks of the year when everybody is looking.",
+      "cta": {
+        "label": "Explore the edit",
+        "href": "/collection/festive-edit"
+      },
+      "cta2": {
+        "label": "Shop women",
+        "href": "/women"
+      },
+      "image": "/images/hero/hero-festive.webp",
+      "mobile": "/images/hero/hero-festive-m.webp",
+      "align": "left",
+      "alt": "A lit ogee arch framed by deep madder and copper drapery, in the SARAI festive palette"
+    },
+    {
+      "id": "new-season",
+      "eyebrow": "New Season",
+      "title": "Tradition Reimagined",
+      "subtitle": "Handloom cloth, cut for the way you live now",
+      "copy": "Jamdani from Rupganj, linen washed before it is cut, and silhouettes that move. Nothing borrowed, nothing precious.",
+      "cta": {
+        "label": "Shop new arrivals",
+        "href": "/new-arrivals"
+      },
+      "cta2": {
+        "label": "Shop men",
+        "href": "/men"
+      },
+      "image": "/images/hero/hero-season.webp",
+      "mobile": "/images/hero/hero-season-m.webp",
+      "align": "left",
+      "alt": "A pale architectural niche washed in cool light, framed by indigo and teal drapery"
+    },
+    {
+      "id": "wedding",
+      "eyebrow": "Bridal",
+      "title": "Wedding Collection",
+      "subtitle": "Crafted for unforgettable moments",
+      "copy": "Benarasi worked with zari across the full pallu, sherwanis cut to measure, and a collar set stone by stone.",
+      "cta": {
+        "label": "Enter the wedding house",
+        "href": "/wedding"
+      },
+      "cta2": {
+        "label": "Book a fitting",
+        "href": "/stores"
+      },
+      "image": "/images/hero/hero-wedding.webp",
+      "mobile": "/images/hero/hero-wedding-m.webp",
+      "align": "center",
+      "alt": "A golden arch of light framed by plum and gold bridal drapery"
+    }
+  ],
+  "journal": [
+    {
+      "slug": "eleven-days-on-the-loom",
+      "kind": "Craft",
+      "title": "Eleven days on the loom",
+      "excerpt": "Jamdani is built motif by motif, with no shuttle and no shortcut. We spent a week in Rupganj watching a single saree come off the beam.",
+      "image": "/images/journal/craft.webp",
+      "date": "12 September 2026",
+      "readTime": "6 min",
+      "body": [
+        "A jamdani loom has no pattern card and no punched tape. The weaver keeps the motif in their head and lifts the warp threads by hand, one group at a time, feeding a supplementary weft through the gap with a fine bamboo needle. The pattern is not printed on the cloth; it is part of the cloth.",
+        "The economics are unforgiving. A length that takes eleven days at the loom competes on a shelf with a length that took eleven minutes on a power loom. The difference is visible if you turn the cloth over — a jamdani has no reverse side, because the motif is woven in rather than floated across.",
+        "We buy at a rate set with the weaving cluster rather than at auction, and we publish the number of days each piece took on its product page. It is the only figure that explains the price."
+      ]
+    },
+    {
+      "slug": "how-to-wear-a-saree-badly",
+      "kind": "Style",
+      "title": "How to wear a saree badly",
+      "excerpt": "Six yards, no buttons, and a great deal of received wisdom. A short argument in favour of getting the pleats slightly wrong.",
+      "image": "/images/journal/style.webp",
+      "date": "28 August 2026",
+      "readTime": "4 min",
+      "body": [
+        "There is a version of the saree that lives in a glass case: pleats counted, pallu pinned flat, the whole thing arranged into stillness. It photographs well and it is almost impossible to move in.",
+        "The saree most people actually wear is looser. The pleats are approximate. The pallu gets thrown over a shoulder when the hands are needed. It creases across the lap by noon, and it looks better for it, because a saree is a length of cloth responding to a body rather than a garment holding one in place.",
+        "Our advice, for what it is worth: buy the cloth you like the feel of, learn one drape properly, and stop counting."
+      ]
+    },
+    {
+      "slug": "the-colour-of-iron",
+      "kind": "Culture",
+      "title": "The colour of iron",
+      "excerpt": "Before synthetic dye there was madder, indigo, myrobalan and rust. What natural dyeing actually asks of a workshop — and of the person wearing it.",
+      "image": "/images/journal/culture.webp",
+      "date": "9 August 2026",
+      "readTime": "7 min",
+      "body": [
+        "Natural dyeing is chemistry with a long feedback loop. Madder gives red in hard water and something closer to brick in soft. Iron shifts everything toward grey. Indigo is not even a dye until it has been reduced in a vat and re-oxidised on the cloth, which is why the fabric comes out of the bath green and turns blue in the air.",
+        "The practical consequence is variation. Two lengths dyed a fortnight apart will not match exactly, and a batch dyed in January will differ from the same recipe in June. Workshops that need perfect consistency use synthetics, and there is no shame in that.",
+        "What you get in exchange is depth and a colour that ages rather than fades — madder mellows toward terracotta, indigo lightens along the fold lines. If you want your clothes to look the same in five years, this is the wrong shelf."
+      ]
+    }
+  ],
+  "stores": [
+    {
+      "id": "gulshan",
+      "name": "SARAI Gulshan",
+      "city": "Dhaka",
+      "address": "House 42, Road 11, Gulshan 1, Dhaka 1212",
+      "phone": "+880 9611 000 101",
+      "hours": "Sat–Thu 10:00–20:00 · Fri 15:00–20:00",
+      "services": [
+        "Bridal fittings",
+        "Alterations",
+        "Gift wrapping"
+      ],
+      "flagship": true
+    },
+    {
+      "id": "dhanmondi",
+      "name": "SARAI Dhanmondi",
+      "city": "Dhaka",
+      "address": "Level 3, Plot 27, Satmasjid Road, Dhanmondi, Dhaka 1209",
+      "phone": "+880 9611 000 102",
+      "hours": "Sat–Thu 10:00–20:30 · Fri 15:00–20:30",
+      "services": [
+        "Alterations",
+        "Gift wrapping"
+      ]
+    },
+    {
+      "id": "uttara",
+      "name": "SARAI Uttara",
+      "city": "Dhaka",
+      "address": "Sector 7, Garib-e-Newaz Avenue, Uttara, Dhaka 1230",
+      "phone": "+880 9611 000 103",
+      "hours": "Sat–Thu 10:00–20:00 · Fri closed",
+      "services": [
+        "Gift wrapping"
+      ]
+    },
+    {
+      "id": "agrabad",
+      "name": "SARAI Agrabad",
+      "city": "Chattogram",
+      "address": "Sheikh Mujib Road, Agrabad C/A, Chattogram 4100",
+      "phone": "+880 9611 000 201",
+      "hours": "Sat–Thu 10:00–20:00 · Fri 15:00–20:00",
+      "services": [
+        "Alterations",
+        "Gift wrapping"
+      ]
+    },
+    {
+      "id": "zindabazar",
+      "name": "SARAI Zindabazar",
+      "city": "Sylhet",
+      "address": "Zindabazar Main Road, Sylhet 3100",
+      "phone": "+880 9611 000 301",
+      "hours": "Sat–Thu 10:30–20:00 · Fri 15:30–20:00",
+      "services": [
+        "Gift wrapping"
+      ]
+    },
+    {
+      "id": "khulna",
+      "name": "SARAI Khulna",
+      "city": "Khulna",
+      "address": "Shib Bari Circle, Khulna 9100",
+      "phone": "+880 9611 000 401",
+      "hours": "Sat–Thu 10:00–19:30 · Fri closed",
+      "services": [
+        "Gift wrapping"
+      ]
+    },
+    {
+      "id": "rajshahi",
+      "name": "SARAI Rajshahi",
+      "city": "Rajshahi",
+      "address": "Greater Road, Shaheb Bazar, Rajshahi 6100",
+      "phone": "+880 9611 000 501",
+      "hours": "Sat–Thu 10:00–19:30 · Fri closed",
+      "services": [
+        "Alterations"
+      ]
+    }
+  ]
+}
