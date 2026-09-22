@@ -1692,18 +1692,274 @@
 
 
 
-    {{-- =========================================================
-        PAGINATION
-    ========================================================== --}}
+    {{-- =============================================================
+        PREMIUM ADMIN PAGINATION
+    ============================================================== --}}
     @if($products->hasPages())
 
+        <div
+            class="
+                mt-5
+                flex
+                flex-col
+                gap-4
+                rounded-xl
+                border
+                border-slate-200
+                bg-white
+                px-5
+                py-4
+                shadow-sm
 
-        <div class="pagination">
+                sm:flex-row
+                sm:items-center
+                sm:justify-between
+            "
+        >
 
-            {{ $products->links() }}
+            {{-- =====================================================
+                RESULT INFO
+            ====================================================== --}}
+            <div class="text-xs text-slate-500">
+
+                Showing
+
+                <span class="font-semibold text-slate-800">
+                    {{ $products->firstItem() }}
+                </span>
+
+                to
+
+                <span class="font-semibold text-slate-800">
+                    {{ $products->lastItem() }}
+                </span>
+
+                of
+
+                <span class="font-semibold text-slate-800">
+                    {{ $products->total() }}
+                </span>
+
+                products
+
+            </div>
+
+
+
+            {{-- =====================================================
+                PAGINATION BUTTONS
+            ====================================================== --}}
+            <nav
+                class="
+                    flex
+                    flex-wrap
+                    items-center
+                    gap-1
+                "
+                aria-label="Product pagination"
+            >
+
+
+                {{-- =================================================
+                    PREVIOUS
+                ================================================== --}}
+                @if($products->onFirstPage())
+
+                    <span
+                        class="
+                            inline-flex
+                            h-9
+                            min-w-[36px]
+                            cursor-not-allowed
+                            items-center
+                            justify-center
+                            rounded-lg
+                            border
+                            border-slate-200
+                            bg-slate-50
+                            px-3
+                            text-xs
+                            font-semibold
+                            text-slate-300
+                        "
+                    >
+
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </span>
+
+                @else
+
+                    <a
+                        href="{{ $products->previousPageUrl() }}"
+                        class="
+                            inline-flex
+                            h-9
+                            min-w-[36px]
+                            items-center
+                            justify-center
+                            rounded-lg
+                            border
+                            border-slate-200
+                            bg-white
+                            px-3
+                            text-xs
+                            font-semibold
+                            text-slate-600
+                            transition
+
+                            hover:border-copper-300
+                            hover:bg-orange-50
+                            hover:text-copper-600
+                        "
+                        rel="prev"
+                        aria-label="Previous page"
+                    >
+
+                        <i class="fa-solid fa-chevron-left"></i>
+
+                    </a>
+
+                @endif
+
+
+
+                {{-- =================================================
+                    PAGE NUMBERS
+                ================================================== --}}
+                @foreach($products->getUrlRange(
+                    max(1, $products->currentPage() - 2),
+                    min($products->lastPage(), $products->currentPage() + 2)
+                ) as $page => $url)
+
+                    @if($page === $products->currentPage())
+
+                        <span
+                            class="
+                                inline-flex
+                                h-9
+                                min-w-[36px]
+                                items-center
+                                justify-center
+                                rounded-lg
+                                border
+                                border-forest
+                                bg-forest
+                                px-3
+                                text-xs
+                                font-semibold
+                                text-white
+                                shadow-sm
+                            "
+                            aria-current="page"
+                        >
+
+                            {{ $page }}
+
+                        </span>
+
+                    @else
+
+                        <a
+                            href="{{ $url }}"
+                            class="
+                                inline-flex
+                                h-9
+                                min-w-[36px]
+                                items-center
+                                justify-center
+                                rounded-lg
+                                border
+                                border-slate-200
+                                bg-white
+                                px-3
+                                text-xs
+                                font-semibold
+                                text-slate-600
+                                transition
+
+                                hover:border-copper-300
+                                hover:bg-orange-50
+                                hover:text-copper-600
+                            "
+                        >
+
+                            {{ $page }}
+
+                        </a>
+
+                    @endif
+
+                @endforeach
+
+
+
+                {{-- =================================================
+                    NEXT
+                ================================================== --}}
+                @if($products->hasMorePages())
+
+                    <a
+                        href="{{ $products->nextPageUrl() }}"
+                        class="
+                            inline-flex
+                            h-9
+                            min-w-[36px]
+                            items-center
+                            justify-center
+                            rounded-lg
+                            border
+                            border-slate-200
+                            bg-white
+                            px-3
+                            text-xs
+                            font-semibold
+                            text-slate-600
+                            transition
+
+                            hover:border-copper-300
+                            hover:bg-orange-50
+                            hover:text-copper-600
+                        "
+                        rel="next"
+                        aria-label="Next page"
+                    >
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </a>
+
+                @else
+
+                    <span
+                        class="
+                            inline-flex
+                            h-9
+                            min-w-[36px]
+                            cursor-not-allowed
+                            items-center
+                            justify-center
+                            rounded-lg
+                            border
+                            border-slate-200
+                            bg-slate-50
+                            px-3
+                            text-xs
+                            font-semibold
+                            text-slate-300
+                        "
+                    >
+
+                        <i class="fa-solid fa-chevron-right"></i>
+
+                    </span>
+
+                @endif
+
+
+            </nav>
 
         </div>
-
 
     @endif
 

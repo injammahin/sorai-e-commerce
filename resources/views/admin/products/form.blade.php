@@ -920,6 +920,7 @@
                             border-slate-100
                             px-5
                             py-4
+
                             sm:flex-row
                             sm:items-center
                             sm:justify-between
@@ -941,9 +942,7 @@
                                     text-violet-600
                                 "
                             >
-
                                 <i class="fa-regular fa-images"></i>
-
                             </span>
 
 
@@ -953,8 +952,9 @@
                                     Product images
                                 </h3>
 
-                                <p class="text-xs text-slate-500 mt-0.5">
-                                    Upload up to 6 JPG, PNG or WebP images, maximum 4 MB each.
+                                <p class="mt-0.5 text-xs text-slate-500">
+                                    Add images one at a time or select multiple images together.
+                                    Maximum 6 images per product.
                                 </p>
 
                             </div>
@@ -976,13 +976,11 @@
                                 text-slate-600
                             "
                         >
-
                             <span id="image-count">
                                 {{ $product->exists ? $product->images->count() : 0 }}
                             </span>
 
                             /6 images
-
                         </span>
 
                     </div>
@@ -991,8 +989,9 @@
 
                     <div class="p-5 sm:p-6">
 
-
-                        {{-- EXISTING IMAGES --}}
+                        {{-- =====================================================
+                            EXISTING IMAGES
+                        ====================================================== --}}
                         @if(
                             $product->exists
                             &&
@@ -1001,10 +1000,11 @@
 
                             <div
                                 class="
-                                    mb-5
+                                    mb-6
                                     grid
                                     grid-cols-2
                                     gap-3
+
                                     sm:grid-cols-3
                                     lg:grid-cols-4
                                     xl:grid-cols-5
@@ -1026,16 +1026,17 @@
                                     >
 
                                         <img
+                                            src="{{ asset($image->path) }}"
+                                            alt="{{ $image->alt_text ?: $product->name }}"
                                             class="
                                                 aspect-[4/5]
                                                 w-full
                                                 object-cover
                                                 transition
                                                 duration-300
+
                                                 group-hover:scale-[1.03]
                                             "
-                                            src="{{ asset($image->path) }}"
-                                            alt="{{ $image->alt_text ?: $product->name }}"
                                         >
 
 
@@ -1049,10 +1050,10 @@
                                                 justify-between
                                                 gap-2
                                                 bg-gradient-to-t
-                                                from-black/70
+                                                from-black/75
                                                 to-transparent
                                                 p-2
-                                                pt-8
+                                                pt-10
                                                 text-white
                                             "
                                         >
@@ -1062,7 +1063,7 @@
                                                 <span
                                                     class="
                                                         rounded-full
-                                                        bg-white/90
+                                                        bg-white
                                                         px-2
                                                         py-1
                                                         text-[9px]
@@ -1096,19 +1097,12 @@
                                                     text-white
                                                     shadow
                                                     transition
+
                                                     hover:bg-red-700
                                                 "
-                                                title="Remove image"
+                                                title="Remove existing image"
                                             >
-
-                                                <i
-                                                    class="
-                                                        fa-solid
-                                                        fa-trash-can
-                                                        text-xs
-                                                    "
-                                                ></i>
-
+                                                <i class="fa-solid fa-trash-can text-xs"></i>
                                             </button>
 
                                         </div>
@@ -1123,23 +1117,23 @@
 
 
 
-                        {{-- IMAGE UPLOAD --}}
-                        <label class="block">
-
-                            <span class="admin-label">
-                                Upload product images
-                            </span>
-
+                        {{-- =====================================================
+                            NEW IMAGE UPLOADER
+                        ====================================================== --}}
+                        <div>
 
                             <div
+                                id="product-image-dropzone"
                                 class="
+                                    relative
                                     rounded-xl
                                     border-2
                                     border-dashed
                                     border-slate-200
                                     bg-slate-50
-                                    p-5
+                                    p-6
                                     transition
+
                                     hover:border-copper-300
                                     hover:bg-orange-50/30
                                 "
@@ -1168,60 +1162,54 @@
                                             shadow-sm
                                         "
                                     >
-
                                         <i class="fa-solid fa-cloud-arrow-up"></i>
-
                                     </span>
 
 
-                                    <p class="text-sm font-medium text-slate-800">
-                                        Choose product images
+                                    <p class="text-sm font-semibold text-slate-800">
+                                        Add product images
                                     </p>
 
 
-                                    <p class="mt-1 text-xs text-slate-500">
-                                        You can select multiple images at once.
+                                    <p class="mt-1 max-w-md text-xs leading-5 text-slate-500">
+                                        Select one image now and more later, or select several at once.
+                                        Previous selections will stay selected.
                                     </p>
+
+
+                                    <label
+                                        for="product-images"
+                                        class="
+                                            mt-4
+                                            inline-flex
+                                            cursor-pointer
+                                            items-center
+                                            gap-2
+                                            rounded-lg
+                                            bg-forest
+                                            px-4
+                                            py-2.5
+                                            text-xs
+                                            font-semibold
+                                            text-white
+                                            transition
+
+                                            hover:bg-copper-500
+                                        "
+                                    >
+                                        <i class="fa-solid fa-plus"></i>
+
+                                        Choose images
+                                    </label>
 
 
                                     <input
                                         id="product-images"
-                                        class="
-                                            mt-4
-                                            block
-                                            w-full
-                                            max-w-xl
-                                            cursor-pointer
-                                            rounded-lg
-                                            border
-                                            border-slate-200
-                                            bg-white
-                                            text-xs
-                                            text-slate-500
-
-                                            file:mr-4
-                                            file:border-0
-                                            file:bg-forest
-                                            file:px-4
-                                            file:py-2.5
-                                            file:text-xs
-                                            file:font-semibold
-                                            file:text-white
-
-                                            hover:file:bg-copper-500
-
-                                            @error('images')
-                                                !border-red-400
-                                            @enderror
-
-                                            @error('images.*')
-                                                !border-red-400
-                                            @enderror
-                                        "
                                         type="file"
                                         name="images[]"
                                         accept="image/jpeg,image/png,image/webp"
                                         multiple
+                                        class="hidden"
                                         data-existing-images="{{
                                             $product->exists
                                                 ? $product->images->count()
@@ -1229,55 +1217,136 @@
                                         }}"
                                     >
 
+
+                                    <p
+                                        id="image-space-text"
+                                        class="
+                                            mt-3
+                                            text-[11px]
+                                            text-slate-400
+                                        "
+                                    ></p>
+
                                 </div>
 
                             </div>
 
-                        </label>
 
 
-                        <p
-                            id="image-limit-message"
-                            class="
-                                mt-2
-                                hidden
-                                text-xs
-                                font-medium
-                                text-red-600
-                            "
-                        ></p>
+                            {{-- ERROR --}}
+                            <div
+                                id="image-limit-message"
+                                class="
+                                    mt-3
+                                    hidden
+                                    rounded-lg
+                                    border
+                                    border-red-200
+                                    bg-red-50
+                                    px-3
+                                    py-2
+                                    text-xs
+                                    font-medium
+                                    text-red-700
+                                "
+                            ></div>
 
 
-                        @error('images')
+                            @error('images')
 
-                            <span class="error">
-                                {{ $message }}
-                            </span>
+                                <span class="mt-2 block text-xs text-red-600">
+                                    {{ $message }}
+                                </span>
 
-                        @enderror
-
-
-                        @error('images.*')
-
-                            <span class="error">
-                                {{ $message }}
-                            </span>
-
-                        @enderror
+                            @enderror
 
 
-                        <div
-                            id="new-image-preview"
-                            class="
-                                mt-4
-                                hidden
-                                grid-cols-2
-                                gap-3
-                                sm:grid-cols-3
-                                lg:grid-cols-4
-                                xl:grid-cols-5
-                            "
-                        ></div>
+                            @error('images.*')
+
+                                <span class="mt-2 block text-xs text-red-600">
+                                    {{ $message }}
+                                </span>
+
+                            @enderror
+
+
+
+                            {{-- =================================================
+                                NEW IMAGE PREVIEWS
+                            ================================================== --}}
+                            <div
+                                id="new-image-preview-wrapper"
+                                class="mt-5 hidden"
+                            >
+
+                                <div
+                                    class="
+                                        mb-3
+                                        flex
+                                        items-center
+                                        justify-between
+                                        gap-3
+                                    "
+                                >
+
+                                    <div>
+
+                                        <p class="text-sm font-semibold text-slate-800">
+                                            New images
+                                        </p>
+
+                                        <p class="mt-0.5 text-[11px] text-slate-400">
+                                            These images will be uploaded when you save the product.
+                                        </p>
+
+                                    </div>
+
+
+                                    <button
+                                        id="clear-new-images"
+                                        type="button"
+                                        class="
+                                            inline-flex
+                                            items-center
+                                            gap-1.5
+                                            rounded-lg
+                                            border
+                                            border-red-200
+                                            bg-red-50
+                                            px-3
+                                            py-2
+                                            text-[11px]
+                                            font-semibold
+                                            text-red-600
+                                            transition
+
+                                            hover:bg-red-100
+                                        "
+                                    >
+                                        <i class="fa-solid fa-xmark"></i>
+
+                                        Clear new images
+                                    </button>
+
+                                </div>
+
+
+                                <div
+                                    id="new-image-preview"
+                                    class="
+                                        grid
+                                        grid-cols-2
+                                        gap-3
+
+                                        sm:grid-cols-3
+                                        lg:grid-cols-4
+                                        xl:grid-cols-5
+                                    "
+                                ></div>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
@@ -2392,486 +2461,1664 @@
 
 <script>
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener(
+    'DOMContentLoaded',
+    function () {
 
 
-    /* =========================================================
-        AUTO SLUG
-    ========================================================== */
+        /* =========================================================
+            AUTO SLUG
+        ========================================================== */
 
-    const productExists = @json($product->exists);
-
-    const nameInput =
-        document.getElementById('product-name');
-
-    const slugInput =
-        document.getElementById('product-slug');
+        const productExists =
+            @json($product->exists);
 
 
-    let slugManuallyChanged =
-        productExists ||
-        Boolean(slugInput?.value);
-
-
-    const makeSlug = (value) => {
-
-        return value
-
-            .toString()
-
-            .normalize('NFKD')
-
-            .replace(
-                /[\u0300-\u036f]/g,
-                ''
-            )
-
-            .toLowerCase()
-
-            .trim()
-
-            .replace(
-                /[^a-z0-9]+/g,
-                '-'
-            )
-
-            .replace(
-                /^-+|-+$/g,
-                ''
+        const nameInput =
+            document.getElementById(
+                'product-name'
             );
 
-    };
+
+        const slugInput =
+            document.getElementById(
+                'product-slug'
+            );
 
 
-    slugInput?.addEventListener(
-        'input',
-        function () {
+        let slugManuallyChanged =
+            productExists
+            ||
+            Boolean(
+                slugInput?.value
+            );
 
-            slugManuallyChanged =
-                this.value.trim() !== '';
 
+        function makeSlug(value)
+        {
+            return value
+                .toString()
+                .normalize('NFKD')
+                .replace(
+                    /[\u0300-\u036f]/g,
+                    ''
+                )
+                .toLowerCase()
+                .trim()
+                .replace(
+                    /[^a-z0-9]+/g,
+                    '-'
+                )
+                .replace(
+                    /^-+|-+$/g,
+                    ''
+                );
         }
-    );
 
 
-    nameInput?.addEventListener(
-        'input',
-        function () {
+        slugInput?.addEventListener(
+            'input',
+            function () {
 
-            if (
-                !slugManuallyChanged
-                &&
-                slugInput
-            ) {
-
-                slugInput.value =
-                    makeSlug(this.value);
+                slugManuallyChanged =
+                    this.value.trim()
+                    !==
+                    '';
 
             }
-
-        }
-    );
+        );
 
 
+        nameInput?.addEventListener(
+            'input',
+            function () {
 
-    /* =========================================================
-        CATEGORY / SUBCATEGORY
-    ========================================================== */
+                if (
+                    !slugManuallyChanged
+                    &&
+                    slugInput
+                ) {
 
-    const categorySelect =
-        document.getElementById('category-id');
-
-    const subcategorySelect =
-        document.getElementById('subcategory-id');
-
-
-    const filterSubcategories = () => {
-
-        if (
-            !categorySelect
-            ||
-            !subcategorySelect
-        ) {
-
-            return;
-
-        }
-
-
-        const selectedCategory =
-            categorySelect.value;
-
-
-        const currentValue =
-            subcategorySelect.value;
-
-
-        let currentStillVisible =
-            currentValue === '';
-
-
-        Array
-            .from(subcategorySelect.options)
-            .forEach(
-                (option, index) => {
-
-                    if (index === 0) {
-
-                        option.hidden = false;
-
-                        option.disabled = false;
-
-                        return;
-
-                    }
-
-
-                    const visible =
-
-                        selectedCategory !== ''
-
-                        &&
-
-                        option.dataset.parent ===
-                        selectedCategory;
-
-
-                    option.hidden =
-                        !visible;
-
-
-                    option.disabled =
-                        !visible;
-
-
-                    if (
-                        visible
-                        &&
-                        option.value === currentValue
-                    ) {
-
-                        currentStillVisible = true;
-
-                    }
+                    slugInput.value =
+                        makeSlug(
+                            this.value
+                        );
 
                 }
+
+            }
+        );
+
+
+
+        /* =========================================================
+            CATEGORY / SUBCATEGORY
+        ========================================================== */
+
+        const categorySelect =
+            document.getElementById(
+                'category-id'
             );
 
 
-        if (!currentStillVisible) {
-
-            subcategorySelect.value = '';
-
-        }
-
-    };
-
-
-    categorySelect?.addEventListener(
-        'change',
-        filterSubcategories
-    );
-
-
-    filterSubcategories();
-
-
-
-    /* =========================================================
-        CHARACTER COUNTERS
-    ========================================================== */
-
-    const bindCounter = (
-        inputId,
-        counterId,
-        max
-    ) => {
-
-        const input =
-            document.getElementById(inputId);
-
-        const counter =
-            document.getElementById(counterId);
-
-
-        if (
-            !input
-            ||
-            !counter
-        ) {
-
-            return;
-
-        }
-
-
-        const update = () => {
-
-            counter.textContent =
-                `${input.value.length} / ${max}`;
-
-        };
-
-
-        input.addEventListener(
-            'input',
-            update
-        );
-
-
-        update();
-
-    };
-
-
-    bindCounter(
-        'short-description',
-        'short-description-count',
-        500
-    );
-
-
-    bindCounter(
-        'meta-title',
-        'meta-title-count',
-        70
-    );
-
-
-    bindCounter(
-        'meta-description',
-        'meta-description-count',
-        170
-    );
-
-
-
-    /* =========================================================
-        IMAGE PREVIEW / IMAGE LIMIT
-    ========================================================== */
-
-    const imageInput =
-        document.getElementById('product-images');
-
-
-    const imagePreview =
-        document.getElementById('new-image-preview');
-
-
-    const imageLimitMessage =
-        document.getElementById('image-limit-message');
-
-
-    const imageCount =
-        document.getElementById('image-count');
-
-
-
-    const clearPreview = () => {
-
-        if (!imagePreview) {
-
-            return;
-
-        }
-
-
-        imagePreview.innerHTML = '';
-
-
-        imagePreview.classList.add(
-            'hidden'
-        );
-
-
-        imagePreview.classList.remove(
-            'grid'
-        );
-
-    };
-
-
-
-    imageInput?.addEventListener(
-        'change',
-        function () {
-
-            clearPreview();
-
-
-            if (imageLimitMessage) {
-
-                imageLimitMessage.textContent = '';
-
-                imageLimitMessage.classList.add(
-                    'hidden'
-                );
-
+        const subcategorySelect =
+            document.getElementById(
+                'subcategory-id'
+            );
+
+
+        function filterSubcategories()
+        {
+            if (
+                !categorySelect
+                ||
+                !subcategorySelect
+            ) {
+                return;
             }
 
 
-            const existingImages =
+            const selectedCategory =
+                categorySelect.value;
+
+
+            const currentValue =
+                subcategorySelect.value;
+
+
+            let currentStillVisible =
+                currentValue === '';
+
+
+            Array
+                .from(
+                    subcategorySelect.options
+                )
+                .forEach(
+                    function (
+                        option,
+                        index
+                    ) {
+
+                        /*
+                        |--------------------------------------------------------------------------
+                        | Keep the first "None" option visible
+                        |--------------------------------------------------------------------------
+                        */
+
+                        if (index === 0) {
+
+                            option.hidden =
+                                false;
+
+
+                            option.disabled =
+                                false;
+
+
+                            return;
+
+                        }
+
+
+                        const visible =
+                            selectedCategory
+                            !==
+                            ''
+                            &&
+                            option.dataset.parent
+                            ===
+                            selectedCategory;
+
+
+                        option.hidden =
+                            !visible;
+
+
+                        option.disabled =
+                            !visible;
+
+
+                        if (
+                            visible
+                            &&
+                            option.value
+                            ===
+                            currentValue
+                        ) {
+
+                            currentStillVisible =
+                                true;
+
+                        }
+
+                    }
+                );
+
+
+            /*
+            |--------------------------------------------------------------------------
+            | Reset invalid selected subcategory
+            |--------------------------------------------------------------------------
+            */
+
+            if (!currentStillVisible) {
+
+                subcategorySelect.value =
+                    '';
+
+            }
+        }
+
+
+        categorySelect?.addEventListener(
+            'change',
+            filterSubcategories
+        );
+
+
+        filterSubcategories();
+
+
+
+        /* =========================================================
+            CHARACTER COUNTERS
+        ========================================================== */
+
+        function bindCounter(
+            inputId,
+            counterId,
+            max
+        ) {
+
+            const input =
+                document.getElementById(
+                    inputId
+                );
+
+
+            const counter =
+                document.getElementById(
+                    counterId
+                );
+
+
+            if (
+                !input
+                ||
+                !counter
+            ) {
+                return;
+            }
+
+
+            function update()
+            {
+                counter.textContent =
+                    `${input.value.length} / ${max}`;
+            }
+
+
+            input.addEventListener(
+                'input',
+                update
+            );
+
+
+            update();
+        }
+
+
+        bindCounter(
+            'short-description',
+            'short-description-count',
+            500
+        );
+
+
+        bindCounter(
+            'meta-title',
+            'meta-title-count',
+            70
+        );
+
+
+        bindCounter(
+            'meta-description',
+            'meta-description-count',
+            170
+        );
+
+
+
+        /* =========================================================
+            PRODUCT IMAGE MANAGER
+
+            Supports:
+            - Select one image
+            - Select another image later
+            - Select multiple images together
+            - Previous selections stay selected
+            - Remove individual new images
+            - Clear all new images
+            - Drag and drop
+            - Maximum 6 images total
+        ========================================================== */
+
+        const imageInput =
+            document.getElementById(
+                'product-images'
+            );
+
+
+        const previewWrapper =
+            document.getElementById(
+                'new-image-preview-wrapper'
+            );
+
+
+        const previewContainer =
+            document.getElementById(
+                'new-image-preview'
+            );
+
+
+        const imageLimitMessage =
+            document.getElementById(
+                'image-limit-message'
+            );
+
+
+        const imageCount =
+            document.getElementById(
+                'image-count'
+            );
+
+
+        const imageSpaceText =
+            document.getElementById(
+                'image-space-text'
+            );
+
+
+        const clearNewImagesButton =
+            document.getElementById(
+                'clear-new-images'
+            );
+
+
+        const dropzone =
+            document.getElementById(
+                'product-image-dropzone'
+            );
+
+
+        const productForm =
+            document.getElementById(
+                'product-form'
+            );
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Only initialize image manager when the image input exists
+        |--------------------------------------------------------------------------
+        */
+
+        if (imageInput) {
+
+
+            /*
+            |--------------------------------------------------------------------------
+            | Configuration
+            |--------------------------------------------------------------------------
+            */
+
+            const MAX_IMAGES =
+                6;
+
+
+            const MAX_FILE_SIZE =
+                4 * 1024 * 1024;
+
+
+            const ALLOWED_TYPES = [
+                'image/jpeg',
+                'image/png',
+                'image/webp'
+            ];
+
+
+
+            /*
+            |--------------------------------------------------------------------------
+            | Images that already exist in database
+            |--------------------------------------------------------------------------
+            */
+
+            const existingImageCount =
                 Number(
-                    this.dataset.existingImages
+                    imageInput.dataset.existingImages
                     ||
                     0
                 );
 
 
-            const selectedFiles =
-                Array.from(
-                    this.files
-                    ||
-                    []
+
+            /*
+            |--------------------------------------------------------------------------
+            | New files selected during this browser session
+            |--------------------------------------------------------------------------
+            |
+            | This array is the important part.
+            |
+            | Normal <input type="file"> behavior replaces previous files
+            | whenever the picker is opened again.
+            |
+            | We keep every selection here and rebuild input.files later.
+            |--------------------------------------------------------------------------
+            */
+
+            let selectedFiles =
+                [];
+
+
+
+            /*
+            |--------------------------------------------------------------------------
+            | Store generated preview URLs
+            |--------------------------------------------------------------------------
+            */
+
+            const previewUrls =
+                new Map();
+
+
+
+            /* =====================================================
+                CREATE UNIQUE FILE KEY
+            ====================================================== */
+
+            function getFileKey(file)
+            {
+                return [
+                    file.name,
+                    file.size,
+                    file.lastModified
+                ].join(
+                    '__'
                 );
-
-
-            const totalImages =
-                existingImages
-                +
-                selectedFiles.length;
+            }
 
 
 
-            /* -----------------------------------------
-                Maximum six product images
-            ----------------------------------------- */
+            /* =====================================================
+                ESCAPE HTML
+            ====================================================== */
 
-            if (totalImages > 6) {
-
-                if (imageLimitMessage) {
-
-                    imageLimitMessage.textContent =
-
-                        `You can upload only ${
-                            Math.max(
-                                0,
-                                6 - existingImages
-                            )
-                        } more image(s).`;
-
-
-                    imageLimitMessage.classList.remove(
-                        'hidden'
+            function escapeHtml(value)
+            {
+                return String(
+                    value
+                )
+                    .replaceAll(
+                        '&',
+                        '&amp;'
+                    )
+                    .replaceAll(
+                        '<',
+                        '&lt;'
+                    )
+                    .replaceAll(
+                        '>',
+                        '&gt;'
+                    )
+                    .replaceAll(
+                        '"',
+                        '&quot;'
+                    )
+                    .replaceAll(
+                        "'",
+                        '&#039;'
                     );
+            }
+
+
+
+            /* =====================================================
+                FORMAT FILE SIZE
+            ====================================================== */
+
+            function formatFileSize(bytes)
+            {
+                if (
+                    bytes
+                    <
+                    1024
+                ) {
+
+                    return `${bytes} B`;
 
                 }
 
 
-                this.value = '';
+                if (
+                    bytes
+                    <
+                    1024 * 1024
+                ) {
 
+                    return `${
+                        (
+                            bytes
+                            /
+                            1024
+                        ).toFixed(1)
+                    } KB`;
+
+                }
+
+
+                return `${
+                    (
+                        bytes
+                        /
+                        (
+                            1024
+                            *
+                            1024
+                        )
+                    ).toFixed(1)
+                } MB`;
+            }
+
+
+
+            /* =====================================================
+                SHOW IMAGE ERROR
+            ====================================================== */
+
+            function showImageError(message)
+            {
+                if (!imageLimitMessage) {
+                    return;
+                }
+
+
+                imageLimitMessage.textContent =
+                    message;
+
+
+                imageLimitMessage.classList.remove(
+                    'hidden'
+                );
+            }
+
+
+
+            /* =====================================================
+                HIDE IMAGE ERROR
+            ====================================================== */
+
+            function hideImageError()
+            {
+                if (!imageLimitMessage) {
+                    return;
+                }
+
+
+                imageLimitMessage.textContent =
+                    '';
+
+
+                imageLimitMessage.classList.add(
+                    'hidden'
+                );
+            }
+
+
+
+            /* =====================================================
+                VALIDATE IMAGE
+            ====================================================== */
+
+            function validateImage(file)
+            {
+                /*
+                |--------------------------------------------------------------------------
+                | MIME type
+                |--------------------------------------------------------------------------
+                */
+
+                if (
+                    !ALLOWED_TYPES.includes(
+                        file.type
+                    )
+                ) {
+
+                    return {
+                        valid: false,
+
+                        message:
+                            `"${file.name}" must be a JPG, PNG or WebP image.`
+                    };
+
+                }
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | Maximum size: 4 MB
+                |--------------------------------------------------------------------------
+                */
+
+                if (
+                    file.size
+                    >
+                    MAX_FILE_SIZE
+                ) {
+
+                    return {
+                        valid: false,
+
+                        message:
+                            `"${file.name}" is larger than the 4 MB limit.`
+                    };
+
+                }
+
+
+                return {
+                    valid: true,
+                    message: null
+                };
+            }
+
+
+
+            /* =====================================================
+                REBUILD REAL FILE INPUT
+            ====================================================== */
+
+            function syncInputFiles()
+            {
+                /*
+                |--------------------------------------------------------------------------
+                | DataTransfer allows us to rebuild FileList.
+                |--------------------------------------------------------------------------
+                */
+
+                const dataTransfer =
+                    new DataTransfer();
+
+
+                selectedFiles.forEach(
+                    function (file) {
+
+                        dataTransfer.items.add(
+                            file
+                        );
+
+                    }
+                );
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | Laravel will receive these as images[]
+                |--------------------------------------------------------------------------
+                */
+
+                imageInput.files =
+                    dataTransfer.files;
+            }
+
+
+
+            /* =====================================================
+                UPDATE IMAGE COUNT
+            ====================================================== */
+
+            function updateImageCounter()
+            {
+                const totalImages =
+                    existingImageCount
+                    +
+                    selectedFiles.length;
+
+
+                const remainingImages =
+                    Math.max(
+                        0,
+                        MAX_IMAGES
+                        -
+                        totalImages
+                    );
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | Main count
+                |--------------------------------------------------------------------------
+                */
 
                 if (imageCount) {
 
                     imageCount.textContent =
-                        existingImages;
+                        totalImages;
 
                 }
 
 
-                return;
+                /*
+                |--------------------------------------------------------------------------
+                | Available image text
+                |--------------------------------------------------------------------------
+                */
 
+                if (imageSpaceText) {
+
+
+                    if (
+                        remainingImages
+                        ===
+                        0
+                    ) {
+
+                        imageSpaceText.textContent =
+                            'Maximum 6 images reached. Remove an existing image before adding another.';
+
+
+                        imageSpaceText
+                            .classList
+                            .remove(
+                                'text-slate-400'
+                            );
+
+
+                        imageSpaceText
+                            .classList
+                            .add(
+                                'text-red-600'
+                            );
+
+                    }
+                    else {
+
+                        imageSpaceText.textContent =
+                            `${remainingImages} more image${
+                                remainingImages
+                                ===
+                                1
+                                    ? ''
+                                    : 's'
+                            } can be added.`;
+
+
+                        imageSpaceText
+                            .classList
+                            .remove(
+                                'text-red-600'
+                            );
+
+
+                        imageSpaceText
+                            .classList
+                            .add(
+                                'text-slate-400'
+                            );
+
+                    }
+
+
+                }
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | Visual state of dropzone when full
+                |--------------------------------------------------------------------------
+                */
+
+                if (dropzone) {
+
+
+                    if (
+                        totalImages
+                        >=
+                        MAX_IMAGES
+                    ) {
+
+                        dropzone.classList.add(
+                            'border-red-200',
+                            'bg-red-50/40'
+                        );
+
+                    }
+                    else {
+
+                        dropzone.classList.remove(
+                            'border-red-200',
+                            'bg-red-50/40'
+                        );
+
+                    }
+
+
+                }
             }
 
 
 
-            if (imageCount) {
+            /* =====================================================
+                REVOKE ONE PREVIEW URL
+            ====================================================== */
 
-                imageCount.textContent =
-                    totalImages;
+            function revokePreviewUrl(key)
+            {
+                const previewUrl =
+                    previewUrls.get(
+                        key
+                    );
 
+
+                if (!previewUrl) {
+                    return;
+                }
+
+
+                URL.revokeObjectURL(
+                    previewUrl
+                );
+
+
+                previewUrls.delete(
+                    key
+                );
             }
 
 
 
-            if (
-                !imagePreview
-                ||
-                selectedFiles.length === 0
-            ) {
+            /* =====================================================
+                REMOVE ONE SELECTED NEW IMAGE
+            ====================================================== */
 
-                return;
+            function removeSelectedImage(key)
+            {
+                selectedFiles =
+                    selectedFiles.filter(
+                        function (file) {
 
+                            return (
+                                getFileKey(
+                                    file
+                                )
+                                !==
+                                key
+                            );
+
+                        }
+                    );
+
+
+                revokePreviewUrl(
+                    key
+                );
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | Rebuild actual input after removal
+                |--------------------------------------------------------------------------
+                */
+
+                syncInputFiles();
+
+
+                renderImagePreviews();
+
+
+                updateImageCounter();
+
+
+                hideImageError();
             }
 
 
 
-            imagePreview.classList.remove(
-                'hidden'
-            );
+            /* =====================================================
+                RENDER IMAGE PREVIEWS
+            ====================================================== */
+
+            function renderImagePreviews()
+            {
+                if (
+                    !previewContainer
+                    ||
+                    !previewWrapper
+                ) {
+                    return;
+                }
 
 
-            imagePreview.classList.add(
-                'grid'
-            );
+                previewContainer.innerHTML =
+                    '';
 
 
+                /*
+                |--------------------------------------------------------------------------
+                | Hide wrapper when nothing selected
+                |--------------------------------------------------------------------------
+                */
 
-            selectedFiles.forEach(
-                (file, index) => {
+                if (
+                    selectedFiles.length
+                    ===
+                    0
+                ) {
 
-                    const reader =
-                        new FileReader();
+                    previewWrapper.classList.add(
+                        'hidden'
+                    );
 
 
-                    reader.onload =
-                        (event) => {
+                    return;
 
-                            const item =
-                                document.createElement(
-                                    'div'
+                }
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | Show wrapper
+                |--------------------------------------------------------------------------
+                */
+
+                previewWrapper.classList.remove(
+                    'hidden'
+                );
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | Render every selected file
+                |--------------------------------------------------------------------------
+                */
+
+                selectedFiles.forEach(
+                    function (
+                        file,
+                        index
+                    ) {
+
+                        const key =
+                            getFileKey(
+                                file
+                            );
+
+
+                        /*
+                        |--------------------------------------------------------------------------
+                        | Create/reuse object URL
+                        |--------------------------------------------------------------------------
+                        */
+
+                        let imageUrl =
+                            previewUrls.get(
+                                key
+                            );
+
+
+                        if (!imageUrl) {
+
+                            imageUrl =
+                                URL.createObjectURL(
+                                    file
                                 );
 
 
-                            item.className =
-
-                                'overflow-hidden rounded-xl border border-slate-200 bg-slate-50';
-
-
-                            item.innerHTML = `
-
-                                <img
-                                    src="${event.target.result}"
-                                    alt="Preview ${index + 1}"
-                                    class="aspect-[4/5] w-full object-cover"
-                                >
-
-                                <div
-                                    class="
-                                        truncate
-                                        border-t
-                                        border-slate-100
-                                        bg-white
-                                        px-2
-                                        py-2
-                                        text-[10px]
-                                        text-slate-500
-                                    "
-                                >
-                                    ${file.name}
-                                </div>
-
-                            `;
-
-
-                            imagePreview.appendChild(
-                                item
+                            previewUrls.set(
+                                key,
+                                imageUrl
                             );
 
-                        };
+                        }
 
 
-                    reader.readAsDataURL(
-                        file
+                        /*
+                        |--------------------------------------------------------------------------
+                        | Card
+                        |--------------------------------------------------------------------------
+                        */
+
+                        const card =
+                            document.createElement(
+                                'div'
+                            );
+
+
+                        card.className =
+                            [
+                                'group',
+                                'relative',
+                                'overflow-hidden',
+                                'rounded-xl',
+                                'border',
+                                'border-slate-200',
+                                'bg-slate-50'
+                            ].join(
+                                ' '
+                            );
+
+
+                        card.innerHTML = `
+
+                            <img
+                                src="${imageUrl}"
+                                alt="Product image preview"
+                                class="
+                                    aspect-[4/5]
+                                    w-full
+                                    object-cover
+                                "
+                            >
+
+
+                            <span
+                                class="
+                                    absolute
+                                    left-2
+                                    top-2
+                                    rounded-full
+                                    bg-slate-950/75
+                                    px-2
+                                    py-1
+                                    text-[9px]
+                                    font-bold
+                                    uppercase
+                                    tracking-wide
+                                    text-white
+                                    backdrop-blur
+                                "
+                            >
+                                New ${index + 1}
+                            </span>
+
+
+                            <div
+                                class="
+                                    absolute
+                                    inset-x-0
+                                    bottom-0
+                                    flex
+                                    items-end
+                                    justify-between
+                                    gap-2
+                                    bg-gradient-to-t
+                                    from-black/85
+                                    via-black/35
+                                    to-transparent
+                                    p-2
+                                    pt-12
+                                "
+                            >
+
+
+                                <div class="min-w-0">
+
+                                    <p
+                                        class="
+                                            truncate
+                                            text-[10px]
+                                            font-medium
+                                            text-white
+                                        "
+                                        title="${escapeHtml(file.name)}"
+                                    >
+                                        ${escapeHtml(file.name)}
+                                    </p>
+
+
+                                    <p
+                                        class="
+                                            mt-0.5
+                                            text-[9px]
+                                            text-white/70
+                                        "
+                                    >
+                                        ${formatFileSize(file.size)}
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="
+                                        js-remove-selected-image
+                                        grid
+                                        h-8
+                                        w-8
+                                        shrink-0
+                                        place-items-center
+                                        rounded-full
+                                        bg-red-600
+                                        text-white
+                                        shadow
+                                        transition
+
+                                        hover:bg-red-700
+                                    "
+                                    data-file-key="${escapeHtml(key)}"
+                                    title="Remove this selected image"
+                                    aria-label="Remove ${escapeHtml(file.name)}"
+                                >
+
+                                    <i
+                                        class="
+                                            fa-solid
+                                            fa-trash-can
+                                            text-xs
+                                        "
+                                    ></i>
+
+                                </button>
+
+
+                            </div>
+
+                        `;
+
+
+                        previewContainer.appendChild(
+                            card
+                        );
+
+                    }
+                );
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | Remove buttons
+                |--------------------------------------------------------------------------
+                */
+
+                previewContainer
+                    .querySelectorAll(
+                        '.js-remove-selected-image'
+                    )
+                    .forEach(
+                        function (button) {
+
+                            button.addEventListener(
+                                'click',
+                                function () {
+
+                                    removeSelectedImage(
+                                        button.dataset.fileKey
+                                    );
+
+                                }
+                            );
+
+                        }
+                    );
+            }
+
+
+
+            /* =====================================================
+                ADD IMAGE FILES
+            ====================================================== */
+
+            function addImages(files)
+            {
+                hideImageError();
+
+
+                const incomingFiles =
+                    Array.from(
+                        files
+                        ||
+                        []
+                    );
+
+
+                if (
+                    incomingFiles.length
+                    ===
+                    0
+                ) {
+                    return;
+                }
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | Product is already full
+                |--------------------------------------------------------------------------
+                */
+
+                if (
+                    existingImageCount
+                    +
+                    selectedFiles.length
+                    >=
+                    MAX_IMAGES
+                ) {
+
+                    showImageError(
+                        'This product already has 6 images. Remove an existing image before adding another.'
+                    );
+
+
+                    return;
+                }
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | Existing newly-selected file keys
+                |--------------------------------------------------------------------------
+                */
+
+                const selectedKeys =
+                    new Set(
+                        selectedFiles.map(
+                            function (file) {
+
+                                return getFileKey(
+                                    file
+                                );
+
+                            }
+                        )
+                    );
+
+
+                let lastError =
+                    null;
+
+
+                let duplicateFound =
+                    false;
+
+
+                let addedCount =
+                    0;
+
+
+
+                incomingFiles.forEach(
+                    function (file) {
+
+
+                        /*
+                        |--------------------------------------------------------------------------
+                        | Validate file
+                        |--------------------------------------------------------------------------
+                        */
+
+                        const validation =
+                            validateImage(
+                                file
+                            );
+
+
+                        if (
+                            !validation.valid
+                        ) {
+
+                            lastError =
+                                validation.message;
+
+
+                            return;
+
+                        }
+
+
+                        /*
+                        |--------------------------------------------------------------------------
+                        | Prevent duplicate selection
+                        |--------------------------------------------------------------------------
+                        */
+
+                        const key =
+                            getFileKey(
+                                file
+                            );
+
+
+                        if (
+                            selectedKeys.has(
+                                key
+                            )
+                        ) {
+
+                            duplicateFound =
+                                true;
+
+
+                            return;
+
+                        }
+
+
+                        /*
+                        |--------------------------------------------------------------------------
+                        | Check six-image limit before adding this image
+                        |--------------------------------------------------------------------------
+                        */
+
+                        if (
+                            existingImageCount
+                            +
+                            selectedFiles.length
+                            >=
+                            MAX_IMAGES
+                        ) {
+
+                            lastError =
+                                'Maximum 6 images are allowed per product.';
+
+
+                            return;
+
+                        }
+
+
+                        /*
+                        |--------------------------------------------------------------------------
+                        | Add image
+                        |--------------------------------------------------------------------------
+                        */
+
+                        selectedFiles.push(
+                            file
+                        );
+
+
+                        selectedKeys.add(
+                            key
+                        );
+
+
+                        addedCount++;
+
+                    }
+                );
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | Important:
+                | Rebuild real browser FileList
+                |--------------------------------------------------------------------------
+                */
+
+                syncInputFiles();
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | Refresh previews/counter
+                |--------------------------------------------------------------------------
+                */
+
+                renderImagePreviews();
+
+
+                updateImageCounter();
+
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | User feedback
+                |--------------------------------------------------------------------------
+                */
+
+                if (lastError) {
+
+                    showImageError(
+                        lastError
+                    );
+
+                }
+                else if (duplicateFound) {
+
+                    showImageError(
+                        'One or more selected images were already added, so the duplicate was skipped.'
+                    );
+
+                }
+
+
+                /*
+                |--------------------------------------------------------------------------
+                | Scroll previews slightly into view when files were added
+                |--------------------------------------------------------------------------
+                */
+
+                if (
+                    addedCount
+                    >
+                    0
+                    &&
+                    previewWrapper
+                ) {
+
+                    /*
+                    | Deliberately no forced scrollIntoView here.
+                    | Keep admin form position stable.
+                    */
+
+                }
+            }
+
+
+
+            /* =====================================================
+                NORMAL FILE PICKER
+            ====================================================== */
+
+            imageInput.addEventListener(
+                'change',
+                function () {
+
+                    /*
+                    |--------------------------------------------------------------------------
+                    | IMPORTANT
+                    |
+                    | Copy the newest browser FileList first.
+                    |
+                    | After this, addImages() will merge these files with
+                    | all previously selected files.
+                    |--------------------------------------------------------------------------
+                    */
+
+                    const newestSelection =
+                        Array.from(
+                            this.files
+                            ||
+                            []
+                        );
+
+
+                    addImages(
+                        newestSelection
                     );
 
                 }
             );
 
-        }
-    );
 
-});
+
+            /* =====================================================
+                CLEAR ALL NEW IMAGES
+            ====================================================== */
+
+            clearNewImagesButton
+                ?.addEventListener(
+                    'click',
+                    function () {
+
+
+                        /*
+                        |--------------------------------------------------------------------------
+                        | Free preview object URLs
+                        |--------------------------------------------------------------------------
+                        */
+
+                        previewUrls.forEach(
+                            function (url) {
+
+                                URL.revokeObjectURL(
+                                    url
+                                );
+
+                            }
+                        );
+
+
+                        previewUrls.clear();
+
+
+                        /*
+                        |--------------------------------------------------------------------------
+                        | Clear selected files
+                        |--------------------------------------------------------------------------
+                        */
+
+                        selectedFiles =
+                            [];
+
+
+                        /*
+                        |--------------------------------------------------------------------------
+                        | Clear real input
+                        |--------------------------------------------------------------------------
+                        */
+
+                        syncInputFiles();
+
+
+                        /*
+                        |--------------------------------------------------------------------------
+                        | Refresh UI
+                        |--------------------------------------------------------------------------
+                        */
+
+                        renderImagePreviews();
+
+
+                        updateImageCounter();
+
+
+                        hideImageError();
+
+                    }
+                );
+
+
+
+            /* =====================================================
+                DRAG & DROP
+            ====================================================== */
+
+            if (dropzone) {
+
+
+                [
+                    'dragenter',
+                    'dragover'
+                ].forEach(
+                    function (eventName) {
+
+                        dropzone.addEventListener(
+                            eventName,
+                            function (event) {
+
+                                event.preventDefault();
+
+                                event.stopPropagation();
+
+
+                                dropzone.classList.add(
+                                    'border-copper-400',
+                                    'bg-orange-50'
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                [
+                    'dragleave',
+                    'drop'
+                ].forEach(
+                    function (eventName) {
+
+                        dropzone.addEventListener(
+                            eventName,
+                            function (event) {
+
+                                event.preventDefault();
+
+                                event.stopPropagation();
+
+
+                                dropzone.classList.remove(
+                                    'border-copper-400',
+                                    'bg-orange-50'
+                                );
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                dropzone.addEventListener(
+                    'drop',
+                    function (event) {
+
+                        addImages(
+                            event.dataTransfer.files
+                        );
+
+                    }
+                );
+
+            }
+
+
+
+            /* =====================================================
+                FINAL FORM SUBMIT SAFETY
+            ====================================================== */
+
+            productForm?.addEventListener(
+                'submit',
+                function () {
+
+                    /*
+                    |--------------------------------------------------------------------------
+                    | Ensure input.files contains the full accumulated list
+                    | immediately before Laravel receives the form.
+                    |--------------------------------------------------------------------------
+                    */
+
+                    syncInputFiles();
+
+                }
+            );
+
+
+
+            /* =====================================================
+                INITIAL STATE
+            ====================================================== */
+
+            updateImageCounter();
+
+
+            renderImagePreviews();
+
+
+
+            /* =====================================================
+                CLEANUP OBJECT URLS
+            ====================================================== */
+
+            window.addEventListener(
+                'beforeunload',
+                function () {
+
+                    previewUrls.forEach(
+                        function (url) {
+
+                            URL.revokeObjectURL(
+                                url
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+        }
+
+
+    }
+);
 
 </script>
 
