@@ -135,87 +135,441 @@ document.addEventListener(
 
 
 /* =============================================================
-   STOREFRONT NAV DROPDOWNS
+   STOREFRONT NAV DROPDOWNS + DYNAMIC HOVER PREVIEWS
 ============================================================= */
+
+const megaMenuItems = [
+    ...document.querySelectorAll(
+        '.nav-wrap[data-mega-menu]'
+    ),
+];
+
+
+const reducedMenuMotion =
+    window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+    );
+
+
+const megaMenuControllers =
+    new WeakMap();
+
 
 let closeTimer;
 
 
-document
-    .querySelectorAll(
-        '.nav-wrap'
-    )
-    .forEach(
-        (item) => {
+const createMegaMenuPreview = (item) => {
+
+    const card =
+        item.querySelector(
+            '[data-menu-preview-card]'
+        );
 
 
-            item.addEventListener(
-                'mouseenter',
+    const previewLinks = [
+        ...item.querySelectorAll(
+            '[data-menu-preview]'
+        ),
+    ];
+
+
+    if (!card || !previewLinks.length) {
+
+        return {
+            reset: () => {},
+        };
+
+    }
+
+
+    const image =
+        card.querySelector(
+            '[data-menu-preview-image]'
+        );
+
+
+    const title =
+        card.querySelector(
+            '[data-menu-preview-title]'
+        );
+
+
+    const eyebrow =
+        card.querySelector(
+            '[data-menu-preview-eyebrow]'
+        );
+
+
+    const defaultPreview = {
+        image: card.dataset.defaultImage,
+        title: card.dataset.defaultTitle,
+        eyebrow: card.dataset.defaultEyebrow,
+        alt: card.dataset.defaultAlt,
+        url: card.dataset.defaultUrl,
+    };
+
+
+    let swapTimer = null;
+
+    let firstFrame = null;
+
+    let secondFrame = null;
+
+
+    const clearPendingSwap = () => {
+
+        window.clearTimeout(
+            swapTimer
+        );
+
+        window.cancelAnimationFrame(
+            firstFrame
+        );
+
+        window.cancelAnimationFrame(
+            secondFrame
+        );
+
+    };
+
+
+    const updateCard = (preview) => {
+
+        image.src = preview.image;
+
+        image.alt = preview.alt;
+
+        title.textContent = preview.title;
+
+        eyebrow.textContent = preview.eyebrow;
+
+        card.href = preview.url;
+
+        card.dataset.currentPreviewImage =
+            preview.image;
+
+    };
+
+
+    const showPreview = (
+        preview,
+        activeLink = null,
+        immediate = false
+    ) => {
+
+        previewLinks.forEach(
+            (link) => {
+
+                link.classList.toggle(
+                    'is-preview-active',
+                    link === activeLink
+                );
+
+            }
+        );
+
+
+        clearPendingSwap();
+
+
+        if (
+            card.dataset.currentPreviewImage
+            ===
+            preview.image
+        ) {
+
+            updateCard(
+                preview
+            );
+
+            card.classList.remove(
+                'is-switching'
+            );
+
+            return;
+
+        }
+
+
+        if (
+            immediate
+            ||
+            reducedMenuMotion.matches
+        ) {
+
+            updateCard(
+                preview
+            );
+
+            card.classList.remove(
+                'is-switching'
+            );
+
+            return;
+
+        }
+
+
+        card.classList.add(
+            'is-switching'
+        );
+
+
+        swapTimer =
+            window.setTimeout(
                 () => {
 
-
-                    clearTimeout(
-                        closeTimer
+                    updateCard(
+                        preview
                     );
 
 
-                    document
-                        .querySelectorAll(
-                            '.nav-wrap.is-open'
-                        )
-                        .forEach(
-                            (element) => {
+                    firstFrame =
+                        window.requestAnimationFrame(
+                            () => {
 
+                                secondFrame =
+                                    window.requestAnimationFrame(
+                                        () => {
 
-                                if (
-                                    element
-                                    !==
-                                    item
-                                ) {
+                                            card.classList.remove(
+                                                'is-switching'
+                                            );
 
-                                    element
-                                        .classList
-                                        .remove(
-                                            'is-open'
-                                        );
-
-                                }
+                                        }
+                                    );
 
                             }
                         );
 
+                },
+                145
+            );
 
-                    item.classList.add(
-                        'is-open'
-                    );
+    };
 
-                }
+
+    previewLinks.forEach(
+        (link) => {
+
+            const preview = {
+                image: link.dataset.previewImage,
+                title: link.dataset.previewTitle,
+                eyebrow: link.dataset.previewEyebrow,
+                alt: link.dataset.previewAlt,
+                url: link.dataset.previewUrl,
+            };
+
+
+            const preload =
+                new Image();
+
+            preload.src =
+                preview.image;
+
+
+            const activate = () => {
+
+                showPreview(
+                    preview,
+                    link
+                );
+
+            };
+
+
+            link.addEventListener(
+                'mouseenter',
+                activate
             );
 
 
-            item.addEventListener(
-                'mouseleave',
-                () => {
-
-
-                    closeTimer =
-                        setTimeout(
-                            () => {
-
-                                item.classList
-                                    .remove(
-                                        'is-open'
-                                    );
-
-                            },
-                            90
-                        );
-
-                }
+            link.addEventListener(
+                'focus',
+                activate
             );
 
         }
     );
+
+
+    return {
+        reset: () => {
+
+            showPreview(
+                defaultPreview,
+                null,
+                true
+            );
+
+        },
+    };
+
+};
+
+
+const closeMegaMenu = (item) => {
+
+    item.classList.remove(
+        'is-open'
+    );
+
+
+    item.querySelector(
+        '.nav-item'
+    )?.setAttribute(
+        'aria-expanded',
+        'false'
+    );
+
+
+    megaMenuControllers
+        .get(item)
+        ?.reset();
+
+};
+
+
+const openMegaMenu = (item) => {
+
+    window.clearTimeout(
+        closeTimer
+    );
+
+
+    megaMenuItems.forEach(
+        (otherItem) => {
+
+            if (otherItem !== item) {
+
+                closeMegaMenu(
+                    otherItem
+                );
+
+            }
+
+        }
+    );
+
+
+    item.classList.add(
+        'is-open'
+    );
+
+
+    item.querySelector(
+        '.nav-item'
+    )?.setAttribute(
+        'aria-expanded',
+        'true'
+    );
+
+};
+
+
+megaMenuItems.forEach(
+    (item) => {
+
+        megaMenuControllers.set(
+            item,
+            createMegaMenuPreview(item)
+        );
+
+
+        item.addEventListener(
+            'mouseenter',
+            () => {
+
+                openMegaMenu(
+                    item
+                );
+
+            }
+        );
+
+
+        item.addEventListener(
+            'mouseleave',
+            () => {
+
+                closeTimer =
+                    window.setTimeout(
+                        () => {
+
+                            closeMegaMenu(
+                                item
+                            );
+
+                        },
+                        130
+                    );
+
+            }
+        );
+
+
+        item.addEventListener(
+            'focusin',
+            () => {
+
+                openMegaMenu(
+                    item
+                );
+
+            }
+        );
+
+
+        item.addEventListener(
+            'focusout',
+            () => {
+
+                closeTimer =
+                    window.setTimeout(
+                        () => {
+
+                            if (
+                                !item.contains(
+                                    document.activeElement
+                                )
+                            ) {
+
+                                closeMegaMenu(
+                                    item
+                                );
+
+                            }
+
+                        },
+                        0
+                    );
+
+            }
+        );
+
+
+        item.addEventListener(
+            'keydown',
+            (event) => {
+
+                if (event.key === 'Escape') {
+
+                    closeMegaMenu(
+                        item
+                    );
+
+
+                    item.querySelector(
+                        '.nav-item'
+                    )?.focus();
+
+                }
+
+            }
+        );
+
+    }
+);
 
 
 
