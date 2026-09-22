@@ -10,42 +10,31 @@ use Illuminate\Validation\Rule;
 
 class BannerController extends Controller
 {
+    private const PLACEMENTS = [
+        'home_hero',
+        'home_popup',
+        'home_promo',
+        'category',
+    ];
+
     public function __construct(
         private MediaService $media
     ) {
     }
 
-
-    /* =========================================================
-        LIST
-    ========================================================== */
-
-    public function index(
-        Request $request
-    ) {
+    public function index(Request $request)
+    {
         $filters = $request->validate([
-
-            'q' => [
-                'nullable',
-                'string',
-                'max:191',
-            ],
+            'q' => ['nullable', 'string', 'max:191'],
 
             'placement' => [
                 'nullable',
-                Rule::in([
-                    'home_hero',
-                    'home_promo',
-                    'category',
-                ]),
+                Rule::in(self::PLACEMENTS),
             ],
 
             'status' => [
                 'nullable',
-                Rule::in([
-                    'active',
-                    'inactive',
-                ]),
+                Rule::in(['active', 'inactive']),
             ],
 
             'sort' => [
@@ -58,355 +47,117 @@ class BannerController extends Controller
                     'title_desc',
                 ]),
             ],
-
         ]);
 
-
         $query = Banner::query()
-
-            /* =====================================================
-                SEARCH
-            ====================================================== */
             ->when(
-                ! empty(
-                    $filters['q']
-                ),
+                filled($filters['q'] ?? null),
                 function ($query) use ($filters) {
+                    $search = trim($filters['q']);
 
-                    $search = trim(
-                        $filters['q']
-                    );
-
-
-                    $query->where(
-                        function ($nested) use ($search) {
-
-                            $nested
-                                ->where(
-                                    'title',
-                                    'like',
-                                    "%{$search}%"
-                                )
-
-                                ->orWhere(
-                                    'eyebrow',
-                                    'like',
-                                    "%{$search}%"
-                                )
-
-                                ->orWhere(
-                                    'subtitle',
-                                    'like',
-                                    "%{$search}%"
-                                )
-
-                                ->orWhere(
-                                    'description',
-                                    'like',
-                                    "%{$search}%"
-                                )
-
-                                ->orWhere(
-                                    'button_text',
-                                    'like',
-                                    "%{$search}%"
-                                )
-
-                                ->orWhere(
-                                    'button_url',
-                                    'like',
-                                    "%{$search}%"
-                                );
-
-                        }
-                    );
-
+                    $query->where(function ($query) use ($search) {
+                        $query
+                            ->where('title', 'like', "%{$search}%")
+                            ->orWhere('eyebrow', 'like', "%{$search}%")
+                            ->orWhere('subtitle', 'like', "%{$search}%")
+                            ->orWhere('description', 'like', "%{$search}%")
+                            ->orWhere('button_text', 'like', "%{$search}%")
+                            ->orWhere('button_url', 'like', "%{$search}%");
+                    });
                 }
             )
-
-
-            /* =====================================================
-                PLACEMENT
-            ====================================================== */
             ->when(
-                ! empty(
+                filled($filters['placement'] ?? null),
+                fn ($query) => $query->where(
+                    'placement',
                     $filters['placement']
-                ),
-                function ($query) use ($filters) {
-
-                    $query->where(
-                        'placement',
-                        $filters['placement']
-                    );
-
-                }
+                )
             )
-
-
-            /* =====================================================
-                STATUS
-            ====================================================== */
             ->when(
-                ($filters['status'] ?? null)
-                ===
-                'active',
-                function ($query) {
-
-                    $query->where(
-                        'is_active',
-                        true
-                    );
-
-                }
+                ($filters['status'] ?? null) === 'active',
+                fn ($query) => $query->where('is_active', true)
             )
-
             ->when(
-                ($filters['status'] ?? null)
-                ===
-                'inactive',
-                function ($query) {
-
-                    $query->where(
-                        'is_active',
-                        false
-                    );
-
-                }
+                ($filters['status'] ?? null) === 'inactive',
+                fn ($query) => $query->where('is_active', false)
             );
 
+        match ($filters['sort'] ?? 'placement_order') {
+            'newest' => $query->latest(),
+            'oldest' => $query->oldest(),
+            'title_asc' => $query->orderBy('title'),
+            'title_desc' => $query->orderByDesc('title'),
 
-        /* =========================================================
-            SORT
-        ========================================================== */
+            default => $query
+                ->orderBy('placement')
+                ->orderBy('sort_order')
+                ->orderByDesc('id'),
+        };
 
-        switch (
-            $filters['sort']
-            ??
-            'placement_order'
-        ) {
-
-            case 'newest':
-
-                $query->latest();
-
-                break;
-
-
-            case 'oldest':
-
-                $query->oldest();
-
-                break;
-
-
-            case 'title_asc':
-
-                $query->orderBy(
-                    'title'
-                );
-
-                break;
-
-
-            case 'title_desc':
-
-                $query->orderByDesc(
-                    'title'
-                );
-
-                break;
-
-
-            case 'placement_order':
-
-            default:
-
-                $query
-                    ->orderBy(
-                        'placement'
-                    )
-                    ->orderBy(
-                        'sort_order'
-                    )
-                    ->orderByDesc(
-                        'id'
-                    );
-
-                break;
-
-        }
-
-
-        $banners = $query
-            ->paginate(25)
-            ->withQueryString();
-
-
-        return view(
-            'admin.banners.index',
-            compact(
-                'banners'
-            )
-        );
+        return view('admin.banners.index', [
+            'banners' => $query
+                ->paginate(25)
+                ->withQueryString(),
+        ]);
     }
-
-
-    /* =========================================================
-        CREATE
-    ========================================================== */
 
     public function create()
     {
-        return view(
-            'admin.banners.form',
-            [
-                'banner' =>
-                    new Banner,
-            ]
-        );
+        return view('admin.banners.form', [
+            'banner' => new Banner,
+        ]);
     }
 
-
-    /* =========================================================
-        STORE
-    ========================================================== */
-
-    public function store(
-        Request $request
-    ) {
-        $this->save(
-            new Banner,
-            $request
-        );
-
+    public function store(Request $request)
+    {
+        $this->save(new Banner, $request);
 
         return redirect()
-            ->route(
-                'admin.banners.index'
-            )
-            ->with(
-                'success',
-                'Banner created successfully.'
-            );
+            ->route('admin.banners.index')
+            ->with('success', 'Banner created successfully.');
     }
 
-
-    /* =========================================================
-        EDIT
-    ========================================================== */
-
-    public function edit(
-        Banner $banner
-    ) {
-        return view(
-            'admin.banners.form',
-            compact(
-                'banner'
-            )
-        );
+    public function edit(Banner $banner)
+    {
+        return view('admin.banners.form', compact('banner'));
     }
-
-
-    /* =========================================================
-        UPDATE
-    ========================================================== */
 
     public function update(
         Request $request,
         Banner $banner
     ) {
-        $this->save(
-            $banner,
-            $request
-        );
-
+        $this->save($banner, $request);
 
         return redirect()
-            ->route(
-                'admin.banners.index'
-            )
-            ->with(
-                'success',
-                'Banner updated successfully.'
-            );
+            ->route('admin.banners.index')
+            ->with('success', 'Banner updated successfully.');
     }
 
-
-    /* =========================================================
-        DELETE
-    ========================================================== */
-
-    public function destroy(
-        Banner $banner
-    ) {
-        /*
-        |--------------------------------------------------------------------------
-        | Keep paths before deleting record
-        |--------------------------------------------------------------------------
-        */
-
-        $desktopImage =
-            $banner->image;
-
-
-        $mobileImage =
-            $banner->mobile_image;
-
-
-        /*
-        |--------------------------------------------------------------------------
-        | Delete record
-        |--------------------------------------------------------------------------
-        */
+    public function destroy(Banner $banner)
+    {
+        $desktopImage = $banner->image;
+        $mobileImage = $banner->mobile_image;
 
         $banner->delete();
 
+        $this->media->delete($desktopImage);
+        $this->media->delete($mobileImage);
 
-        /*
-        |--------------------------------------------------------------------------
-        | Delete stored images
-        |--------------------------------------------------------------------------
-        */
-
-        $this->media->delete(
-            $desktopImage
+        return back()->with(
+            'success',
+            'Banner deleted successfully.'
         );
-
-
-        $this->media->delete(
-            $mobileImage
-        );
-
-
-        return back()
-            ->with(
-                'success',
-                'Banner deleted successfully.'
-            );
     }
-
-
-    /* =========================================================
-        SAVE
-    ========================================================== */
 
     private function save(
         Banner $banner,
         Request $request
     ): Banner {
-
         $data = $request->validate([
-
             'placement' => [
                 'required',
-
-                Rule::in([
-                    'home_hero',
-                    'home_promo',
-                    'category',
-                ]),
+                Rule::in(self::PLACEMENTS),
             ],
-
 
             'eyebrow' => [
                 'nullable',
@@ -414,13 +165,11 @@ class BannerController extends Controller
                 'max:100',
             ],
 
-
             'title' => [
                 'required',
                 'string',
                 'max:191',
             ],
-
 
             'subtitle' => [
                 'nullable',
@@ -428,27 +177,18 @@ class BannerController extends Controller
                 'max:191',
             ],
 
-
             'description' => [
                 'nullable',
                 'string',
                 'max:500',
             ],
 
-
             'image' => [
-
-                $banner->exists
-                    ? 'nullable'
-                    : 'required',
-
+                $banner->exists ? 'nullable' : 'required',
                 'image',
-
                 'mimes:jpg,jpeg,png,webp',
-
                 'max:6144',
             ],
-
 
             'mobile_image' => [
                 'nullable',
@@ -457,12 +197,10 @@ class BannerController extends Controller
                 'max:6144',
             ],
 
-
             'remove_mobile_image' => [
                 'nullable',
                 'boolean',
             ],
-
 
             'button_text' => [
                 'nullable',
@@ -470,13 +208,34 @@ class BannerController extends Controller
                 'max:60',
             ],
 
-
             'button_url' => [
+                'required_if:placement,home_popup',
                 'nullable',
                 'string',
                 'max:255',
-            ],
 
+                function ($attribute, $value, $fail) {
+                    $url = trim((string) $value);
+
+                    $isInternalUrl = preg_match(
+                        '#^/(?!/)#',
+                        $url
+                    );
+
+                    $isExternalUrl = preg_match(
+                        '/^https?:\/\//i',
+                        $url
+                    );
+
+                    if ($isInternalUrl || $isExternalUrl) {
+                        return;
+                    }
+
+                    $fail(
+                        'The destination URL must start with /, http:// or https://.'
+                    );
+                },
+            ],
 
             'sort_order' => [
                 'required',
@@ -484,134 +243,60 @@ class BannerController extends Controller
                 'min:0',
             ],
 
-
             'is_active' => [
                 'nullable',
                 'boolean',
             ],
-
 
             'starts_at' => [
                 'nullable',
                 'date',
             ],
 
-
             'ends_at' => [
                 'nullable',
                 'date',
                 'after:starts_at',
             ],
-
         ]);
 
+        if ($request->hasFile('image')) {
+            $oldImage = $banner->image;
 
-        /* =========================================================
-            DESKTOP IMAGE
-        ========================================================== */
-
-        if (
-            $request->hasFile(
-                'image'
-            )
-        ) {
-
-            $oldImage =
-                $banner->image;
-
-
-            $data['image'] =
-                $this->media->store(
-                    $request->file(
-                        'image'
-                    ),
-                    'banners'
-                );
-
-
-            $this->media->delete(
-                $oldImage
+            $data['image'] = $this->media->store(
+                $request->file('image'),
+                'banners'
             );
 
+            $this->media->delete($oldImage);
         }
 
+        if ($request->hasFile('mobile_image')) {
+            $oldMobileImage = $banner->mobile_image;
 
-        /* =========================================================
-            MOBILE IMAGE
-        ========================================================== */
-
-        if (
-            $request->hasFile(
-                'mobile_image'
-            )
-        ) {
-
-            $oldMobileImage =
-                $banner->mobile_image;
-
-
-            $data['mobile_image'] =
-                $this->media->store(
-                    $request->file(
-                        'mobile_image'
-                    ),
-                    'banners'
-                );
-
-
-            $this->media->delete(
-                $oldMobileImage
+            $data['mobile_image'] = $this->media->store(
+                $request->file('mobile_image'),
+                'banners'
             );
 
-        }
-        elseif (
-            $request->boolean(
-                'remove_mobile_image'
-            )
-        ) {
+            $this->media->delete($oldMobileImage);
+        } elseif ($request->boolean('remove_mobile_image')) {
+            $this->media->delete($banner->mobile_image);
 
-            $this->media->delete(
-                $banner->mobile_image
-            );
-
-
-            $data['mobile_image'] =
-                null;
-
+            $data['mobile_image'] = null;
         }
 
+        unset($data['remove_mobile_image']);
 
-        /*
-        |--------------------------------------------------------------------------
-        | This is not a DB column
-        |--------------------------------------------------------------------------
-        */
+        $data['is_active'] = $request->boolean('is_active');
 
-        unset(
-            $data['remove_mobile_image']
-        );
-
-
-        /* =========================================================
-            ACTIVE
-        ========================================================== */
-
-        $data['is_active'] =
-            $request->boolean(
-                'is_active'
+        if (array_key_exists('button_url', $data)) {
+            $data['button_url'] = trim(
+                (string) $data['button_url']
             );
+        }
 
-
-        /* =========================================================
-            SAVE
-        ========================================================== */
-
-        $banner
-            ->fill(
-                $data
-            )
-            ->save();
-
+        $banner->fill($data)->save();
 
         return $banner;
     }

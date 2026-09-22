@@ -303,7 +303,12 @@
                         >
                             Home hero
                         </option>
-
+                        <option
+                            value="home_popup"
+                            @selected(request('placement') === 'home_popup')
+                        >
+                            Homepage popup
+                        </option>
 
                         <option
                             value="home_promo"
@@ -868,6 +873,7 @@
 
                                         'home_promo' =>
                                             'Home promo',
+                                        'home_popup' => 'Homepage popup',
 
                                         'category' =>
                                             'Category',

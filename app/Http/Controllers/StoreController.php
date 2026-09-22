@@ -8,8 +8,41 @@ use App\Models\Post;
 use App\Models\Product;
 use Illuminate\Http\Request;
 class StoreController extends Controller {
- public function home(){return view('store.home',['banners'=>Banner::live()->where('placement','home_hero')->get(),'featured'=>Product::active()->where('is_featured',true)->with('images')->latest()->limit(8)->get(),'newArrivals'=>Product::active()->where('is_new',true)->with('images')->latest()->limit(8)->get(),'collections'=>Collection::where('is_active',true)->limit(4)->get(),'posts'=>Post::published()->latest('published_at')->limit(3)->get()]);}
- public function category(Category $category,Request $request){abort_unless($category->is_active,404);$children=$category->children()->active()->ordered()->get();$products=Product::active()->where('category_id',$category->id)->with('images')->latest()->limit(8)->get();return view('store.category-landing',compact('category','children','products'));}
+public function home()
+{
+    return view('store.home', [
+        'banners' => Banner::live()
+            ->where('placement', 'home_hero')
+            ->get(),
+
+        'popupBanner' => Banner::live()
+            ->where('placement', 'home_popup')
+            ->first(),
+
+        'featured' => Product::active()
+            ->where('is_featured', true)
+            ->with('images')
+            ->latest()
+            ->limit(8)
+            ->get(),
+
+        'newArrivals' => Product::active()
+            ->where('is_new', true)
+            ->with('images')
+            ->latest()
+            ->limit(8)
+            ->get(),
+
+        'collections' => Collection::where('is_active', true)
+            ->limit(4)
+            ->get(),
+
+        'posts' => Post::published()
+            ->latest('published_at')
+            ->limit(3)
+            ->get(),
+    ]);
+} public function category(Category $category,Request $request){abort_unless($category->is_active,404);$children=$category->children()->active()->ordered()->get();$products=Product::active()->where('category_id',$category->id)->with('images')->latest()->limit(8)->get();return view('store.category-landing',compact('category','children','products'));}
  public function products(Request $request,Category $category,?Category $subcategory=null){if($subcategory&&$subcategory->parent_id!==$category->id)abort(404);$q=Product::active()->where('category_id',$category->id)->with('images');if($subcategory)$q->where('subcategory_id',$subcategory->id);$this->applyFilters($q,$request);$products=$q->paginate(16)->withQueryString();return view('store.products',compact('category','subcategory','products'));}
  public function collection(Collection $collection,Request $request){abort_unless($collection->is_active,404);$q=$collection->products()->active()->with('images');$this->applyFilters($q,$request);$products=$q->paginate(16)->withQueryString();return view('store.collection',compact('collection','products'));}
  public function newArrivals(Request $request){$q=Product::active()->where('is_new',true)->with('images');$this->applyFilters($q,$request);$products=$q->paginate(16)->withQueryString();return view('store.products',compact('products')+['pageTitle'=>'New Arrivals','category'=>null,'subcategory'=>null]);}

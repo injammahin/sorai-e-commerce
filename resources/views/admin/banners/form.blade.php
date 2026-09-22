@@ -596,16 +596,11 @@
 
                         {{-- BUTTON URL --}}
                         <label class="md:col-span-2">
-
-
                             <span class="admin-label">
-                                Button URL
+                                Button URL / Destination
                             </span>
 
-
                             <div class="relative">
-
-
                                 <span
                                     class="
                                         pointer-events-none
@@ -618,18 +613,8 @@
                                         text-slate-400
                                     "
                                 >
-
-                                    <i
-                                        class="
-                                            fa-solid
-                                            fa-link
-                                            text-xs
-                                        "
-                                    ></i>
-
+                                    <i class="fa-solid fa-link text-xs"></i>
                                 </span>
-
-
 
                                 <input
                                     class="
@@ -643,35 +628,30 @@
                                     name="button_url"
                                     value="{{ old('button_url', $banner->button_url) }}"
                                     maxlength="255"
-                                    placeholder="/collections/festive or https://example.com"
+                                    placeholder="/product/product-slug"
                                 >
-
-
                             </div>
-
-
 
                             <span
                                 class="
                                     mt-1
                                     block
                                     text-[11px]
+                                    leading-5
                                     text-slate-400
                                 "
                             >
-                                Relative storefront paths and full URLs are supported.
+                                This destination is required for homepage popups.
+                                Use /product/product-slug, /journal/post-slug,
+                                /women, /category/women/women-sarees or a full
+                                https:// URL.
                             </span>
 
-
                             @error('button_url')
-
                                 <span class="error">
                                     {{ $message }}
                                 </span>
-
                             @enderror
-
-
                         </label>
 
 
@@ -1462,26 +1442,13 @@
 
                             <select
                                 name="placement"
-                                class="
-                                    admin-input
-
-                                    @error('placement')
-                                        !border-red-400
-                                    @enderror
-                                "
+                                class="admin-input"
                                 required
                             >
-
-
                                 <option
                                     value="home_hero"
                                     @selected(
-                                        old(
-                                            'placement',
-                                            $banner->placement
-                                            ?:
-                                            'home_hero'
-                                        )
+                                        old('placement', $banner->placement)
                                         ===
                                         'home_hero'
                                     )
@@ -1489,14 +1456,10 @@
                                     Home hero
                                 </option>
 
-
                                 <option
                                     value="home_promo"
                                     @selected(
-                                        old(
-                                            'placement',
-                                            $banner->placement
-                                        )
+                                        old('placement', $banner->placement)
                                         ===
                                         'home_promo'
                                     )
@@ -1504,22 +1467,27 @@
                                     Home promo
                                 </option>
 
+                                <option
+                                    value="home_popup"
+                                    @selected(
+                                        old('placement', $banner->placement)
+                                        ===
+                                        'home_popup'
+                                    )
+                                >
+                                    Homepage popup
+                                </option>
 
                                 <option
                                     value="category"
                                     @selected(
-                                        old(
-                                            'placement',
-                                            $banner->placement
-                                        )
+                                        old('placement', $banner->placement)
                                         ===
                                         'category'
                                     )
                                 >
                                     Category
                                 </option>
-
-
                             </select>
 
 

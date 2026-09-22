@@ -1959,3 +1959,95 @@ else {
 ============================================================= */
 
 initialiseAdminSidebar();
+/* =============================================================
+   ADMIN-CONTROLLED HOMEPAGE POPUP
+============================================================= */
+
+const homePopup = document.querySelector(
+    '[data-home-popup]'
+);
+
+if (homePopup) {
+    const closeButton = homePopup.querySelector(
+        '[data-home-popup-close]'
+    );
+
+    const popupDelay = Number.parseInt(
+        homePopup.dataset.popupDelay || '500',
+        10
+    );
+
+    let openTimer = null;
+    let previouslyFocused = null;
+
+    const openHomePopup = () => {
+        previouslyFocused = document.activeElement;
+
+        homePopup.classList.add('is-open');
+        homePopup.setAttribute('aria-hidden', 'false');
+
+        body.classList.add('no-scroll');
+
+        window.setTimeout(() => {
+            closeButton?.focus();
+        }, 360);
+    };
+
+    const closeHomePopup = () => {
+        window.clearTimeout(openTimer);
+
+        homePopup.classList.remove('is-open');
+        homePopup.setAttribute('aria-hidden', 'true');
+
+        const anotherLayerIsOpen = document.querySelector(
+            '.is-open[data-layer], .nav-wrap.is-open'
+        );
+
+        if (!anotherLayerIsOpen) {
+            body.classList.remove('no-scroll');
+        }
+
+        if (previouslyFocused instanceof HTMLElement) {
+            previouslyFocused.focus();
+        }
+    };
+
+    const scheduleHomePopup = () => {
+        openTimer = window.setTimeout(
+            openHomePopup,
+            Number.isNaN(popupDelay)
+                ? 500
+                : Math.max(0, popupDelay)
+        );
+    };
+
+    closeButton?.addEventListener(
+        'click',
+        closeHomePopup
+    );
+
+    homePopup.addEventListener('click', event => {
+        if (event.target === homePopup) {
+            closeHomePopup();
+        }
+    });
+
+    document.addEventListener('keydown', event => {
+        if (
+            event.key === 'Escape'
+            && homePopup.classList.contains('is-open')
+        ) {
+            closeHomePopup();
+        }
+    });
+
+    if (document.readyState === 'complete') {
+        scheduleHomePopup();
+    } else {
+        window.addEventListener(
+            'load',
+            scheduleHomePopup,
+            { once: true }
+        );
+    }
+}
