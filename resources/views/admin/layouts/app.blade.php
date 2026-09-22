@@ -25,6 +25,8 @@
         'resources/js/app.js'
     ])
 
+    @stack('styles')
+
 </head>
 
 

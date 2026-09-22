@@ -562,29 +562,172 @@
 
 
 
-        @if($hasFilters)
+        <div
+            class="
+                flex
+                flex-wrap
+                items-center
+                gap-2
+            "
+        >
 
-            <a
-                href="{{ route('admin.categories.index') }}"
-                class="
-                    inline-flex
-                    items-center
-                    gap-1.5
-                    text-xs
-                    font-semibold
-                    text-red-600
+            @if($hasFilters)
 
-                    hover:text-red-700
-                "
-            >
+                <a
+                    href="{{ route('admin.categories.index') }}"
+                    class="
+                        mr-1
+                        inline-flex
+                        items-center
+                        gap-1.5
+                        text-xs
+                        font-semibold
+                        text-red-600
 
-                <i class="fa-solid fa-xmark"></i>
+                        hover:text-red-700
+                    "
+                >
 
-                Clear filters
+                    <i class="fa-solid fa-xmark"></i>
 
-            </a>
+                    Clear filters
 
-        @endif
+                </a>
+
+            @endif
+
+
+            {{-- Always-visible compact pagination --}}
+            @if($categories->hasPages())
+
+                <nav
+                    class="flex items-center gap-1"
+                    aria-label="Category pagination"
+                >
+
+                    @if($categories->onFirstPage())
+
+                        <span
+                            class="
+                                grid
+                                h-9
+                                w-9
+                                cursor-not-allowed
+                                place-items-center
+                                rounded-md
+                                border
+                                border-slate-200
+                                bg-slate-50
+                                text-slate-300
+                            "
+                            aria-disabled="true"
+                            title="Previous page"
+                        >
+                            <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                        </span>
+
+                    @else
+
+                        <a
+                            href="{{ $categories->previousPageUrl() }}"
+                            class="
+                                grid
+                                h-9
+                                w-9
+                                place-items-center
+                                rounded-md
+                                border
+                                border-slate-200
+                                bg-white
+                                text-slate-600
+                                transition
+
+                                hover:border-[#c4622f]
+                                hover:bg-orange-50
+                                hover:text-[#c4622f]
+                            "
+                            rel="prev"
+                            title="Previous page"
+                        >
+                            <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                        </a>
+
+                    @endif
+
+
+                    <span
+                        class="
+                            inline-flex
+                            h-9
+                            items-center
+                            rounded-md
+                            border
+                            border-slate-200
+                            bg-white
+                            px-3
+                            text-xs
+                            font-semibold
+                            text-slate-600
+                        "
+                    >
+                        Page {{ $categories->currentPage() }} of {{ $categories->lastPage() }}
+                    </span>
+
+
+                    @if($categories->hasMorePages())
+
+                        <a
+                            href="{{ $categories->nextPageUrl() }}"
+                            class="
+                                grid
+                                h-9
+                                w-9
+                                place-items-center
+                                rounded-md
+                                border
+                                border-slate-200
+                                bg-white
+                                text-slate-600
+                                transition
+
+                                hover:border-[#c4622f]
+                                hover:bg-orange-50
+                                hover:text-[#c4622f]
+                            "
+                            rel="next"
+                            title="Next page"
+                        >
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </a>
+
+                    @else
+
+                        <span
+                            class="
+                                grid
+                                h-9
+                                w-9
+                                cursor-not-allowed
+                                place-items-center
+                                rounded-md
+                                border
+                                border-slate-200
+                                bg-slate-50
+                                text-slate-300
+                            "
+                            aria-disabled="true"
+                            title="Next page"
+                        >
+                            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                        </span>
+
+                    @endif
+
+                </nav>
+
+            @endif
+
+        </div>
 
 
     </div>
@@ -1269,9 +1412,290 @@
 
     @if($categories->hasPages())
 
-        <div class="pagination">
+        @php
+            $currentPage = $categories->currentPage();
+            $lastPage = $categories->lastPage();
+            $startPage = max(1, $currentPage - 2);
+            $endPage = min($lastPage, $currentPage + 2);
+        @endphp
 
-            {{ $categories->links() }}
+
+        <div
+            class="
+                flex
+                flex-col
+                gap-3
+                rounded-xl
+                border
+                border-slate-200
+                bg-white
+                px-4
+                py-3
+                shadow-sm
+
+                sm:flex-row
+                sm:items-center
+                sm:justify-between
+            "
+        >
+
+            <p class="text-xs text-slate-500">
+                Showing
+                <span class="font-semibold text-slate-800">
+                    {{ $categories->firstItem() }}–{{ $categories->lastItem() }}
+                </span>
+                of
+                <span class="font-semibold text-slate-800">
+                    {{ $categories->total() }}
+                </span>
+                categories
+            </p>
+
+
+            <nav
+                class="flex flex-wrap items-center gap-1"
+                aria-label="Category pages"
+            >
+
+                {{-- Previous --}}
+                @if($categories->onFirstPage())
+
+                    <span
+                        class="
+                            inline-flex
+                            h-9
+                            cursor-not-allowed
+                            items-center
+                            gap-2
+                            rounded-md
+                            border
+                            border-slate-200
+                            bg-slate-50
+                            px-3
+                            text-xs
+                            font-semibold
+                            text-slate-300
+                        "
+                        aria-disabled="true"
+                    >
+                        <i class="fa-solid fa-chevron-left text-[9px]"></i>
+                        Previous
+                    </span>
+
+                @else
+
+                    <a
+                        href="{{ $categories->previousPageUrl() }}"
+                        class="
+                            inline-flex
+                            h-9
+                            items-center
+                            gap-2
+                            rounded-md
+                            border
+                            border-slate-200
+                            bg-white
+                            px-3
+                            text-xs
+                            font-semibold
+                            text-slate-600
+                            transition
+
+                            hover:border-[#c4622f]
+                            hover:bg-orange-50
+                            hover:text-[#c4622f]
+                        "
+                        rel="prev"
+                    >
+                        <i class="fa-solid fa-chevron-left text-[9px]"></i>
+                        Previous
+                    </a>
+
+                @endif
+
+
+                {{-- First page and leading separator --}}
+                @if($startPage > 1)
+
+                    <a
+                        href="{{ $categories->url(1) }}"
+                        class="
+                            grid
+                            h-9
+                            min-w-9
+                            place-items-center
+                            rounded-md
+                            border
+                            border-slate-200
+                            bg-white
+                            px-2
+                            text-xs
+                            font-semibold
+                            text-slate-600
+                            transition
+
+                            hover:border-[#c4622f]
+                            hover:text-[#c4622f]
+                        "
+                    >
+                        1
+                    </a>
+
+                    @if($startPage > 2)
+                        <span class="px-1 text-slate-400">…</span>
+                    @endif
+
+                @endif
+
+
+                {{-- Nearby page numbers --}}
+                @foreach($categories->getUrlRange($startPage, $endPage) as $page => $url)
+
+                    @if($page === $currentPage)
+
+                        <span
+                            class="
+                                grid
+                                h-9
+                                min-w-9
+                                place-items-center
+                                rounded-md
+                                border
+                                border-[#173d32]
+                                bg-[#173d32]
+                                px-2
+                                text-xs
+                                font-semibold
+                                text-white
+                            "
+                            aria-current="page"
+                        >
+                            {{ $page }}
+                        </span>
+
+                    @else
+
+                        <a
+                            href="{{ $url }}"
+                            class="
+                                grid
+                                h-9
+                                min-w-9
+                                place-items-center
+                                rounded-md
+                                border
+                                border-slate-200
+                                bg-white
+                                px-2
+                                text-xs
+                                font-semibold
+                                text-slate-600
+                                transition
+
+                                hover:border-[#c4622f]
+                                hover:bg-orange-50
+                                hover:text-[#c4622f]
+                            "
+                        >
+                            {{ $page }}
+                        </a>
+
+                    @endif
+
+                @endforeach
+
+
+                {{-- Last page and trailing separator --}}
+                @if($endPage < $lastPage)
+
+                    @if($endPage < $lastPage - 1)
+                        <span class="px-1 text-slate-400">…</span>
+                    @endif
+
+                    <a
+                        href="{{ $categories->url($lastPage) }}"
+                        class="
+                            grid
+                            h-9
+                            min-w-9
+                            place-items-center
+                            rounded-md
+                            border
+                            border-slate-200
+                            bg-white
+                            px-2
+                            text-xs
+                            font-semibold
+                            text-slate-600
+                            transition
+
+                            hover:border-[#c4622f]
+                            hover:text-[#c4622f]
+                        "
+                    >
+                        {{ $lastPage }}
+                    </a>
+
+                @endif
+
+
+                {{-- Next --}}
+                @if($categories->hasMorePages())
+
+                    <a
+                        href="{{ $categories->nextPageUrl() }}"
+                        class="
+                            inline-flex
+                            h-9
+                            items-center
+                            gap-2
+                            rounded-md
+                            border
+                            border-slate-200
+                            bg-white
+                            px-3
+                            text-xs
+                            font-semibold
+                            text-slate-600
+                            transition
+
+                            hover:border-[#c4622f]
+                            hover:bg-orange-50
+                            hover:text-[#c4622f]
+                        "
+                        rel="next"
+                    >
+                        Next
+                        <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                    </a>
+
+                @else
+
+                    <span
+                        class="
+                            inline-flex
+                            h-9
+                            cursor-not-allowed
+                            items-center
+                            gap-2
+                            rounded-md
+                            border
+                            border-slate-200
+                            bg-slate-50
+                            px-3
+                            text-xs
+                            font-semibold
+                            text-slate-300
+                        "
+                        aria-disabled="true"
+                    >
+                        Next
+                        <i class="fa-solid fa-chevron-right text-[9px]"></i>
+                    </span>
+
+                @endif
+
+            </nav>
 
         </div>
 
