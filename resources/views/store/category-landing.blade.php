@@ -1,5 +1,5 @@
 @extends('layouts.store')
-@section('title',$category->meta_title?:$category->name.' | SARAI')
+@section('title',$category->meta_title?:$category->name.' | AATCHALA')
 @section('description',$category->meta_description?:$category->description)
 @section('og_image',asset($category->banner_image?:$category->image))
 @section('content')

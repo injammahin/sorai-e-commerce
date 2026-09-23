@@ -1,6 +1,6 @@
 @extends('layouts.store')
 
-@section('title', 'Verify Email | SARAI')
+@section('title', 'Verify Email | AATCHALA')
 
 @section('content')
 
@@ -60,7 +60,7 @@
             </strong>.
 
             Open the email and click the verification button
-            to activate your SARAI account.
+            to activate your AATCHALA account.
 
         </p>
 

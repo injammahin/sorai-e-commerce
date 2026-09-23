@@ -1,6 +1,6 @@
-# SARAI Commerce — Laravel 9
+# AATCHALA Commerce — Laravel 9
 
-A production-oriented Laravel 9 + MySQL commerce application converted from the supplied SARAI React storefront. The Blade storefront preserves the original editorial design, imagery and interactions while making products, collections, content, merchandising and operations manageable from the administration panel.
+A production-oriented Laravel 9 + MySQL commerce application converted from the supplied AATCHALA React storefront. The Blade storefront preserves the original editorial design, imagery and interactions while making products, collections, content, merchandising and operations manageable from the administration panel.
 
 ## Included
 
@@ -24,8 +24,8 @@ A production-oriented Laravel 9 + MySQL commerce application converted from the 
 ## Installation
 
 ```bash
-unzip sarai-laravel9-commerce.zip
-cd sarai-laravel
+unzip aatchala-laravel9-commerce.zip
+cd aatchala-laravel
 composer install --no-dev --optimize-autoloader
 cp .env.example .env
 php artisan key:generate
@@ -73,7 +73,7 @@ MAIL_USERNAME=your-brevo-smtp-login
 MAIL_PASSWORD=your-brevo-smtp-key
 MAIL_ENCRYPTION=tls
 MAIL_FROM_ADDRESS=hello@your-domain.com
-MAIL_FROM_NAME="SARAI"
+MAIL_FROM_NAME="AATCHALA"
 QUEUE_CONNECTION=database
 ```
 

@@ -14,7 +14,7 @@ class VerifyEmailNotification extends BaseVerifyEmail
     public function toMail($notifiable)
     {
         return (new MailMessage)
-            ->subject('Verify your email address | SARAI')
+            ->subject('Verify your email address | AATCHALA')
             ->view('emails.auth.verify-email', [
                 'user' => $notifiable,
 

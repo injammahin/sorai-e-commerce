@@ -1,4 +1,4 @@
-# SARAI launch checklist
+# AATCHALA launch checklist
 
 - [ ] Production domain points to `public/`, HTTPS redirects are active, and `APP_URL` is correct.
 - [ ] `APP_ENV=production`, `APP_DEBUG=false`, and a unique `APP_KEY` are set.

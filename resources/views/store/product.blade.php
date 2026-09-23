@@ -1,8 +1,8 @@
 @extends('layouts.store')
 
-{{-- SARAI PRODUCT SHOW V3 FINAL: gallery + single-open animated accordion --}}
+{{-- AATCHALA PRODUCT SHOW V3 FINAL: gallery + single-open animated accordion --}}
 
-@section('title', $product->meta_title ?: $product->name . ' | SARAI')
+@section('title', $product->meta_title ?: $product->name . ' | AATCHALA')
 @section('description', $product->meta_description ?: $product->short_description)
 @section('canonical', $product->canonical_url ?: route('products.show', $product))
 @section('og_type', 'product')
@@ -32,7 +32,7 @@
             'image' => $galleryImages->map(fn ($image) => asset($image->path))->all(),
             'description' => $product->short_description,
             'sku' => $product->sku,
-            'brand' => ['@type' => 'Brand', 'name' => 'SARAI'],
+            'brand' => ['@type' => 'Brand', 'name' => 'AATCHALA'],
             'offers' => [
                 '@type' => 'Offer',
                 'url' => route('products.show', $product),
@@ -49,7 +49,7 @@
 @push('head')
     <style>
         /* ================================================================
-           SARAI PRODUCT SHOW PAGE
+           AATCHALA PRODUCT SHOW PAGE
         ================================================================= */
         .product-show-section {
             padding-top: clamp(1.5rem, 3vw, 2.5rem);
@@ -503,7 +503,7 @@
 @endpush
 
 @section('content')
-    <!-- SARAI PRODUCT SHOW V3 -->
+    <!-- AATCHALA PRODUCT SHOW V3 -->
     <section class="product-show-section">
         <div class="wrap">
             <nav class="product-breadcrumbs" aria-label="Breadcrumb">

@@ -119,7 +119,7 @@
 
                         ? 'Update banner content, artwork, scheduling and storefront visibility.'
 
-                        : 'Create a polished storefront banner or hero slide for SARAI.'
+                        : 'Create a polished storefront banner or hero slide for AATCHALA.'
                 }}
 
             </p>

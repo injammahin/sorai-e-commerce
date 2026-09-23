@@ -1,3 +1,3 @@
 @extends('layouts.store')
-@section('title',$collection->title.' | SARAI') @section('description',$collection->description) @section('og_image',asset($collection->image))
+@section('title',$collection->title.' | AATCHALA') @section('description',$collection->description) @section('og_image',asset($collection->image))
 @section('content')<section class="page-hero"><img src="{{ asset($collection->image) }}" alt="{{ $collection->title }}"><div class="wrap page-hero-content"><p class="eyebrow !text-white/70">{{ $collection->tagline }}</p><h1 class="display">{{ $collection->title }}</h1><p class="max-w-xl text-white/75 mt-4">{{ $collection->description }}</p></div></section><section class="section"><div class="wrap"><div class="product-grid">@foreach($products as $product)<x-product-card :product="$product"/>@endforeach</div><div class="pagination mt-12">{{ $products->links() }}</div></div></section>@endsection

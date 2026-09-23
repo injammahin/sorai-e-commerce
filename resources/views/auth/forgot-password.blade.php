@@ -1,2 +1,2 @@
-@extends('layouts.store') @section('title','Reset Password | SARAI')
+@extends('layouts.store') @section('title','Reset Password | AATCHALA')
 @section('content')<div class="auth-shell"><div class="auth-card"><h1 class="text-5xl">Reset password</h1><p class="muted mt-3">We will email you a secure reset link.</p><form class="mt-7" method="post" action="{{ route('password.email') }}">@csrf<label><span class="label">Email</span><input class="field" type="email" name="email" required></label><button class="btn btn-dark w-full mt-7">Email reset link</button></form></div></div>@endsection

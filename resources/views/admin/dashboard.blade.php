@@ -2,7 +2,7 @@
 
 @section('title', 'Commerce overview')
 @section('page_title', 'Commerce overview')
-@section('eyebrow', 'SARAI intelligence')
+@section('eyebrow', 'AATCHALA intelligence')
 
 @php
     $money = fn ($amount) => '৳'.number_format((float) $amount, 0);
@@ -861,7 +861,7 @@
 
                 <p>
                     A live commercial overview of paid sales, orders,
-                    customers and inventory health across SARAI.
+                    customers and inventory health across AATCHALA.
                 </p>
             </div>
 

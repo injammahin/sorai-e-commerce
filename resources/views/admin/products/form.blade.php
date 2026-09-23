@@ -46,7 +46,7 @@
 
                 {{ $product->exists
                     ? 'Update product details, pricing, images and storefront visibility.'
-                    : 'Create a complete product listing for the SARAI storefront.'
+                    : 'Create a complete product listing for the AATCHALA storefront.'
                 }}
 
             </p>

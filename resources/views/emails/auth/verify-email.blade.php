@@ -12,7 +12,7 @@
     >
 
     <title>
-        Verify your SARAI email address
+        Verify your AATCHALA email address
     </title>
 
 </head>
@@ -82,10 +82,10 @@
 
 
                         <img
-                            src="{{ url('/favicon/favicon-192.png') }}"
+                            src="{{ url('/favicon/favicon.png') }}"
                             width="54"
                             height="54"
-                            alt="SARAI"
+                            alt="AATCHALA"
                             style="
                                 display:block;
                                 width:54px;
@@ -106,7 +106,7 @@
                                 color:#173d32;
                             "
                         >
-                            SARAI
+                            AATCHALA
                         </div>
 
 
@@ -162,7 +162,7 @@
                             "
                         >
 
-                            Welcome to SARAI,
+                            Welcome to AATCHALA,
                             {{ $user->name }}.
 
                         </h1>
@@ -177,7 +177,7 @@
                             "
                         >
 
-                            Thank you for creating your SARAI account.
+                            Thank you for creating your AATCHALA account.
 
                             Please verify your email address so you can
                             securely access your account, wishlist,
@@ -266,7 +266,7 @@
                                 </strong>.
 
 
-                                If you did not create a SARAI account,
+                                If you did not create a AATCHALA account,
                                 you can safely ignore this email.
 
                             </p>
@@ -349,7 +349,7 @@
                             "
                         >
 
-                            © {{ date('Y') }} SARAI.
+                            © {{ date('Y') }} AATCHALA.
 
                             Curated craft, fashion and lifestyle
                             from Bangladesh.

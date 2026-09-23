@@ -1,6 +1,6 @@
 @extends('layouts.store')
 
-@section('title', 'SARAI Journal — Craft, Culture & Style')
+@section('title', 'AATCHALA Journal — Craft, Culture & Style')
 @section('description', 'Stories from Bangladeshi artisans, handloom traditions, materials, style and culture.')
 
 @section('content')

@@ -220,7 +220,7 @@ class GoogleController extends Controller
                     'name' =>
                         $googleUser->getName()
                         ?:
-                        'SARAI Customer',
+                        'AATCHALA Customer',
 
                     'email' =>
                         $googleEmail,

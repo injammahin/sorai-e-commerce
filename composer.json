@@ -1,7 +1,7 @@
 {
-    "name": "nexolio/sarai-commerce",
+    "name": "nexolio/aatchala-commerce",
     "type": "project",
-    "description": "SARAI premium Bangladeshi craft commerce platform",
+    "description": "AATCHALA premium Bangladeshi craft commerce platform",
     "keywords": ["laravel", "ecommerce", "bangladesh", "craft", "jamdani", "nakshi-kantha"],
     "license": "proprietary",
     "require": {

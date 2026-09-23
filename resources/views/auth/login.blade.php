@@ -3,8 +3,8 @@
 @section(
     'title',
     ($isAdminLogin ?? false)
-        ? 'Admin Sign In | SARAI'
-        : 'Sign In | SARAI'
+        ? 'Admin Sign In | AATCHALA'
+        : 'Sign In | AATCHALA'
 )
 
 @section('content')
@@ -37,7 +37,7 @@
 
                 {{
                     ($isAdminLogin ?? false)
-                        ? 'SARAI administration'
+                        ? 'AATCHALA administration'
                         : 'Welcome back'
                 }}
 
@@ -274,7 +274,7 @@
 
             <p class="mt-6 text-center text-sm">
 
-                New to SARAI?
+                New to AATCHALA?
 
                 <a
                     class="underline"

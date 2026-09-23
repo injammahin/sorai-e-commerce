@@ -1,4 +1,4 @@
-{{-- SARAI HEADER V2.1 FIXED: Laravel 9-safe PHP blocks + smooth hover previews --}}
+{{-- AATCHALA HEADER V2.1 FIXED: Laravel 9-safe PHP blocks + smooth hover previews --}}
 @php
     $cartService = app(\App\Services\CartService::class);
 @endphp
@@ -31,11 +31,11 @@
             </button>
         </div>
 
-        <a href="{{ route('home') }}" aria-label="SARAI home">
+        <a href="{{ route('home') }}" aria-label="AATCHALA home">
             <img
                 class="logo"
-                src="{{ asset('images/logo/sarai-lockup.webp') }}"
-                alt="SARAI"
+                src="{{ asset('images/logo/aatchala-lockup.webp') }}"
+                alt="aatchala"
             >
         </a>
 
@@ -140,8 +140,8 @@
                                         data-menu-preview
                                         data-preview-image="{{ asset('images/category/new-arrivals.webp') }}"
                                         data-preview-title="New Arrivals"
-                                        data-preview-eyebrow="Latest from SARAI"
-                                        data-preview-alt="SARAI new arrivals"
+                                        data-preview-eyebrow="Latest from AATCHALA"
+                                        data-preview-alt="AATCHALA new arrivals"
                                         data-preview-url="{{ route('new-arrivals') }}"
                                     >
                                         New Arrivals
@@ -155,7 +155,7 @@
                                             data-preview-image="{{ asset($child->image ?: $nav->image ?: 'images/placeholder.webp') }}"
                                             data-preview-title="{{ $child->name }}"
                                             data-preview-eyebrow="{{ $nav->name }} collection"
-                                            data-preview-alt="{{ $child->name }} from SARAI"
+                                            data-preview-alt="{{ $child->name }} from AATCHALA"
                                             data-preview-url="{{ route('products.index', [$nav, $child]) }}"
                                         >
                                             {{ $child->name }}
@@ -277,7 +277,7 @@
         method="GET"
     >
         <p class="eyebrow mb-5">
-            Search SARAI
+            Search AATCHALA
         </p>
 
         <div class="flex border-b border-black">
@@ -318,8 +318,8 @@
         <div class="flex items-center justify-between mb-8">
             <img
                 class="h-12"
-                src="{{ asset('images/logo/sarai-lockup.webp') }}"
-                alt="SARAI"
+                src="{{ asset('images/logo/aatchala-lockup.webp') }}"
+                alt="aatchala"
             >
 
             <button

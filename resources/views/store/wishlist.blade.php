@@ -1,2 +1,2 @@
-@extends('layouts.store') @section('title','Your Wishlist | SARAI')
+@extends('layouts.store') @section('title','Your Wishlist | AATCHALA')
 @section('content')<div class="wrap section"><h1 class="heading mb-12">Your wishlist</h1><div class="product-grid">@forelse($products as $product)<x-product-card :product="$product"/>@empty<div class="col-span-full text-center py-20"><i class="fa-regular fa-heart text-4xl muted"></i><h2 class="text-4xl mt-5">Save the pieces you love.</h2><a class="btn btn-dark mt-7" href="{{ route('new-arrivals') }}">Start exploring</a></div>@endforelse</div>{{ $products->links() }}</div>@endsection

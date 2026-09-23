@@ -3584,7 +3584,7 @@
       "image": "/images/hero/hero-festive.webp",
       "mobile": "/images/hero/hero-festive-m.webp",
       "align": "left",
-      "alt": "A lit ogee arch framed by deep madder and copper drapery, in the SARAI festive palette"
+      "alt": "A lit ogee arch framed by deep madder and copper drapery, in the AATCHALA festive palette"
     },
     {
       "id": "new-season",
@@ -3672,7 +3672,7 @@
   "stores": [
     {
       "id": "gulshan",
-      "name": "SARAI Gulshan",
+      "name": "AATCHALA Gulshan",
       "city": "Dhaka",
       "address": "House 42, Road 11, Gulshan 1, Dhaka 1212",
       "phone": "+880 9611 000 101",
@@ -3686,7 +3686,7 @@
     },
     {
       "id": "dhanmondi",
-      "name": "SARAI Dhanmondi",
+      "name": "AATCHALA Dhanmondi",
       "city": "Dhaka",
       "address": "Level 3, Plot 27, Satmasjid Road, Dhanmondi, Dhaka 1209",
       "phone": "+880 9611 000 102",
@@ -3698,7 +3698,7 @@
     },
     {
       "id": "uttara",
-      "name": "SARAI Uttara",
+      "name": "AATCHALA Uttara",
       "city": "Dhaka",
       "address": "Sector 7, Garib-e-Newaz Avenue, Uttara, Dhaka 1230",
       "phone": "+880 9611 000 103",
@@ -3709,7 +3709,7 @@
     },
     {
       "id": "agrabad",
-      "name": "SARAI Agrabad",
+      "name": "AATCHALA Agrabad",
       "city": "Chattogram",
       "address": "Sheikh Mujib Road, Agrabad C/A, Chattogram 4100",
       "phone": "+880 9611 000 201",
@@ -3721,7 +3721,7 @@
     },
     {
       "id": "zindabazar",
-      "name": "SARAI Zindabazar",
+      "name": "AATCHALA Zindabazar",
       "city": "Sylhet",
       "address": "Zindabazar Main Road, Sylhet 3100",
       "phone": "+880 9611 000 301",
@@ -3732,7 +3732,7 @@
     },
     {
       "id": "khulna",
-      "name": "SARAI Khulna",
+      "name": "AATCHALA Khulna",
       "city": "Khulna",
       "address": "Shib Bari Circle, Khulna 9100",
       "phone": "+880 9611 000 401",
@@ -3743,7 +3743,7 @@
     },
     {
       "id": "rajshahi",
-      "name": "SARAI Rajshahi",
+      "name": "AATCHALA Rajshahi",
       "city": "Rajshahi",
       "address": "Greater Road, Shaheb Bazar, Rajshahi 6100",
       "phone": "+880 9611 000 501",

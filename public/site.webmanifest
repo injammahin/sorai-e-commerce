@@ -1,13 +1,13 @@
 {
-  "name": "SARAI",
-  "short_name": "SARAI",
+  "name": "AATCHALA",
+  "short_name": "AATCHALA",
   "description": "Crafted traditions, contemporary stories.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#faf8f5",
   "theme_color": "#faf8f5",
   "icons": [
-    { "src": "/favicon/favicon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/favicon/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "/favicon/favicon.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/favicon/favicon.png", "sizes": "512x512", "type": "image/png" }
   ]
 }

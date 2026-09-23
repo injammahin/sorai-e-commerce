@@ -981,7 +981,7 @@ const adminDesktopMedia =
 
 
 const adminSidebarStorageKey =
-    'sarai_admin_sidebar_collapsed';
+    'aatchala_admin_sidebar_collapsed';
 
 
 let adminTooltipTrigger = null;

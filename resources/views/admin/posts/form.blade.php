@@ -34,7 +34,7 @@
             <p class="mt-1 text-sm text-slate-500">
                 {{ $post->exists
                     ? 'Update the article content, feature image, SEO and publishing settings.'
-                    : 'Write, format and publish a new article for the SARAI journal.' }}
+                    : 'Write, format and publish a new article for the AATCHALA journal.' }}
             </p>
         </div>
 

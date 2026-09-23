@@ -1,6 +1,6 @@
 @extends('layouts.store')
 
-@section('title', 'Create Account | SARAI')
+@section('title', 'Create Account | AATCHALA')
 
 @section('content')
 
@@ -29,7 +29,7 @@
 
 
             <p class="eyebrow mt-5">
-                Join SARAI
+                Join AATCHALA
             </p>
 
 

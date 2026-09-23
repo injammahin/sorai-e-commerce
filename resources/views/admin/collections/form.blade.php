@@ -1974,7 +1974,7 @@
                                     text-slate-500
                                 "
                             >
-                                How SARAI collections behave.
+                                How AATCHALA collections behave.
                             </p>
 
 

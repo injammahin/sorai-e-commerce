@@ -1,6 +1,6 @@
 @extends('layouts.store')
 
-@section('title', $post->meta_title ?: $post->title . ' | SARAI Journal')
+@section('title', $post->meta_title ?: $post->title . ' | AATCHALA Journal')
 @section('description', $post->meta_description ?: $post->excerpt)
 @section('og_type', 'article')
 @if($post->image)

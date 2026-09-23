@@ -16,7 +16,7 @@
 
 
     <title>
-        @yield('title', 'Admin') — SARAI
+        @yield('title', 'Admin') — AATCHALA
     </title>
 
 
@@ -63,8 +63,8 @@
             <span class="admin-brand-mark">
 
                 <img
-                    src="{{ asset('images/logo/sarai-mark.webp') }}"
-                    alt="SARAI"
+                    src="{{ asset('images/logo/AATCHALA-mark.webp') }}"
+                    alt="AATCHALA"
                 >
 
             </span>
@@ -73,7 +73,7 @@
             <span class="admin-brand-copy">
 
                 <strong>
-                    SARAI
+                    AATCHALA
                 </strong>
 
                 <small>
@@ -410,7 +410,7 @@
 
                         @yield(
                             'eyebrow',
-                            'SARAI administration'
+                            'AATCHALA administration'
                         )
 
                     </small>

@@ -43,7 +43,7 @@ class User extends Authenticatable implements MustVerifyEmail
 
     /*
     |--------------------------------------------------------------------------
-    | Custom SARAI verification email
+    | Custom AATCHALA verification email
     |--------------------------------------------------------------------------
     */
     public function sendEmailVerificationNotification(): void

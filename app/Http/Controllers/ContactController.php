@@ -104,7 +104,7 @@ class ContactController extends Controller
 
         return back()->with(
             'success',
-            'Welcome to the SARAI journal.'
+            'Welcome to the AATCHALA journal.'
         );
     }
 }

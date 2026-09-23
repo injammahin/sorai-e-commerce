@@ -1936,7 +1936,7 @@
                                     text-slate-500
                                 "
                             >
-                                SARAI uses top-level categories and subcategories.
+                                AATCHALA uses top-level categories and subcategories.
                             </p>
 
                         </div>

@@ -1,7 +1,7 @@
 server {
     listen 80;
-    server_name sarai.example.com;
-    root /var/www/sarai/public;
+    server_name aatchala.example.com;
+    root /var/www/aatchala/public;
     index index.php;
     add_header X-Content-Type-Options nosniff always;
     add_header Referrer-Policy strict-origin-when-cross-origin always;
