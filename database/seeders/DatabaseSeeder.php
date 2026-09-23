@@ -1,26 +1,26 @@
 <?php
+
 namespace Database\Seeders;
-use App\Models\Banner;
-use App\Models\Category;
-use App\Models\Collection;
-use App\Models\Page;
-use App\Models\Post;
-use App\Models\Product;
-use App\Models\Setting;
+
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
-class DatabaseSeeder extends Seeder {
- public function run(){
-  $data=json_decode(file_get_contents(__DIR__.'/data/store.json'),true,512,JSON_THROW_ON_ERROR);
-  $admin=User::updateOrCreate(['email'=>env('ADMIN_EMAIL','mahin@gmail.com')],['name'=>'Mahin','password'=>Hash::make(env('ADMIN_PASSWORD','Mahin@5507')),'role'=>'admin','is_active'=>true,'email_verified_at'=>now()]);
-  foreach($data['categories'] as $i=>$row){$parent=Category::updateOrCreate(['slug'=>$row['slug']],['name'=>$row['name'],'tagline'=>$row['tagline'],'heading'=>$row['heading'],'description'=>$row['intro'],'image'=>ltrim($row['image'],'/'),'banner_image'=>ltrim($row['wide'],'/'),'sort_order'=>$i,'is_active'=>true,'show_in_menu'=>true,'meta_title'=>$row['name'].' — Bangladeshi Craft & Lifestyle | SARAI','meta_description'=>Str::limit($row['intro'],160,'')]);foreach($row['subcategories'] as $j=>$sub)Category::updateOrCreate(['slug'=>$row['slug'].'-'.$sub['slug']],['parent_id'=>$parent->id,'name'=>$sub['name'],'image'=>ltrim($sub['image'],'/'),'sort_order'=>$j,'is_active'=>true,'show_in_menu'=>true]);}
-  foreach($data['products'] as $row){$category=Category::where('slug',$row['category'])->firstOrFail();$sub=Category::where('slug',$row['category'].'-'.$row['subcategory'])->first();$product=Product::updateOrCreate(['slug'=>$row['slug']],['category_id'=>$category->id,'subcategory_id'=>$sub?->id,'name'=>$row['name'],'sku'=>$row['sku'],'short_description'=>$row['shortDescription'],'description'=>$row['description'],'material'=>$row['material'],'price'=>$row['price'],'compare_price'=>$row['originalPrice'],'stock'=>$row['stock'],'colors'=>$row['colors'],'sizes'=>$row['sizes'],'tags'=>$row['tags'],'rating'=>$row['rating'],'review_count'=>$row['reviewCount'],'is_active'=>true,'is_featured'=>$row['isFeatured'],'is_new'=>$row['isNew'],'is_bestseller'=>$row['isBestseller'],'is_limited'=>$row['isLimited'],'meta_title'=>Str::limit($row['name'].' | Authentic Bangladeshi Craft — SARAI',70,''),'meta_description'=>Str::limit($row['shortDescription'],165,'')]);foreach($row['images'] as $i=>$image)$product->images()->updateOrCreate(['sort_order'=>$i],['path'=>ltrim($image,'/'),'alt_text'=>$row['name'].' handcrafted in Bangladesh','is_primary'=>$i===0]);}
-  foreach($data['collections'] as $row){$collection=Collection::updateOrCreate(['slug'=>$row['slug']],['title'=>$row['title'],'tagline'=>$row['tagline'],'description'=>$row['copy'],'image'=>ltrim($row['image'],'/'),'is_active'=>true]);$ids=Product::whereIn('slug',$row['product_slugs'])->pluck('id');$collection->products()->sync($ids->mapWithKeys(fn($id,$i)=>[$id=>['sort_order'=>$i]])->all());}
-  foreach($data['heroSlides'] as $i=>$row)Banner::updateOrCreate(['placement'=>'home_hero','sort_order'=>$i],['eyebrow'=>$row['eyebrow'],'title'=>$row['title'],'subtitle'=>$row['subtitle'],'description'=>$row['copy'],'image'=>ltrim($row['image'],'/'),'mobile_image'=>ltrim($row['mobile'],'/'),'button_text'=>$row['cta']['label'],'button_url'=>$row['cta']['href'],'is_active'=>true]);
-  foreach($data['journal'] as $row)Post::updateOrCreate(['slug'=>$row['slug']],['author_id'=>$admin->id,'title'=>$row['title'],'category'=>$row['kind'],'excerpt'=>$row['excerpt'],'content'=>collect($row['body'])->map(fn($p)=>'<p>'.e($p).'</p>')->implode("\n"),'image'=>ltrim($row['image'],'/'),'meta_title'=>Str::limit($row['title'].' | SARAI Journal',70,''),'meta_description'=>Str::limit($row['excerpt'],165,''),'is_published'=>true,'published_at'=>now()->subDays(rand(5,80))]);
-  $pages=['about'=>['About SARAI','SARAI is a modern gathering place for the work of independent Bangladeshi artisans, weavers, rural families, women entrepreneurs and small workshops. We source with care, name our makers and celebrate the regional craft traditions behind every piece.'],'customer-service'=>['Customer Service','Our team can help with products, sizing, delivery, returns, gifting and bridal appointments. Contact us and we will respond within one working day.'],'shipping'=>['Shipping & Delivery','We deliver across Bangladesh. Standard delivery is usually completed within 2–5 working days. Remote areas and made-to-order products may require additional time.'],'returns'=>['Returns & Exchanges','Eligible unused products may be returned within 7 days in original condition with tags and packaging. Custom, altered, beauty, jewellery and sale items may be non-returnable.'],'privacy'=>['Privacy Policy','We collect only the personal information needed to provide your order, account and support services. We do not sell your personal data.'], 'terms'=>['Terms & Conditions','By using SARAI you agree to provide accurate information and to use the website lawfully. Product availability, handmade variation and delivery times are subject to the terms shown at checkout.'],'size-guide'=>['Size Guide','Measurements vary by silhouette. Please compare the garment measurements on each product with a well-fitting garment you own, or contact us for guidance.'],'stores'=>['Our Stores','Visit our stores for personal styling, fittings and gift services. Store information is maintained from the administration panel.'],'contact'=>['Contact SARAI','Send us a message for product questions, orders, press, maker partnerships or store appointments.']];foreach($pages as $slug=>$p)Page::updateOrCreate(['slug'=>$slug],['title'=>$p[0],'content'=>'<p>'.e($p[1]).'</p>','meta_title'=>$p[0].' | SARAI','meta_description'=>Str::limit($p[1],165,''),'is_active'=>true]);
-  $settings=['site_name'=>['general','SARAI',1],'site_tagline'=>['general','Bangladeshi craft, thoughtfully gathered',1],'contact_email'=>['contact','hello@sarai.com.bd',1],'contact_phone'=>['contact','+880 9611 000 101',1],'address'=>['contact','Dhaka, Bangladesh',1],'order_notification_email'=>['email',env('ADMIN_EMAIL','mahin@gmail.com'),0],'announcement'=>['marketing','Complimentary delivery across Bangladesh on orders over ৳5,000',1],'shipping_charge'=>['commerce','120',0],'free_shipping_threshold'=>['commerce','5000',1],'tax_rate'=>['commerce','0',0],'facebook_url'=>['social','',1],'instagram_url'=>['social','',1],'youtube_url'=>['social','',1],'google_site_verification'=>['seo','',1],'default_meta_title'=>['seo','SARAI — Authentic Bangladeshi Craft, Handloom & Lifestyle',1],'default_meta_description'=>['seo','Shop curated Bangladeshi Jamdani, Nakshi Kantha, Shital Pati, handloom fashion, pottery, jute, cane, jewellery and home décor from real makers.',1],'store_locations'=>['content',json_encode($data['stores'],JSON_UNESCAPED_UNICODE),1]];foreach($settings as $key=>$s)Setting::updateOrCreate(['key'=>$key],['group'=>$s[0],'value'=>$s[1],'type'=>str_contains($key,'description')||$key==='store_locations'?'textarea':'text','is_public'=>$s[2]]);
- }
+
+class DatabaseSeeder extends Seeder
+{
+    public function run(): void
+    {
+        User::updateOrCreate(
+            ['email' => env('ADMIN_EMAIL', 'mahin@gmail.com')],
+            [
+                'name'              => env('ADMIN_NAME', 'Mahin'),
+                'password'          => Hash::make(env('ADMIN_PASSWORD', 'Mahin@5507')),
+                'role'              => 'admin',
+                'is_active'         => true,
+                'email_verified_at' => now(),
+            ]
+        );
+
+        $this->command?->info('Admin account ready: ' . env('ADMIN_EMAIL', 'mahin@gmail.com'));
+    }
 }

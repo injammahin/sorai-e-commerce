@@ -114,6 +114,8 @@ Route::prefix('admin')->name('admin.')->middleware(['auth','admin'])->group(func
  Route::resource('categories',App\Http\Controllers\Admin\CategoryController::class)->except('show');
  Route::resource('collections',App\Http\Controllers\Admin\CollectionController::class)->except('show');Route::resource('posts',App\Http\Controllers\Admin\PostController::class)->except('show');
  Route::resource('orders',App\Http\Controllers\Admin\OrderController::class)->only(['index','show','update']);
+ Route::post('posts/editor-image', [\App\Http\Controllers\Admin\PostController::class, 'editorImage'])
+    ->name('posts.editor-image');
  Route::get('customers',[App\Http\Controllers\Admin\CustomerController::class,'index'])->name('customers.index');Route::get('customers/{customer}',[App\Http\Controllers\Admin\CustomerController::class,'show'])->name('customers.show');Route::patch('customers/{customer}/toggle',[App\Http\Controllers\Admin\CustomerController::class,'toggle'])->name('customers.toggle');
  Route::resource('pages',App\Http\Controllers\Admin\PageController::class)->except('show');Route::resource('banners',App\Http\Controllers\Admin\BannerController::class)->except('show');Route::resource('coupons',App\Http\Controllers\Admin\CouponController::class)->except('show');
  Route::get('reviews',[App\Http\Controllers\Admin\ReviewController::class,'index'])->name('reviews.index');Route::patch('reviews/{review}',[App\Http\Controllers\Admin\ReviewController::class,'update'])->name('reviews.update');Route::delete('reviews/{review}',[App\Http\Controllers\Admin\ReviewController::class,'destroy'])->name('reviews.destroy');
