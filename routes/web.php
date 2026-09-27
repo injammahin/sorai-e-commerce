@@ -13,6 +13,12 @@ use App\Http\Controllers\SeoController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\WishlistController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StaticPageController;
+use App\Http\Controllers\LiveSearchController;
+
+
+
+
 
 Route::get('/',[StoreController::class,'home'])->name('home');
 Route::get('/new-arrivals',[StoreController::class,'newArrivals'])->name('new-arrivals');
@@ -123,5 +129,29 @@ Route::prefix('admin')->name('admin.')->middleware(['auth','admin'])->group(func
  Route::get('subscribers',[App\Http\Controllers\Admin\SubscriberController::class,'index'])->name('subscribers.index');Route::get('subscribers/export',[App\Http\Controllers\Admin\SubscriberController::class,'export'])->name('subscribers.export');
 });
 
+
+
+Route::get(
+    '/search/live',
+    LiveSearchController::class
+)
+    ->middleware('throttle:60,1')
+    ->name('search.live');
+
+
+Route::get(
+    '/search',
+    [
+        StoreController::class,
+        'search',
+    ]
+)->name('search');
+
 Route::get('/{category}',[StoreController::class,'category'])->name('categories.show');
-Route::get('/pages/{page}',[StoreController::class,'page'])->name('pages.show');
+Route::get(
+    '/pages/{slug}',
+    [
+        StaticPageController::class,
+        'show',
+    ]
+)->name('pages.show');

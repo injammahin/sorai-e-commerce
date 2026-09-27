@@ -79,8 +79,9 @@
 
         .product-show-layout {
             display: grid;
-            grid-template-columns: 84px minmax(0, 1fr) minmax(340px, 410px);
+            grid-template-columns: 76px minmax(0, 620px) minmax(340px, 410px);
             grid-template-areas: "thumbs stage details";
+            justify-content: center;
             align-items: start;
             gap: clamp(1rem, 2vw, 2rem);
         }
@@ -142,7 +143,10 @@
         .product-gallery-stage {
             position: relative;
             grid-area: stage;
+            width: 100%;
+            max-width: 620px;
             min-width: 0;
+            justify-self: center;
             overflow: hidden;
             background: #eee8df;
             isolation: isolate;
@@ -160,6 +164,7 @@
         }
 
         .product-gallery-main-image {
+            display: block;
             width: 100%;
             aspect-ratio: 4 / 5;
             object-fit: cover;
@@ -446,8 +451,9 @@
 
         @media (max-width: 1180px) {
             .product-show-layout {
-                grid-template-columns: 76px minmax(0, 1fr);
+                grid-template-columns: 72px minmax(0, 620px);
                 grid-template-areas: "thumbs stage" ". details";
+                justify-content: center;
             }
             .product-show-summary {
                 position: static;
@@ -893,6 +899,7 @@
             const previousButton = gallery.querySelector('[data-gallery-previous]');
             const nextButton = gallery.querySelector('[data-gallery-next]');
             const currentLabel = gallery.querySelector('[data-gallery-current]');
+            const thumbnailsContainer = gallery.querySelector('.product-gallery-thumbnails');
             const thumbnails = [...gallery.querySelectorAll('[data-gallery-thumbnail]')];
             const dots = [...gallery.querySelectorAll('[data-gallery-dot]')];
             const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -913,6 +920,43 @@
                 });
             };
 
+            const keepActiveThumbnailVisible = (thumbnail) => {
+                if (!thumbnail || !thumbnailsContainer) return;
+
+                /*
+                 * IMPORTANT:
+                 * Do not use thumbnail.scrollIntoView() here.
+                 * The gallery auto-rotates, and scrollIntoView() can move the
+                 * whole document back to the product gallery while the user is
+                 * reading the Related pieces section.
+                 *
+                 * We only scroll the thumbnail strip itself.
+                 */
+                const isHorizontal = window.getComputedStyle(thumbnailsContainer).flexDirection === 'row';
+
+                if (isHorizontal) {
+                    const desiredLeft =
+                        thumbnail.offsetLeft
+                        - ((thumbnailsContainer.clientWidth - thumbnail.offsetWidth) / 2);
+
+                    thumbnailsContainer.scrollTo({
+                        left: Math.max(0, desiredLeft),
+                        behavior: reduceMotion.matches ? 'auto' : 'smooth',
+                    });
+
+                    return;
+                }
+
+                const desiredTop =
+                    thumbnail.offsetTop
+                    - ((thumbnailsContainer.clientHeight - thumbnail.offsetHeight) / 2);
+
+                thumbnailsContainer.scrollTo({
+                    top: Math.max(0, desiredTop),
+                    behavior: reduceMotion.matches ? 'auto' : 'smooth',
+                });
+            };
+
             const updateControls = () => {
                 thumbnails.forEach((thumbnail, index) => {
                     const isActive = index === activeIndex;
@@ -920,11 +964,7 @@
                     thumbnail.setAttribute('aria-current', isActive ? 'true' : 'false');
 
                     if (isActive) {
-                        thumbnail.scrollIntoView({
-                            behavior: reduceMotion.matches ? 'auto' : 'smooth',
-                            block: 'nearest',
-                            inline: 'nearest',
-                        });
+                        keepActiveThumbnailVisible(thumbnail);
                     }
                 });
 
