@@ -43,8 +43,151 @@ public function home()
             ->get(),
     ]);
 } public function category(Category $category,Request $request){abort_unless($category->is_active,404);$children=$category->children()->active()->ordered()->get();$products=Product::active()->where('category_id',$category->id)->with('images')->latest()->limit(8)->get();return view('store.category-landing',compact('category','children','products'));}
- public function products(Request $request,Category $category,?Category $subcategory=null){if($subcategory&&$subcategory->parent_id!==$category->id)abort(404);$q=Product::active()->where('category_id',$category->id)->with('images');if($subcategory)$q->where('subcategory_id',$subcategory->id);$this->applyFilters($q,$request);$products=$q->paginate(16)->withQueryString();return view('store.products',compact('category','subcategory','products'));}
- public function collection(Collection $collection,Request $request){abort_unless($collection->is_active,404);$q=$collection->products()->active()->with('images');$this->applyFilters($q,$request);$products=$q->paginate(16)->withQueryString();return view('store.collection',compact('collection','products'));}
+public function products(
+    Request $request,
+    Category $category,
+    ?string $subcategory = null
+) {
+    /*
+    |--------------------------------------------------------------------------
+    | VALIDATE PARENT CATEGORY
+    |--------------------------------------------------------------------------
+    |
+    | A /category/... URL should always begin with a top-level,
+    | active category.
+    |
+    */
+
+    abort_unless(
+        $category->is_active,
+        404
+    );
+
+
+    abort_unless(
+        $category->parent_id === null,
+        404
+    );
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | RESOLVE SUBCATEGORY THROUGH THE PARENT
+    |--------------------------------------------------------------------------
+    |
+    | IMPORTANT:
+    |
+    | Do NOT independently route-model-bind the second Category.
+    |
+    | Resolve it through:
+    |
+    | $category->children()
+    |
+    | This guarantees:
+    |
+    | /category/home-living/nokshi-kantha
+    |
+    | only resolves Nokshi Kantha if it is actually a child of
+    | Home & Living.
+    |
+    */
+
+    $subcategoryModel = null;
+
+
+    if (
+        $subcategory !== null
+        &&
+        $subcategory !== ''
+    ) {
+
+        $subcategoryModel =
+            $category
+                ->children()
+                ->active()
+                ->where(
+                    'slug',
+                    $subcategory
+                )
+                ->firstOrFail();
+
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | PRODUCTS
+    |--------------------------------------------------------------------------
+    */
+
+    $query = Product::query()
+        ->active()
+        ->where(
+            'category_id',
+            $category->id
+        )
+        ->with('images');
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | FILTER BY SUBCATEGORY
+    |--------------------------------------------------------------------------
+    */
+
+    if ($subcategoryModel) {
+
+        $query->where(
+            'subcategory_id',
+            $subcategoryModel->id
+        );
+
+    }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | PRICE / MATERIAL / SORT FILTERS
+    |--------------------------------------------------------------------------
+    */
+
+    $this->applyFilters(
+        $query,
+        $request
+    );
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | PAGINATION
+    |--------------------------------------------------------------------------
+    */
+
+    $products =
+        $query
+            ->paginate(16)
+            ->withQueryString();
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | Keep Blade variable name unchanged
+    |--------------------------------------------------------------------------
+    */
+
+    $subcategory =
+        $subcategoryModel;
+
+
+    return view(
+        'store.products',
+        compact(
+            'category',
+            'subcategory',
+            'products'
+        )
+    );
+} public function collection(Collection $collection,Request $request){abort_unless($collection->is_active,404);$q=$collection->products()->active()->with('images');$this->applyFilters($q,$request);$products=$q->paginate(16)->withQueryString();return view('store.collection',compact('collection','products'));}
  public function newArrivals(Request $request){$q=Product::active()->where('is_new',true)->with('images');$this->applyFilters($q,$request);$products=$q->paginate(16)->withQueryString();return view('store.products',compact('products')+['pageTitle'=>'New Arrivals','category'=>null,'subcategory'=>null]);}
  public function product(Product $product){abort_unless($product->is_active,404);$product->load(['images','variants'=>fn($q)=>$q->where('is_active',true),'category','subcategory']);$related=Product::active()->where('id','!=',$product->id)->where(fn($q)=>$q->where('subcategory_id',$product->subcategory_id)->orWhere('category_id',$product->category_id))->with('images')->limit(8)->get();return view('store.product',compact('product','related'));}
  public function search(Request $request){$term=trim($request->string('q'));$products=Product::active()->search($term)->with('images')->paginate(20)->withQueryString();return view('store.search',compact('products','term'));}
