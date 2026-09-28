@@ -586,7 +586,7 @@
 
             margin-top: .55rem;
 
-            font-size: clamp(1.6rem, 2vw, 2.4rem);
+            font-size: clamp(1.6rem, 1vw, 2.4rem);
 
             letter-spacing: -.025em;
 
@@ -1312,7 +1312,7 @@
 
             .product-show-summary { width: 100%; order: 3; padding-top: 2rem; }
 
-            .product-show-title { font-size: clamp(2.45rem, 12vw, 3.4rem); }
+            .product-show-title { font-size: clamp(1.45rem, 6vw, 2.4rem); }
 
         }
 
