@@ -2643,17 +2643,7 @@
 
 
 
-        font-size:
-
-            clamp(
-
-                2.5rem,
-
-                4vw,
-
-                4rem
-
-            );
+        font-size: clamp(1.5rem, 1vw, 2rem);
 
 
 
