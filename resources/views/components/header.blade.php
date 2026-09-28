@@ -698,7 +698,7 @@
 
 
 
-        object-fit: contain;
+        object-fit: fill;
 
         object-position: center center;
 
