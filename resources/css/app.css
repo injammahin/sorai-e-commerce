@@ -1733,4 +1733,168 @@
     .home-popup-cta i {
         transition-duration: 0.01ms !important;
     }
+}/* =========================================================
+   PRODUCT CARD — GLOBAL IMAGE FIX
+   Used on homepage, categories, new arrivals, wishlist, etc.
+========================================================= */
+
+.product-card,
+.premium-product-card {
+    position: relative;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   IMAGE CONTAINER
+========================================================= */
+
+.product-card .product-media,
+.premium-product-card .premium-product-media {
+    position: relative !important;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: #eee8df;
+}
+
+
+/* =========================================================
+   IMAGE LINK
+========================================================= */
+
+.product-card .premium-product-image-link,
+.premium-product-card .premium-product-image-link {
+    display: block !important;
+
+    width: 100%;
+    height: 100%;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    /*
+    |--------------------------------------------------------------------------
+    | Removes inline-image/baseline spacing
+    |--------------------------------------------------------------------------
+    */
+
+    line-height: 0 !important;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGES
+========================================================= */
+
+.product-card .premium-product-image-link > img,
+.premium-product-card .premium-product-image-link > img {
+    display: block !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0;
+
+    vertical-align: top;
+}
+
+
+/* =========================================================
+   DISCOUNT / NEW BADGE
+   IMPORTANT: badge overlays image instead of taking space
+========================================================= */
+
+.product-card .premium-product-badge,
+.premium-product-card .premium-product-badge {
+    position: absolute !important;
+
+    top: .65rem !important;
+    left: .65rem !important;
+
+    z-index: 25 !important;
+
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    width: auto !important;
+
+    margin: 0 !important;
+
+    padding:
+        .38rem
+        .55rem !important;
+
+    border: 0;
+
+    background: #111 !important;
+
+    color: #fff !important;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    line-height: 1 !important;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   FAVOURITE ICON
+========================================================= */
+
+.product-card .product-favourite-action,
+.premium-product-card .product-favourite-action {
+    position: absolute !important;
+
+    top: .65rem !important;
+    right: .65rem !important;
+
+    z-index: 30 !important;
+
+    margin: 0 !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 680px) {
+
+    .product-card .premium-product-badge,
+    .premium-product-card .premium-product-badge {
+        top: .4rem !important;
+        left: .4rem !important;
+
+        padding:
+            .3rem
+            .42rem !important;
+
+        font-size: 7px;
+    }
+
+
+    .product-card .product-favourite-action,
+    .premium-product-card .product-favourite-action {
+        top: .4rem !important;
+        right: .4rem !important;
+    }
+
 }
