@@ -2413,7 +2413,7 @@
 
 
 
-        object-fit: contain;
+        object-fit: cover;
 
         object-position: center;
 
@@ -3459,7 +3459,7 @@
 
         .quick-view-title {
 
-            font-size: 2.7rem;
+            font-size: 1.4rem;
 
         }
 
