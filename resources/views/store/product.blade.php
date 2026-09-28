@@ -1077,7 +1077,7 @@
             max-width: calc(100% - 56px);
             margin-top: .35rem;
             font-family: var(--font-display, "Cormorant Garamond", Georgia, serif);
-            font-size: clamp(2rem, 4vw, 3.4rem);
+            font-size: clamp(1rem, 2vw, 2.4rem);
             font-weight: 400;
             line-height: 1;
             letter-spacing: -.025em;
@@ -1212,7 +1212,7 @@
 
             .product-description-modal-title {
                 max-width: calc(100% - 48px);
-                font-size: 2.3rem;
+                font-size: 1.5rem;
             }
 
             .product-description-modal-close {
