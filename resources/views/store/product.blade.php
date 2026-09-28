@@ -1622,7 +1622,14 @@
 
 
 
-                    <form action="{{ route('cart.store', $product) }}" method="post" class="mt-8">
+                    <form
+                        action="{{ route('cart.store', $product) }}"
+                        method="POST"
+
+                        class="mt-8"
+
+                        data-ajax-cart
+                    >
 
                         @csrf
 

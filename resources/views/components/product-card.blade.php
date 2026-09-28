@@ -129,9 +129,13 @@
 
                 @auth
 
-                    <form
+                   <form
                         action="{{ route('wishlist.toggle', $product) }}"
                         method="POST"
+
+                        data-ajax-wishlist
+
+                        data-product-id="{{ $product->id }}"
                     >
 
                         @csrf
@@ -179,41 +183,36 @@
 
                 {{-- ADD TO BAG --}}
 
-                <form
-                    action="{{ route('cart.store', $product) }}"
-                    method="POST"
-                    class="product-hover-form"
+            <form
+                method="POST"
+                action="{{ route('cart.store', $product) }}"
+
+                class="product-hover-form"
+
+                data-ajax-cart
+                data-product-id="{{ $product->id }}"
+            >
+                @csrf
+
+                <input
+                    type="hidden"
+                    name="quantity"
+                    value="1"
                 >
 
-                    @csrf
+                <button
+                    type="submit"
+                    class="product-hover-button product-hover-add"
 
+                    @disabled($product->stock < 1)
+                >
+                    <i class="fa-solid fa-bag-shopping"></i>
 
-                    <input
-                        type="hidden"
-                        name="quantity"
-                        value="1"
-                    >
-
-
-                    <button
-                        type="submit"
-                        class="product-hover-button product-hover-add"
-                        @disabled($product->stock <= 0)
-                        aria-label="{{ $product->stock > 0 ? 'Add ' . $product->name . ' to bag' : $product->name . ' is sold out' }}"
-                    >
-
-                        <i class="fa-solid fa-bag-shopping"></i>
-
-
-                        <span>
-
-                            {{ $product->stock > 0 ? 'Add to Bag' : 'Sold Out' }}
-
-                        </span>
-
-                    </button>
-
-                </form>
+                    <span>
+                        {{ $product->stock > 0 ? 'Add to Bag' : 'Sold Out' }}
+                    </span>
+                </button>
+            </form>
 
 
 

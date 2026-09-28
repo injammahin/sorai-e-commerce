@@ -8,4 +8,4 @@
 @if(!empty($siteSettings['google_site_verification']))<meta name="google-site-verification" content="{{ $siteSettings['google_site_verification'] }}">@endif
 <script type="application/ld+json">{!! json_encode(['@context'=>'https://schema.org','@type'=>'Organization','name'=>$siteSettings['site_name']??'AATCHALA','url'=>url('/'),'logo'=>asset('images/logo/AATCHALA-lockup.webp'),'email'=>$siteSettings['contact_email']??null,'telephone'=>$siteSettings['contact_phone']??null],JSON_UNESCAPED_SLASHES) !!}</script>
 @stack('schema') @vite(['resources/css/app.css','resources/js/app.js']) @stack('head')</head><body>
-<a href="#main" class="sr-only focus:not-sr-only">Skip to content</a><x-header/><main id="main">@yield('content')</main><x-footer/><x-flash/>@stack('scripts')</body></html>
+<a href="#main" class="sr-only focus:not-sr-only">Skip to content</a><x-header/><main id="main">@yield('content')</main><x-footer/><x-flash/><x-ajax-commerce/>@stack('scripts')</body></html>

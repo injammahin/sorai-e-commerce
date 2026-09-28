@@ -1543,18 +1543,46 @@
 
 
 
-    .premium-product-badge {
+.premium-product-badge {
+    position: absolute !important;
 
-        left: .6rem !important;
+    top: .65rem !important;
+    left: .65rem !important;
 
-        top: .6rem !important;
+    z-index: 25 !important;
 
+    display: inline-flex;
 
+    align-items: center;
+    justify-content: center;
 
-        z-index: 10;
+    width: auto;
+    min-width: 0;
 
-    }
+    margin: 0 !important;
 
+    padding:
+        .38rem
+        .55rem;
+
+    border: 0;
+
+    background: #111;
+
+    color: #fff;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    letter-spacing: .08em;
+
+    text-transform: uppercase;
+
+    pointer-events: none;
+}
 
 
 
@@ -5470,15 +5498,14 @@
 
 
 
-            <form
+                <form
+                    method="POST"
 
-                method="POST"
+                    class="quick-view-cart"
 
-                class="quick-view-cart"
-
-                data-qv-cart-form
-
-            >
+                    data-qv-cart-form
+                    data-ajax-cart
+                >
 
 
 

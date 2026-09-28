@@ -1149,8 +1149,12 @@
 
                         <form
                             class="wishlist-remove-form"
+                             action="{{ route('wishlist.toggle', $product) }}"
                             method="POST"
-                            action="{{ route('wishlist.toggle', $product) }}"
+
+                            data-ajax-wishlist
+
+                            data-product-id="{{ $product->id }}"
                         >
 
                             @csrf
@@ -1279,12 +1283,14 @@
 
 
                             {{-- ADD TO BAG --}}
+                                <form
+                                    action="{{ route('cart.store', $product) }}"
+                                    method="POST"
 
-                            <form
-                                class="wishlist-add-form"
-                                method="POST"
-                                action="{{ route('cart.store', $product) }}"
-                            >
+                                    class="product-hover-form"
+
+                                    data-ajax-cart
+                                >
 
                                 @csrf
 
